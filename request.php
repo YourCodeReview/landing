@@ -1,8 +1,36 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 header('Content-Type: application/json');
 
-require_once __DIR__.DIRECTORY_SEPARATOR.'local.php';
+require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/local.php';
+
+function sendEmail(string $email, string $subject, string $message): bool {
+	$mail = new PHPMailer(true);
+
+	//Server settings
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    // $mail->isSMTP();                                            //Send using SMTP
+    // $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+    // $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    // $mail->Username   = 'user@example.com';                     //SMTP username
+    // $mail->Password   = 'secret';                               //SMTP password
+    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    // $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+
+	$mail->setFrom('noreply@yourcodereview.com', 'YourCodeReview.com');
+
+	$mail->addAddress($email);
+	$mail->Subject = $subject;
+	$mail->msgHTML($message);
+
+	return $mail->send();
+}
 
 try {
 	$telegram = filter_input(INPUT_POST, 'telegram', FILTER_SANITIZE_STRING);
@@ -21,15 +49,7 @@ try {
 
 	$message = sprintf('User "%s" has requested code review', $telegram);
 
-	$headers = [
-		'From: "YourCodeReview.com" <noreply@yourcodereview.com>',
-		'Reply-To: "YourCodeReview.com" <noreply@yourcodereview.com>',
-		'X-Mailer: PHP/' . phpversion(),
-		'MIME-Version: 1.0',
-		'Content-type: text/html; charset=utf-8',
-	];
-
-	$result = mail($email, 'New review request', $message, implode("\r\n", $headers));
+	$result = sendEmail($email, 'New review request', $message);
 	if (!$result) {
 		throw new Exception('Failed to send email!');
 	}

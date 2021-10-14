@@ -1,1 +1,5 @@
 local.php
+
+/vendor/
+error_log
+composer.phar
