@@ -1,4 +1,4 @@
-# codereview_landing
+# landing
 
 ## Установка
 
