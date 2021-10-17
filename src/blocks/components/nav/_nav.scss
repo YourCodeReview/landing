@@ -1,0 +1,39 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include sm-down {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin-right: 38px;
+
+    @include md-down {
+      margin-right: 20px;
+      padding: 10px;
+    }
+
+    @include sm-down {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 113%;
+    text-transform: uppercase;
+    color: #34605C;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

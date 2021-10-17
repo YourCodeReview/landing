@@ -1,0 +1,128 @@
+@function rem($size) {
+    @return $size / 16px * 1rem;
+}
+
+
+// Desktop First
+$screen-xs-down: 576px;
+$screen-sm-down: 767px;
+$screen-md-down: 1023px;
+$screen-lg-down: 1200px;
+$screen-xl-down: 1366px;
+
+// Mobile First
+$screen-xs-up: 576px;
+$screen-sm-up: 768px;
+$screen-md-up: 992px;
+$screen-lg-up: 1200px;
+$screen-xl-up: 1850px; //1800
+
+// Desktop First
+@mixin xl-down {
+    @media only screen and (max-width: $screen-xl-down) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media only screen and (max-width: $screen-lg-down) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @media only screen and (max-width: $screen-md-down) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @media only screen and (max-width: $screen-sm-down) {
+        @content;
+    }
+}
+
+@mixin xs-down {
+    @media only screen and (max-width: $screen-xs-down) {
+        @content;
+    }
+}
+
+// Mobile First
+@mixin xs-up {
+    @media only screen and (min-width: $screen-xs-up) {
+        @content;
+    }
+}
+
+@mixin sm-up {
+    @media only screen and (min-width: $screen-sm-up) {
+        @content;
+    }
+}
+
+@mixin md-up {
+    @media only screen and (min-width: $screen-md-up) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @media only screen and (min-width: $screen-lg-up) {
+        @content;
+    }
+}
+
+@mixin xl-up {
+    @media only screen and (min-width: $screen-xl-up) {
+        @content;
+    }
+}
+
+
+@mixin placeholder {
+    &::placeholder {
+        @content;
+    }
+    
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    
+    &:-moz-placeholder {
+        @content;
+    }
+    
+    &::-moz-placeholder {
+        @content;
+    }
+    
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media only screen and (min-device-pixel-ratio: 2) {
+        @content;
+    }
+    
+    @media only screen and (min-resolution: 192dpi) {
+        @content;
+    }
+    
+    @media only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@mixin add_font($font_name, $font_folder, $font_type, $font_weight, $font_style) {
+    @font-face {
+        font-family: $font_name;
+        src: unquote("url(../fonts/" + $font_folder + "/" + $font_type + ".eot)");
+        src: unquote("url(../fonts/" + $font_folder + "/" + $font_type + ".otf)");
+        src: unquote("url(../fonts/" + $font_folder + "/" + $font_type + ".woff)");
+        font-weight: $font_weight;
+        font-style: $font_style;
+    }
+}

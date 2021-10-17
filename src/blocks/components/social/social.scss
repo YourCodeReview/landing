@@ -1,0 +1,42 @@
+.social {
+
+  &--mob {
+    padding: 0 15px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 15px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon {
+
+  }
+}
+
+.social--mob {
+  padding: 0 15px;
+
+  .social__item {
+    margin-right: 25px;
+  }
+}

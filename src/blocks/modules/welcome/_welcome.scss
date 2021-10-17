@@ -1,0 +1,159 @@
+.welcome {
+  position: relative;
+  padding-bottom: 50px;
+  background: linear-gradient(109.3deg, #554fb6 -0.77%, #2f2b70 24.75%, #2f2b70 79.82%, #554fb6 102.39%);
+  //clip-path: ellipse(100% 55% at 48% 44%);
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @include lg-down {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+
+    @include md-down {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: left;
+      padding-top: 20px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 500px;
+  }
+
+
+  &__img {
+    @include md-down {
+      margin-bottom: 40px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 1.2;
+    color: #e5e5e5;
+
+
+    @include sm-down {
+      margin-bottom: 32px;
+    }
+
+    @include xs-down {
+      font-size: 48px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    line-height: 1.4;
+    color: #e5e5e5;
+    font-weight: 400;
+
+    //color: #8a90b4;
+    margin-bottom: 32px;
+
+
+    @include sm-down {
+      font-size: 18px;
+    }
+  }
+
+  &__form {
+
+  }
+
+  &__form-text {
+    font-size: 26px;
+    line-height: 1.4;
+    color: #A9A9A9;
+    margin-bottom: 12px;
+
+    @include sm-down {
+      font-size: 18px;
+    }
+  }
+
+  &__form-group {
+    display: flex;
+    align-items: center;
+
+    @include xs-down {
+      flex-direction: column;
+    }
+  }
+
+  &__form-input-wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 4px;
+    background: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-right: 16px;
+
+    @include xs-down {
+      margin-right: 0;
+      margin-bottom: 8px;
+      max-width: 100%;
+    }
+  }
+
+  &__form-label {
+    display: block;
+    padding: 8px 12px;
+    border-right: 1px solid #2F2B70;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__form-input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 9px 12px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2F2B70;
+
+    &::placeholder {
+      color: rgba(47, 43, 112, 0.31);
+    }
+  }
+
+  &__form-button {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background-color: #00BFA6;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+    padding: 12px 28px;
+
+    @include xs-down {
+      width: 100%;
+    }
+  }
+}

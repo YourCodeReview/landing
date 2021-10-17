@@ -1,0 +1,68 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 20px 40px;
+    background: #FF8A18;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background: linear-gradient(180deg, #DD22FC 0%, #FF244C 100%);
+    border-radius: 10px;
+    z-index: 2;
+
+
+    
+    @include sm-down {
+        font-size: 14px;
+        line-height: 28px;
+        padding: 15px 30px;
+    }
+
+
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(180deg, #DD22FC 0%, #DD22FC 100%);
+    }
+
+}
+
+.download-btn {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 7px 18px 7px 13px;
+    background: #FF8A18;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background: linear-gradient(113.2deg, #3B4274 6.22%, #272E59 79.81%);
+    box-shadow: 4px 4px 16px #111533, -4px -4px 16px #20264D;
+    border-radius: 6px;
+    z-index: 2;
+
+    &--apple {
+        padding: 6px 18px 6px 13px;
+    }
+
+    &--google {
+        padding: 7px 13px 7px 8px;
+    }
+
+
+
+    &:hover {
+        background: linear-gradient(113.2deg, #404e9b 6.22%, #272E59 79.81%);
+        box-shadow: 4px 4px 16px #111533, -4px -4px 16px 6px #20264D;
+    }
+}

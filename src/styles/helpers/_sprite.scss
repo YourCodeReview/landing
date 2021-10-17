@@ -1,0 +1,27 @@
+//<svg class="icon icon-discord">
+//  <use xlink:href="#discord"></use>
+//</svg>
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    position: relative;
+    top: .1em;
+}
+
+.d-none {
+    display: none;
+}
+
+.icon-form-mail {
+    width:(18/14)*1em;
+}
+.icon-form-name {
+    width:(15/18)*1em;
+}
+.icon-form-phone {
+    width:(17/17)*1em;
+}
+
