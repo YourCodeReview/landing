@@ -78,8 +78,10 @@ $( document ).ready(function() {
         e.preventDefault();
         party.confetti(this);
         let telegram = $(".welcome__form-input").val();
+        let formData = new FormData();
+        formData.append('telegram', telegram);
         console.log('click', telegram);
-        axios.post('/request.php', {telegram: telegram})
+        axios.post('/request.php', formData)
         $('.welcome__form-done').css("display", "block");
     });
 });
