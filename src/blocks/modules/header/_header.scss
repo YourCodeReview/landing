@@ -88,6 +88,7 @@
   transition: .3s ease-in-out;
   margin-top: 120px;
   overflow-y: auto;
+  visibility: hidden;
   text-align: left;
 
   @include xs-down {

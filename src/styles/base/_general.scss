@@ -36,8 +36,8 @@ body {
   font-weight: 400;
   line-height: 1.15;
   font-family: $FontPrimary;
-  color: #D5DAFE;
-  background-color: #131733;
+  color: #2F2B70;
+  background-color: #E5E5E5;
   position: relative;
   min-width: 320px;
   -ms-overflow-style: scrollbar;
@@ -63,15 +63,6 @@ body {
   @include lg-down {
     max-width: 100%;
   }
-  //
-  //&--inner {
-  //  max-width: 1470px;
-  //  width: 100%;
-  //  padding-right: 15px;
-  //  padding-left: 15px;
-  //  margin-right: auto;
-  //  margin-left: auto;
-  //}
 }
 
 .container-fluid {
@@ -89,62 +80,50 @@ body {
 
 
 h1, .h1 {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 56px;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 1.2;
   font-family: $FontPrimary;
   margin: 0;
-
-  //@include lg-down {
-  //  font-size: 34px;
-  //  line-height: 45px;
-  //}
 
   @include sm-down {
     font-size: 32px;
     line-height: 38px;
   }
-
 }
 
 h2, .h2 {
   font-family: $FontPrimary;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  margin: 0;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 1.2;
 
-  //@include xs-down {
-  //  font-size: 26px;
-  //  line-height: 32px;
-  //}
+  @include lg-down {
+    font-size: 60px;
+  }
 
-  //@include xl-down {
-  //  font-size: 42px;
-  //  line-height: 46px;
-  //}
-  //
-  //@include sm-down {
-  //  font-size: 24px;
-  //  line-height: 28px;
-  //}
+  @include sm-down {
+    font-size: 42px;
+  }
 }
-//
+
 h3, .h3 {
-  color: #ffffff;
   margin: 0;
-
 }
-//
-//h4 {
-//  font-size: 20px;
-//  font-weight: 500;
-//  line-height: 28px;
-//  color: #ffffff;
-//  margin: 0;
-//}
+
+p, .text {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  @include lg-down {
+    font-size: 20px;
+  }
+
+  @include sm-down {
+    font-size: 18px;
+  }
+}
 
 .orange {
   color: #f4a600;
@@ -161,11 +140,3 @@ h3, .h3 {
 .overflow {
   overflow: hidden;
 }
-
-//.container {
-//    @include container();
-//    @include sm(max-width, rem(510));
-//    @include md(max-width, rem(690));
-//    @include lg(max-width, rem(930));
-//    @include xl(max-width, rem(1110));
-//}

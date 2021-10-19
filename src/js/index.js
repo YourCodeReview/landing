@@ -2,6 +2,8 @@ import './import/modules.js';
 // import './import/rellax.js';
 import './import/waypoints.js';
 import './import/_animate-css.js';
+// import party from "party-js";
+// const party = require("party-js");
 
 
 
@@ -70,7 +72,13 @@ $( document ).ready(function() {
     $(".stage__block").animated('fadeInUp');
 
 
-
+    document.querySelector(".welcome__form-button")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log('click');
+        party.confetti(this);
+        $('.welcome__form-done').css("display", "block");
+    });
 });
 
 $(".welcome__btn").click(function (e) {

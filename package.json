@@ -64,6 +64,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "party-js": "^2.1.2",
         "smart-grid": "^2.1.2"
     }
 }
