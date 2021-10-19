@@ -2,6 +2,7 @@ import './import/modules.js';
 // import './import/rellax.js';
 import './import/waypoints.js';
 import './import/_animate-css.js';
+import axios from "axios";
 // import party from "party-js";
 // const party = require("party-js");
 
@@ -75,8 +76,10 @@ $( document ).ready(function() {
     document.querySelector(".welcome__form-button")
       .addEventListener("click", function (e) {
         e.preventDefault();
-        console.log('click');
         party.confetti(this);
+        let username = $(".welcome__form-input").val();
+        console.log('click', username);
+        axios.post('/request.php', username)
         $('.welcome__form-done').css("display", "block");
     });
 });

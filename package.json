@@ -64,6 +64,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "axios": "^0.23.0",
         "party-js": "^2.1.2",
         "smart-grid": "^2.1.2"
     }
