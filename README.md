@@ -1,10 +1,8 @@
 # gulp-scss-starter
 
-![GitHub release](https://img.shields.io/github/release/andreyalexeich/gulp-scss-starter.svg)
-[![dependencies Status](https://david-dm.org/andreyalexeich/gulp-scss-starter/status.svg)](https://david-dm.org/andreyalexeich/gulp-scss-starter)
-[![devDependencies Status](https://david-dm.org/andreyalexeich/gulp-scss-starter/dev-status.svg)](https://david-dm.org/andreyalexeich/gulp-scss-starter?type=dev)
-![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-scss-starter.svg?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/andreyalexeich/gulp-scss-starter.svg?style=social)
+![GitHub release](https://img.shields.io/github/release/YourCodeReview/landing.svg)
+![GitHub stars](https://img.shields.io/github/stars/YourCodeReview/landing.svg?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/YourCodeReview/landing.svg?style=social)
 <a href="https://www.qiwi.com/n/ANDREYALEXEICH">
 <img src="https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-Qiwi-orange.svg">
 </a>
@@ -24,16 +22,31 @@
 * используется CSS-сетка [smart-grid](https://github.com/dmitry-lavrik/smart-grid) на основе Bootstrap для быстрой адаптивной вёрстки
 * используется жёсткий кодгайд
 
-## Установка
+## Установка Frontend
 * установите [NodeJS](https://nodejs.org/en/) (если требуется) и [Yarn](https://yarnpkg.com/en/docs/install)
-* скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/andreyalexeich/gulp-scss-starter.git```
+* скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/YourCodeReview/landing.git```
 * установите ```gulp``` глобально: ```yarn global add gulp-cli```
-* перейдите в скачанную папку со сборкой: ```cd gulp-scss-starter```
+* перейдите в скачанную папку со сборкой: ```cd landing```
 * скачайте необходимые зависимости: ```yarn```
 * чтобы начать работу, введите команду: ```yarn run dev``` (режим разработки)
 * чтобы собрать проект, введите команду ```yarn run build``` (режим сборки)
 
 Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером. Режим сборки предполагает оптимизацию проекта: сжатие изображений, минифицирование CSS и JS-файлов для загрузки на сервер.
+
+## Установка Backend
+
+* Клонировать проект
+* Установить `composer`
+* Выполнить `composer install`
+* Создать файл `local.php` с содержимым:
+```php
+<?php
+
+
+define('REQUESTS_EMAIL', 'youremail@gmail.com');
+
+
+```
 
 ## Файловая структура
 
@@ -208,7 +221,7 @@ entry: {
 Используйте [эту](https://github.com/andreyalexeich/gulp-pug-starter/) сборку.
 
 ## Нравится проект?
-Сообщайте мне о [багах](https://github.com/andreyalexeich/gulp-scss-starter/issues), ставьте звёздочку в правом верхнем углу, задонатьте мне на пиво :beer:
+Сообщайте мне о [багах](https://github.com/YourCodeReview/landing/issues), ставьте звёздочку в правом верхнем углу, задонатьте мне на пиво :beer:
 * [На Qiwi](https://www.qiwi.com/n/ANDREYALEXEICH)
 * [На PayPal](https://www.paypal.me/andreyalexeich)
 * [На карту - 5536 9137 5288 1934](https://www.tinkoff.ru/cardtocard/)
