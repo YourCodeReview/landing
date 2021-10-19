@@ -77,9 +77,9 @@ $( document ).ready(function() {
       .addEventListener("click", function (e) {
         e.preventDefault();
         party.confetti(this);
-        let username = $(".welcome__form-input").val();
-        console.log('click', username);
-        axios.post('/request.php', username)
+        let telegram = $(".welcome__form-input").val();
+        console.log('click', telegram);
+        axios.post('/request.php', {telegram: telegram})
         $('.welcome__form-done').css("display", "block");
     });
 });
