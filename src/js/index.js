@@ -72,15 +72,30 @@ $( document ).ready(function() {
     $(".benefit__block-wrap").animated('fadeInUp');
     $(".stage__block").animated('fadeInUp');
 
-    document.querySelectorAll(".welcome__form-button").forEach((el) => {
-        el.addEventListener("click", function (e) {
-            e.preventDefault();
-            party.confetti(this);
-            $('.welcome__form-done').addClass('welcome__form-done--active');
-            setTimeout(()=> {$('.welcome__form-done-btn').addClass('welcome__form-done-btn--active')}, 1000);
-        });
-    })
+    $(".welcome__form").submit(function (e) {
+        e.preventDefault();
+        party.confetti(this);
 
+        let telegram = $(".welcome__form-input").val();
+        let formData = new FormData();
+        formData.append('telegram', telegram);
+
+        fetch($(this).attr('action'), {
+            method: 'POST',
+            body: formData,
+        }).then(response => {
+            return response.json();
+        }).then(result => {
+            if (result.result) {
+                $('.welcome__form-done').addClass('welcome__form-done--active');
+                $('.welcome__form-done').css('display', 'block');
+                $('.welcome__form-done-btn').addClass('welcome__form-done-btn--active');
+            } else {
+                console.error('Error');
+            }
+        });
+
+    });
 });
 
 $(".welcome__btn").click(function (e) {
