@@ -104,6 +104,10 @@
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 
+    @include xs-down {
+      padding: 40px 15px 100px;
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -130,7 +134,7 @@
 
     &-text {
       width: 100%;
-      color: #FFFFFF;
+      color: rgba(255, 255, 255, 0.85);
       margin-bottom: 20px;
       text-align: center;
 
