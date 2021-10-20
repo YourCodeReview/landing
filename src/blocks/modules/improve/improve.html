@@ -1,18 +1,53 @@
-<section class="welcome" id="welcome">
+<section class="improve">
     <div class="container">
-        @@include("../header/header.html")
-        <div class="welcome__wrap">
-            <div class="welcome__content">
-                <h1 class="welcome__title">
-                    Your <br> codereview
-                </h1>
-                <h3 class="welcome__subtitle">
-                    Первое русскоязычное код-ревью комьюнити.
-                </h3>
-                <form action="#" class="welcome__form">
-                    <p class="welcome__form-text">
-                        Хотите прислать свой код на ревью?
+        <div class="improve__wrap">
+            <div class="improve__block">
+                <div class="improve__content">
+                    <h2 class="improve__title">
+                        Улучшай качество кода
+                    </h2>
+                    <p class="improve__text">
+                        Десятки разработчиков еженедельно улучшают навыки программирования и качество своего кода вместе с нами.
                     </p>
+                </div>
+                <div class="improve__image">
+                    <img src="img/main/improve/improve-1.png" alt="iphone">
+                </div>
+            </div>
+            <div class="improve__block improve__block--even">
+                <div class="improve__image">
+                    <img src="img/main/improve/improve-2.png" alt="iphone">
+                </div>
+                <div class="improve__content">
+                    <p class="improve__text">
+                        Более <span>500 комментариев</span> оставляют ревьюеры каждый месяц, помогая другим улучшать свой код.
+                    </p>
+                </div>
+            </div>
+            <div class="improve__block">
+                <div class="improve__content">
+                    <p class="improve__text">
+                        ⭐ <span>8,7</span> - средняя оценка полезности комментариев.
+                    </p>
+                    <p class="improve__text">
+                        Десятки <span>довольных разработчиков</span>, кто уже применяет полученные знания на практике и чей код стал значительно лучше.
+                    </p>
+                </div>
+                <div class="improve__image">
+                    <img src="img/main/improve/improve-1.png" alt="iphone">
+                </div>
+            </div>
+            <div class="improve__submit">
+                <h3 class="improve__submit-title">
+                    Хотите прислать свой код на ревью?
+                </h3>
+                <p class="improve__submit-text">
+                    Оставьте свой ник в telegram, и мы поможем вам разместить ваш код на ревью.
+                </p>
+                <p class="improve__submit-text">
+                    <span>Это бесплатно.</span>
+                </p>
+                <form action="#" class="welcome__form">
                     <div class="welcome__form-group">
                         <div class="welcome__form-input-wrap">
                             <label for="telegram" class="welcome__form-label">
@@ -38,9 +73,7 @@
                     </div>
                 </form>
             </div>
-            <div class="welcome__img">
-                <img src="img/main/welcome/community.svg" alt="iphone">
-            </div>
         </div>
+        @@include("../footer/footer.html")
     </div>
 </section>

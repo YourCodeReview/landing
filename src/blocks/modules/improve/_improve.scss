@@ -1,0 +1,143 @@
+.improve {
+  padding-top: 120px;
+  background: linear-gradient(109.3deg, #554FB6 -0.77%, #2F2B70 24.75%, #2F2B70 79.82%, #554FB6 102.39%);
+  background-blend-mode: multiply;
+
+  @include md-down {
+    padding-top: 80px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 200px;
+  }
+
+  &__block {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    margin-bottom: 60px;
+
+    @include md-down {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+
+    &--even {
+      @include md-down {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__image {
+    @include md-down {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    max-width: 550px;
+
+    @include lg-down {
+      max-width: 500px;
+    }
+  }
+
+  &__title {
+    color: #FFFFFF;
+    margin-bottom: 24px;
+
+    @include sm-down {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    color: #FFFFFF;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    a {
+      font-weight: 700;
+      transition: all 0.2s ease-in-out;
+      color: #FFFFFF;
+
+      &:hover {
+        color: #00bfa6;
+      }
+    }
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 40px 40px 100px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(103.59deg, rgba(47, 43, 112, 0.6) 0.27%, rgba(255, 255, 255, 0.06) 100.98%);
+      backdrop-filter: blur(10px) saturate(100%) contrast(70%) brightness(130%);
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: -20px;
+    }
+
+    &-title {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 40px;
+    }
+
+    &-text {
+      width: 100%;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      text-align: center;
+
+      span {
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  }
+}

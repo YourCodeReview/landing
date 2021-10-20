@@ -83,7 +83,7 @@
   &__form-text {
     font-size: 26px;
     line-height: 1.4;
-    color: #A9A9A9;
+    color: #a9a9a9;
     margin-bottom: 12px;
 
     @include sm-down {
@@ -122,7 +122,7 @@
   &__form-label {
     display: block;
     padding: 8px 12px;
-    border-right: 1px solid #2F2B70;
+    border-right: 1px solid #2f2b70;
 
     svg {
       display: block;
@@ -136,7 +136,7 @@
     padding: 9px 12px;
     font-size: 20px;
     line-height: 24px;
-    color: #2F2B70;
+    color: #2f2b70;
 
     &::placeholder {
       color: rgba(47, 43, 112, 0.31);
@@ -147,8 +147,8 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
-    color: #FFFFFF;
-    background-color: #00BFA6;
+    color: #ffffff;
+    background-color: #00bfa6;
     border-radius: 10px;
     border: 0;
     outline: none;
@@ -166,6 +166,7 @@
   }
 
   &__form-done {
+    z-index: 99;
     display: none;
     position: absolute;
     top: 0;
@@ -173,13 +174,63 @@
     bottom: 0;
     left: 0;
     text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 42px;
-    color: #2F2B70;
     padding: 4px;
     background: #ffffff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__form-done-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 42px;
+    color: #2f2b70;
+  }
+
+
+  &__form-done-btn {
+    display: flex;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    padding: 12px 28px;
+    transform: translateY(0);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+    background-color: #00bfa6;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    opacity: 0;
+
+    svg {
+      margin-left: 8px;
+    }
+
+    &:hover, &:active {
+      background-color: #00e3c4;
+    }
+
+    @include xs-down {
+      width: 100%;
+    }
+
+    &--active {
+      opacity: 1;
+      transform: translateY(60px);
+      transition: all 0.4s ease-in;
+    }
   }
 }
