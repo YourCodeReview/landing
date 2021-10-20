@@ -1,13 +1,6 @@
 import './import/modules.js';
-// import './import/rellax.js';
 import './import/waypoints.js';
 import './import/_animate-css.js';
-// import axios from "axios";
-// import party from "party-js";
-// const party = require("party-js");
-
-
-
 
 $( document ).ready(function() {
 
@@ -81,42 +74,34 @@ $( document ).ready(function() {
         });
     })
 
-});
+    // $('#request-form').submit(function (e) {
+    //     e.preventDefault();
+    //     var formData = new FormData(e.target);
+    //     console.log($(this));
+    //     $.ajax({
+    //         url: 'mail.php',
+    //         type: 'POST',
+    //         data: formData,
+    //         success: function success(data) {
+    //             if (data.trim() === 'OK') {
+    //                 console.log(data);
+    //                 $('.popup').fadeOut(400); // $('#popup').css("display","none");
+    //                 $('.popup').css("display", "none");
+    //                 $('#done-popup').fadeIn(400); // $('#done').css("display","block");
+    //                 $('#done-popup').css("display", "flex");
+    //             } else {
+    //                 console.error(data);
+    //                 $('.popup').fadeOut(400);
+    //                 $('.popup').css("display", "none");
+    //                 $('#error-popup').fadeIn(400);
+    //                 $('#error-popup').css("display", "flex");
+    //             }
+    //         },
+    //         cache: false,
+    //         contentType: false,
+    //         processData: false
+    //     });
+    //     return false;
+    // });
 
-$(".welcome__btn").click(function (e) {
-    e.preventDefault();
-    $('html').addClass('overflow');
-    $(".popup").fadeIn(300, function () {
-        $(this).focus();
-    });
-});
-$('.popup__close').click(function () {
-    $(".popup").fadeOut(300);
-    $('html').removeClass('overflow');
-});
-
-$(document).mouseup(function (e) {
-    if ($(".popup__wrap").has(e.target).length === 0) {
-        $(".popup").fadeOut(300);
-    }
-
-    if ($(".test__wrap").has(e.target).length === 0) {
-        $(".test").fadeOut(300);
-    }
-});
-
-
-$(".request__form-btn").click(function (e) {
-    e.preventDefault();
-    $(".request__form-message--ok").fadeIn(300, function () {
-        $(this).focus();
-    });
-});
-
-$(".popup__btn").click(function (e) {
-    e.preventDefault();
-    $(".popup__group-input-wrap ").fadeOut(300);
-    $(".popup__form-message--ok").fadeIn(300, function () {
-        $(this).focus();
-    });
 });
