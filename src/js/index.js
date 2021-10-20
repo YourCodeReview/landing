@@ -67,9 +67,9 @@ $( document ).ready(function() {
 
     $(".welcome__form").submit(function (e) {
         e.preventDefault();
-        party.confetti(this);
 
-        let telegram = $(".welcome__form-input").val();
+        let telegram = $(this).find(".welcome__form-input").val();
+
         let formData = new FormData();
         formData.append('telegram', telegram);
 
@@ -79,6 +79,7 @@ $( document ).ready(function() {
         }).then(response => {
             return response.json();
         }).then(result => {
+            party.confetti(this);
             if (result.result) {
                 $('.welcome__form-done').addClass('welcome__form-done--active');
                 $('.welcome__form-done').css('display', 'block');
@@ -87,6 +88,9 @@ $( document ).ready(function() {
                 console.error('Error');
                 // TODO: add display error message
             }
+        }).catch(error => {
+            party.confetti(this);
+            console.error('Error:', error);
         });
     });
 });
