@@ -16,6 +16,7 @@ package-lock.json
 
 local.php
 
+/dist/
 /vendor/
 error_log
 composer.phar
