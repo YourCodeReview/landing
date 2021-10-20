@@ -1,8 +1,992 @@
-!function(t){var e={};function o(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,o),i.l=!0,i.exports}o.m=t,o.c=e,o.d=function(t,e,n){o.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},o.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},o.t=function(t,e){if(1&e&&(t=o(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)o.d(n,i,function(e){return t[e]}.bind(null,i));return n},o.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return o.d(e,"a",e),e},o.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},o.p="/",o(o.s=3)}([function(t,e){},function(t,e){
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/blocks/modules/header/header.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/modules/header/header.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./src/js/import/_animate-css.js":
+/*!***************************************!*\
+  !*** ./src/js/import/_animate-css.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function ($) {
+  $.fn.animated = function (inEffect) {
+    $(this).each(function () {
+      var ths = $(this);
+      ths.css("opacity", "0").addClass("animated").waypoint(function (dir) {
+        if (dir === "down") {
+          ths.addClass(inEffect).css("opacity", "1");
+        }
+
+        ;
+      }, {
+        offset: "90%"
+      });
+    });
+  };
+})(jQuery);
+
+/***/ }),
+
+/***/ "./src/js/import/modules.js":
+/*!**********************************!*\
+  !*** ./src/js/import/modules.js ***!
+  \**********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
+/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/***/ }),
+
+/***/ "./src/js/import/waypoints.js":
+/*!************************************!*\
+  !*** ./src/js/import/waypoints.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
 /*!
 Waypoints - 4.0.1
 Copyright © 2011-2016 Caleb Troughton
 Licensed under the MIT license.
 https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 */
-!function(){"use strict";var t=0,e={};function o(n){if(!n)throw new Error("No options passed to Waypoint constructor");if(!n.element)throw new Error("No element option passed to Waypoint constructor");if(!n.handler)throw new Error("No handler option passed to Waypoint constructor");this.key="waypoint-"+t,this.options=o.Adapter.extend({},o.defaults,n),this.element=this.options.element,this.adapter=new o.Adapter(this.element),this.callback=n.handler,this.axis=this.options.horizontal?"horizontal":"vertical",this.enabled=this.options.enabled,this.triggerPoint=null,this.group=o.Group.findOrCreate({name:this.options.group,axis:this.axis}),this.context=o.Context.findOrCreateByElement(this.options.context),o.offsetAliases[this.options.offset]&&(this.options.offset=o.offsetAliases[this.options.offset]),this.group.add(this),this.context.add(this),e[this.key]=this,t+=1}o.prototype.queueTrigger=function(t){this.group.queueTrigger(this,t)},o.prototype.trigger=function(t){this.enabled&&this.callback&&this.callback.apply(this,t)},o.prototype.destroy=function(){this.context.remove(this),this.group.remove(this),delete e[this.key]},o.prototype.disable=function(){return this.enabled=!1,this},o.prototype.enable=function(){return this.context.refresh(),this.enabled=!0,this},o.prototype.next=function(){return this.group.next(this)},o.prototype.previous=function(){return this.group.previous(this)},o.invokeAll=function(t){var o=[];for(var n in e)o.push(e[n]);for(var i=0,r=o.length;i<r;i++)o[i][t]()},o.destroyAll=function(){o.invokeAll("destroy")},o.disableAll=function(){o.invokeAll("disable")},o.enableAll=function(){for(var t in o.Context.refreshAll(),e)e[t].enabled=!0;return this},o.refreshAll=function(){o.Context.refreshAll()},o.viewportHeight=function(){return window.innerHeight||document.documentElement.clientHeight},o.viewportWidth=function(){return document.documentElement.clientWidth},o.adapters=[],o.defaults={context:window,continuous:!0,enabled:!0,group:"default",horizontal:!1,offset:0},o.offsetAliases={"bottom-in-view":function(){return this.context.innerHeight()-this.adapter.outerHeight()},"right-in-view":function(){return this.context.innerWidth()-this.adapter.outerWidth()}},window.Waypoint=o}(),function(){"use strict";function t(t){window.setTimeout(t,1e3/60)}var e=0,o={},n=window.Waypoint,i=window.onload;function r(t){this.element=t,this.Adapter=n.Adapter,this.adapter=new this.Adapter(t),this.key="waypoint-context-"+e,this.didScroll=!1,this.didResize=!1,this.oldScroll={x:this.adapter.scrollLeft(),y:this.adapter.scrollTop()},this.waypoints={vertical:{},horizontal:{}},t.waypointContextKey=this.key,o[t.waypointContextKey]=this,e+=1,n.windowContext||(n.windowContext=!0,n.windowContext=new r(window)),this.createThrottledScrollHandler(),this.createThrottledResizeHandler()}r.prototype.add=function(t){var e=t.options.horizontal?"horizontal":"vertical";this.waypoints[e][t.key]=t,this.refresh()},r.prototype.checkEmpty=function(){var t=this.Adapter.isEmptyObject(this.waypoints.horizontal),e=this.Adapter.isEmptyObject(this.waypoints.vertical),n=this.element==this.element.window;t&&e&&!n&&(this.adapter.off(".waypoints"),delete o[this.key])},r.prototype.createThrottledResizeHandler=function(){var t=this;function e(){t.handleResize(),t.didResize=!1}this.adapter.on("resize.waypoints",(function(){t.didResize||(t.didResize=!0,n.requestAnimationFrame(e))}))},r.prototype.createThrottledScrollHandler=function(){var t=this;function e(){t.handleScroll(),t.didScroll=!1}this.adapter.on("scroll.waypoints",(function(){t.didScroll&&!n.isTouch||(t.didScroll=!0,n.requestAnimationFrame(e))}))},r.prototype.handleResize=function(){n.Context.refreshAll()},r.prototype.handleScroll=function(){var t={},e={horizontal:{newScroll:this.adapter.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.adapter.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};for(var o in e){var n=e[o],i=n.newScroll>n.oldScroll?n.forward:n.backward;for(var r in this.waypoints[o]){var s=this.waypoints[o][r];if(null!==s.triggerPoint){var a=n.oldScroll<s.triggerPoint,l=n.newScroll>=s.triggerPoint;(a&&l||!a&&!l)&&(s.queueTrigger(i),t[s.group.id]=s.group)}}}for(var c in t)t[c].flushTriggers();this.oldScroll={x:e.horizontal.newScroll,y:e.vertical.newScroll}},r.prototype.innerHeight=function(){return this.element==this.element.window?n.viewportHeight():this.adapter.innerHeight()},r.prototype.remove=function(t){delete this.waypoints[t.axis][t.key],this.checkEmpty()},r.prototype.innerWidth=function(){return this.element==this.element.window?n.viewportWidth():this.adapter.innerWidth()},r.prototype.destroy=function(){var t=[];for(var e in this.waypoints)for(var o in this.waypoints[e])t.push(this.waypoints[e][o]);for(var n=0,i=t.length;n<i;n++)t[n].destroy()},r.prototype.refresh=function(){var t,e=this.element==this.element.window,o=e?void 0:this.adapter.offset(),i={};for(var r in this.handleScroll(),t={horizontal:{contextOffset:e?0:o.left,contextScroll:e?0:this.oldScroll.x,contextDimension:this.innerWidth(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:e?0:o.top,contextScroll:e?0:this.oldScroll.y,contextDimension:this.innerHeight(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}}){var s=t[r];for(var a in this.waypoints[r]){var l,c,u,p,d=this.waypoints[r][a],h=d.options.offset,f=d.triggerPoint,w=0,y=null==f;d.element!==d.element.window&&(w=d.adapter.offset()[s.offsetProp]),"function"==typeof h?h=h.apply(d):"string"==typeof h&&(h=parseFloat(h),d.options.offset.indexOf("%")>-1&&(h=Math.ceil(s.contextDimension*h/100))),l=s.contextScroll-s.contextOffset,d.triggerPoint=Math.floor(w+l-h),c=f<s.oldScroll,u=d.triggerPoint>=s.oldScroll,p=!c&&!u,!y&&(c&&u)?(d.queueTrigger(s.backward),i[d.group.id]=d.group):(!y&&p||y&&s.oldScroll>=d.triggerPoint)&&(d.queueTrigger(s.forward),i[d.group.id]=d.group)}}return n.requestAnimationFrame((function(){for(var t in i)i[t].flushTriggers()})),this},r.findOrCreateByElement=function(t){return r.findByElement(t)||new r(t)},r.refreshAll=function(){for(var t in o)o[t].refresh()},r.findByElement=function(t){return o[t.waypointContextKey]},window.onload=function(){i&&i(),r.refreshAll()},n.requestAnimationFrame=function(e){(window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||t).call(window,e)},n.Context=r}(),function(){"use strict";function t(t,e){return t.triggerPoint-e.triggerPoint}function e(t,e){return e.triggerPoint-t.triggerPoint}var o={vertical:{},horizontal:{}},n=window.Waypoint;function i(t){this.name=t.name,this.axis=t.axis,this.id=this.name+"-"+this.axis,this.waypoints=[],this.clearTriggerQueues(),o[this.axis][this.name]=this}i.prototype.add=function(t){this.waypoints.push(t)},i.prototype.clearTriggerQueues=function(){this.triggerQueues={up:[],down:[],left:[],right:[]}},i.prototype.flushTriggers=function(){for(var o in this.triggerQueues){var n=this.triggerQueues[o],i="up"===o||"left"===o;n.sort(i?e:t);for(var r=0,s=n.length;r<s;r+=1){var a=n[r];(a.options.continuous||r===n.length-1)&&a.trigger([o])}}this.clearTriggerQueues()},i.prototype.next=function(e){this.waypoints.sort(t);var o=n.Adapter.inArray(e,this.waypoints);return o===this.waypoints.length-1?null:this.waypoints[o+1]},i.prototype.previous=function(e){this.waypoints.sort(t);var o=n.Adapter.inArray(e,this.waypoints);return o?this.waypoints[o-1]:null},i.prototype.queueTrigger=function(t,e){this.triggerQueues[e].push(t)},i.prototype.remove=function(t){var e=n.Adapter.inArray(t,this.waypoints);e>-1&&this.waypoints.splice(e,1)},i.prototype.first=function(){return this.waypoints[0]},i.prototype.last=function(){return this.waypoints[this.waypoints.length-1]},i.findOrCreate=function(t){return o[t.axis][t.name]||new i(t)},n.Group=i}(),function(){"use strict";var t=window.jQuery,e=window.Waypoint;function o(e){this.$element=t(e)}t.each(["innerHeight","innerWidth","off","offset","on","outerHeight","outerWidth","scrollLeft","scrollTop"],(function(t,e){o.prototype[e]=function(){var t=Array.prototype.slice.call(arguments);return this.$element[e].apply(this.$element,t)}})),t.each(["extend","inArray","isEmptyObject"],(function(e,n){o[n]=t[n]})),e.adapters.push({name:"jquery",Adapter:o}),e.Adapter=o}(),function(){"use strict";var t=window.Waypoint;function e(e){return function(){var o=[],n=arguments[0];return e.isFunction(arguments[0])&&((n=e.extend({},arguments[1])).handler=arguments[0]),this.each((function(){var i=e.extend({},n,{element:this});"string"==typeof i.context&&(i.context=e(this).closest(i.context)[0]),o.push(new t(i))})),o}}window.jQuery&&(window.jQuery.fn.waypoint=e(window.jQuery)),window.Zepto&&(window.Zepto.fn.waypoint=e(window.Zepto))}()},function(t,e){!function(t){t.fn.animated=function(e){t(this).each((function(){var o=t(this);o.css("opacity","0").addClass("animated").waypoint((function(t){"down"===t&&o.addClass(e).css("opacity","1")}),{offset:"90%"})}))}}(jQuery)},function(t,e,o){"use strict";o.r(e);o(0),o(1),o(2);$(document).ready((function(){var t=document.querySelector(".hamburger"),e=document.querySelector(".header-mobile");function o(){console.log("close1"),$("html").removeClass("overflow"),$(".header-mobile__circle").removeClass("expand"),$(".header-mobile__nav-item").removeClass("animate"),$(".header-mobile").css("visibility","hidden"),console.log("close2")}t.addEventListener("click",(function(){t.classList.toggle("is-active"),e.classList.toggle("opened"),t.classList.contains("is-active")?(console.log("open1"),$("html").addClass("overflow"),$(".header-mobile__circle").addClass("expand"),$(".header-mobile__nav-item").addClass("animate"),$(".header-mobile").css("visibility","visible"),console.log("open2")):o()})),$(".header-mobile__nav-link").on("click",(function(e){console.log("close menu by link"),t.classList.toggle("is-active"),o()})),$(".header__nav-link, .footer__up-btn, .header-mobile__nav-link").on("click",(function(){var t=$(this).attr("href");return void 0!==t&&""!==t&&$("body,html").animate({scrollTop:$(t).offset().top},500),!1})),$(".benefit__block-wrap").animated("fadeInUp"),$(".stage__block").animated("fadeInUp"),document.querySelectorAll(".welcome__form-button").forEach((function(t){t.addEventListener("click",(function(t){t.preventDefault(),party.confetti(this),$(".welcome__form-done").addClass("welcome__form-done--active"),setTimeout((function(){$(".welcome__form-done-btn").addClass("welcome__form-done-btn--active")}),1e3)}))}))})),$(".welcome__btn").click((function(t){t.preventDefault(),$("html").addClass("overflow"),$(".popup").fadeIn(300,(function(){$(this).focus()}))})),$(".popup__close").click((function(){$(".popup").fadeOut(300),$("html").removeClass("overflow")})),$(document).mouseup((function(t){0===$(".popup__wrap").has(t.target).length&&$(".popup").fadeOut(300),0===$(".test__wrap").has(t.target).length&&$(".test").fadeOut(300)})),$(".request__form-btn").click((function(t){t.preventDefault(),$(".request__form-message--ok").fadeIn(300,(function(){$(this).focus()}))})),$(".popup__btn").click((function(t){t.preventDefault(),$(".popup__group-input-wrap ").fadeOut(300),$(".popup__form-message--ok").fadeIn(300,(function(){$(this).focus()}))}))}]);
+(function () {
+  'use strict';
+
+  var keyCounter = 0;
+  var allWaypoints = {};
+  /* http://imakewebthings.com/waypoints/api/waypoint */
+
+  function Waypoint(options) {
+    if (!options) {
+      throw new Error('No options passed to Waypoint constructor');
+    }
+
+    if (!options.element) {
+      throw new Error('No element option passed to Waypoint constructor');
+    }
+
+    if (!options.handler) {
+      throw new Error('No handler option passed to Waypoint constructor');
+    }
+
+    this.key = 'waypoint-' + keyCounter;
+    this.options = Waypoint.Adapter.extend({}, Waypoint.defaults, options);
+    this.element = this.options.element;
+    this.adapter = new Waypoint.Adapter(this.element);
+    this.callback = options.handler;
+    this.axis = this.options.horizontal ? 'horizontal' : 'vertical';
+    this.enabled = this.options.enabled;
+    this.triggerPoint = null;
+    this.group = Waypoint.Group.findOrCreate({
+      name: this.options.group,
+      axis: this.axis
+    });
+    this.context = Waypoint.Context.findOrCreateByElement(this.options.context);
+
+    if (Waypoint.offsetAliases[this.options.offset]) {
+      this.options.offset = Waypoint.offsetAliases[this.options.offset];
+    }
+
+    this.group.add(this);
+    this.context.add(this);
+    allWaypoints[this.key] = this;
+    keyCounter += 1;
+  }
+  /* Private */
+
+
+  Waypoint.prototype.queueTrigger = function (direction) {
+    this.group.queueTrigger(this, direction);
+  };
+  /* Private */
+
+
+  Waypoint.prototype.trigger = function (args) {
+    if (!this.enabled) {
+      return;
+    }
+
+    if (this.callback) {
+      this.callback.apply(this, args);
+    }
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/destroy */
+
+
+  Waypoint.prototype.destroy = function () {
+    this.context.remove(this);
+    this.group.remove(this);
+    delete allWaypoints[this.key];
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/disable */
+
+
+  Waypoint.prototype.disable = function () {
+    this.enabled = false;
+    return this;
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/enable */
+
+
+  Waypoint.prototype.enable = function () {
+    this.context.refresh();
+    this.enabled = true;
+    return this;
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/next */
+
+
+  Waypoint.prototype.next = function () {
+    return this.group.next(this);
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/previous */
+
+
+  Waypoint.prototype.previous = function () {
+    return this.group.previous(this);
+  };
+  /* Private */
+
+
+  Waypoint.invokeAll = function (method) {
+    var allWaypointsArray = [];
+
+    for (var waypointKey in allWaypoints) {
+      allWaypointsArray.push(allWaypoints[waypointKey]);
+    }
+
+    for (var i = 0, end = allWaypointsArray.length; i < end; i++) {
+      allWaypointsArray[i][method]();
+    }
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/destroy-all */
+
+
+  Waypoint.destroyAll = function () {
+    Waypoint.invokeAll('destroy');
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/disable-all */
+
+
+  Waypoint.disableAll = function () {
+    Waypoint.invokeAll('disable');
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/enable-all */
+
+
+  Waypoint.enableAll = function () {
+    Waypoint.Context.refreshAll();
+
+    for (var waypointKey in allWaypoints) {
+      allWaypoints[waypointKey].enabled = true;
+    }
+
+    return this;
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/refresh-all */
+
+
+  Waypoint.refreshAll = function () {
+    Waypoint.Context.refreshAll();
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/viewport-height */
+
+
+  Waypoint.viewportHeight = function () {
+    return window.innerHeight || document.documentElement.clientHeight;
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/viewport-width */
+
+
+  Waypoint.viewportWidth = function () {
+    return document.documentElement.clientWidth;
+  };
+
+  Waypoint.adapters = [];
+  Waypoint.defaults = {
+    context: window,
+    continuous: true,
+    enabled: true,
+    group: 'default',
+    horizontal: false,
+    offset: 0
+  };
+  Waypoint.offsetAliases = {
+    'bottom-in-view': function bottomInView() {
+      return this.context.innerHeight() - this.adapter.outerHeight();
+    },
+    'right-in-view': function rightInView() {
+      return this.context.innerWidth() - this.adapter.outerWidth();
+    }
+  };
+  window.Waypoint = Waypoint;
+})();
+
+(function () {
+  'use strict';
+
+  function requestAnimationFrameShim(callback) {
+    window.setTimeout(callback, 1000 / 60);
+  }
+
+  var keyCounter = 0;
+  var contexts = {};
+  var Waypoint = window.Waypoint;
+  var oldWindowLoad = window.onload;
+  /* http://imakewebthings.com/waypoints/api/context */
+
+  function Context(element) {
+    this.element = element;
+    this.Adapter = Waypoint.Adapter;
+    this.adapter = new this.Adapter(element);
+    this.key = 'waypoint-context-' + keyCounter;
+    this.didScroll = false;
+    this.didResize = false;
+    this.oldScroll = {
+      x: this.adapter.scrollLeft(),
+      y: this.adapter.scrollTop()
+    };
+    this.waypoints = {
+      vertical: {},
+      horizontal: {}
+    };
+    element.waypointContextKey = this.key;
+    contexts[element.waypointContextKey] = this;
+    keyCounter += 1;
+
+    if (!Waypoint.windowContext) {
+      Waypoint.windowContext = true;
+      Waypoint.windowContext = new Context(window);
+    }
+
+    this.createThrottledScrollHandler();
+    this.createThrottledResizeHandler();
+  }
+  /* Private */
+
+
+  Context.prototype.add = function (waypoint) {
+    var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical';
+    this.waypoints[axis][waypoint.key] = waypoint;
+    this.refresh();
+  };
+  /* Private */
+
+
+  Context.prototype.checkEmpty = function () {
+    var horizontalEmpty = this.Adapter.isEmptyObject(this.waypoints.horizontal);
+    var verticalEmpty = this.Adapter.isEmptyObject(this.waypoints.vertical);
+    var isWindow = this.element == this.element.window;
+
+    if (horizontalEmpty && verticalEmpty && !isWindow) {
+      this.adapter.off('.waypoints');
+      delete contexts[this.key];
+    }
+  };
+  /* Private */
+
+
+  Context.prototype.createThrottledResizeHandler = function () {
+    var self = this;
+
+    function resizeHandler() {
+      self.handleResize();
+      self.didResize = false;
+    }
+
+    this.adapter.on('resize.waypoints', function () {
+      if (!self.didResize) {
+        self.didResize = true;
+        Waypoint.requestAnimationFrame(resizeHandler);
+      }
+    });
+  };
+  /* Private */
+
+
+  Context.prototype.createThrottledScrollHandler = function () {
+    var self = this;
+
+    function scrollHandler() {
+      self.handleScroll();
+      self.didScroll = false;
+    }
+
+    this.adapter.on('scroll.waypoints', function () {
+      if (!self.didScroll || Waypoint.isTouch) {
+        self.didScroll = true;
+        Waypoint.requestAnimationFrame(scrollHandler);
+      }
+    });
+  };
+  /* Private */
+
+
+  Context.prototype.handleResize = function () {
+    Waypoint.Context.refreshAll();
+  };
+  /* Private */
+
+
+  Context.prototype.handleScroll = function () {
+    var triggeredGroups = {};
+    var axes = {
+      horizontal: {
+        newScroll: this.adapter.scrollLeft(),
+        oldScroll: this.oldScroll.x,
+        forward: 'right',
+        backward: 'left'
+      },
+      vertical: {
+        newScroll: this.adapter.scrollTop(),
+        oldScroll: this.oldScroll.y,
+        forward: 'down',
+        backward: 'up'
+      }
+    };
+
+    for (var axisKey in axes) {
+      var axis = axes[axisKey];
+      var isForward = axis.newScroll > axis.oldScroll;
+      var direction = isForward ? axis.forward : axis.backward;
+
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey];
+
+        if (waypoint.triggerPoint === null) {
+          continue;
+        }
+
+        var wasBeforeTriggerPoint = axis.oldScroll < waypoint.triggerPoint;
+        var nowAfterTriggerPoint = axis.newScroll >= waypoint.triggerPoint;
+        var crossedForward = wasBeforeTriggerPoint && nowAfterTriggerPoint;
+        var crossedBackward = !wasBeforeTriggerPoint && !nowAfterTriggerPoint;
+
+        if (crossedForward || crossedBackward) {
+          waypoint.queueTrigger(direction);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        }
+      }
+    }
+
+    for (var groupKey in triggeredGroups) {
+      triggeredGroups[groupKey].flushTriggers();
+    }
+
+    this.oldScroll = {
+      x: axes.horizontal.newScroll,
+      y: axes.vertical.newScroll
+    };
+  };
+  /* Private */
+
+
+  Context.prototype.innerHeight = function () {
+    /*eslint-disable eqeqeq */
+    if (this.element == this.element.window) {
+      return Waypoint.viewportHeight();
+    }
+    /*eslint-enable eqeqeq */
+
+
+    return this.adapter.innerHeight();
+  };
+  /* Private */
+
+
+  Context.prototype.remove = function (waypoint) {
+    delete this.waypoints[waypoint.axis][waypoint.key];
+    this.checkEmpty();
+  };
+  /* Private */
+
+
+  Context.prototype.innerWidth = function () {
+    /*eslint-disable eqeqeq */
+    if (this.element == this.element.window) {
+      return Waypoint.viewportWidth();
+    }
+    /*eslint-enable eqeqeq */
+
+
+    return this.adapter.innerWidth();
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/context-destroy */
+
+
+  Context.prototype.destroy = function () {
+    var allWaypoints = [];
+
+    for (var axis in this.waypoints) {
+      for (var waypointKey in this.waypoints[axis]) {
+        allWaypoints.push(this.waypoints[axis][waypointKey]);
+      }
+    }
+
+    for (var i = 0, end = allWaypoints.length; i < end; i++) {
+      allWaypoints[i].destroy();
+    }
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/context-refresh */
+
+
+  Context.prototype.refresh = function () {
+    /*eslint-disable eqeqeq */
+    var isWindow = this.element == this.element.window;
+    /*eslint-enable eqeqeq */
+
+    var contextOffset = isWindow ? undefined : this.adapter.offset();
+    var triggeredGroups = {};
+    var axes;
+    this.handleScroll();
+    axes = {
+      horizontal: {
+        contextOffset: isWindow ? 0 : contextOffset.left,
+        contextScroll: isWindow ? 0 : this.oldScroll.x,
+        contextDimension: this.innerWidth(),
+        oldScroll: this.oldScroll.x,
+        forward: 'right',
+        backward: 'left',
+        offsetProp: 'left'
+      },
+      vertical: {
+        contextOffset: isWindow ? 0 : contextOffset.top,
+        contextScroll: isWindow ? 0 : this.oldScroll.y,
+        contextDimension: this.innerHeight(),
+        oldScroll: this.oldScroll.y,
+        forward: 'down',
+        backward: 'up',
+        offsetProp: 'top'
+      }
+    };
+
+    for (var axisKey in axes) {
+      var axis = axes[axisKey];
+
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey];
+        var adjustment = waypoint.options.offset;
+        var oldTriggerPoint = waypoint.triggerPoint;
+        var elementOffset = 0;
+        var freshWaypoint = oldTriggerPoint == null;
+        var contextModifier, wasBeforeScroll, nowAfterScroll;
+        var triggeredBackward, triggeredForward;
+
+        if (waypoint.element !== waypoint.element.window) {
+          elementOffset = waypoint.adapter.offset()[axis.offsetProp];
+        }
+
+        if (typeof adjustment === 'function') {
+          adjustment = adjustment.apply(waypoint);
+        } else if (typeof adjustment === 'string') {
+          adjustment = parseFloat(adjustment);
+
+          if (waypoint.options.offset.indexOf('%') > -1) {
+            adjustment = Math.ceil(axis.contextDimension * adjustment / 100);
+          }
+        }
+
+        contextModifier = axis.contextScroll - axis.contextOffset;
+        waypoint.triggerPoint = Math.floor(elementOffset + contextModifier - adjustment);
+        wasBeforeScroll = oldTriggerPoint < axis.oldScroll;
+        nowAfterScroll = waypoint.triggerPoint >= axis.oldScroll;
+        triggeredBackward = wasBeforeScroll && nowAfterScroll;
+        triggeredForward = !wasBeforeScroll && !nowAfterScroll;
+
+        if (!freshWaypoint && triggeredBackward) {
+          waypoint.queueTrigger(axis.backward);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        } else if (!freshWaypoint && triggeredForward) {
+          waypoint.queueTrigger(axis.forward);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        } else if (freshWaypoint && axis.oldScroll >= waypoint.triggerPoint) {
+          waypoint.queueTrigger(axis.forward);
+          triggeredGroups[waypoint.group.id] = waypoint.group;
+        }
+      }
+    }
+
+    Waypoint.requestAnimationFrame(function () {
+      for (var groupKey in triggeredGroups) {
+        triggeredGroups[groupKey].flushTriggers();
+      }
+    });
+    return this;
+  };
+  /* Private */
+
+
+  Context.findOrCreateByElement = function (element) {
+    return Context.findByElement(element) || new Context(element);
+  };
+  /* Private */
+
+
+  Context.refreshAll = function () {
+    for (var contextId in contexts) {
+      contexts[contextId].refresh();
+    }
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/context-find-by-element */
+
+
+  Context.findByElement = function (element) {
+    return contexts[element.waypointContextKey];
+  };
+
+  window.onload = function () {
+    if (oldWindowLoad) {
+      oldWindowLoad();
+    }
+
+    Context.refreshAll();
+  };
+
+  Waypoint.requestAnimationFrame = function (callback) {
+    var requestFn = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || requestAnimationFrameShim;
+    requestFn.call(window, callback);
+  };
+
+  Waypoint.Context = Context;
+})();
+
+(function () {
+  'use strict';
+
+  function byTriggerPoint(a, b) {
+    return a.triggerPoint - b.triggerPoint;
+  }
+
+  function byReverseTriggerPoint(a, b) {
+    return b.triggerPoint - a.triggerPoint;
+  }
+
+  var groups = {
+    vertical: {},
+    horizontal: {}
+  };
+  var Waypoint = window.Waypoint;
+  /* http://imakewebthings.com/waypoints/api/group */
+
+  function Group(options) {
+    this.name = options.name;
+    this.axis = options.axis;
+    this.id = this.name + '-' + this.axis;
+    this.waypoints = [];
+    this.clearTriggerQueues();
+    groups[this.axis][this.name] = this;
+  }
+  /* Private */
+
+
+  Group.prototype.add = function (waypoint) {
+    this.waypoints.push(waypoint);
+  };
+  /* Private */
+
+
+  Group.prototype.clearTriggerQueues = function () {
+    this.triggerQueues = {
+      up: [],
+      down: [],
+      left: [],
+      right: []
+    };
+  };
+  /* Private */
+
+
+  Group.prototype.flushTriggers = function () {
+    for (var direction in this.triggerQueues) {
+      var waypoints = this.triggerQueues[direction];
+      var reverse = direction === 'up' || direction === 'left';
+      waypoints.sort(reverse ? byReverseTriggerPoint : byTriggerPoint);
+
+      for (var i = 0, end = waypoints.length; i < end; i += 1) {
+        var waypoint = waypoints[i];
+
+        if (waypoint.options.continuous || i === waypoints.length - 1) {
+          waypoint.trigger([direction]);
+        }
+      }
+    }
+
+    this.clearTriggerQueues();
+  };
+  /* Private */
+
+
+  Group.prototype.next = function (waypoint) {
+    this.waypoints.sort(byTriggerPoint);
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints);
+    var isLast = index === this.waypoints.length - 1;
+    return isLast ? null : this.waypoints[index + 1];
+  };
+  /* Private */
+
+
+  Group.prototype.previous = function (waypoint) {
+    this.waypoints.sort(byTriggerPoint);
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints);
+    return index ? this.waypoints[index - 1] : null;
+  };
+  /* Private */
+
+
+  Group.prototype.queueTrigger = function (waypoint, direction) {
+    this.triggerQueues[direction].push(waypoint);
+  };
+  /* Private */
+
+
+  Group.prototype.remove = function (waypoint) {
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints);
+
+    if (index > -1) {
+      this.waypoints.splice(index, 1);
+    }
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/first */
+
+
+  Group.prototype.first = function () {
+    return this.waypoints[0];
+  };
+  /* Public */
+
+  /* http://imakewebthings.com/waypoints/api/last */
+
+
+  Group.prototype.last = function () {
+    return this.waypoints[this.waypoints.length - 1];
+  };
+  /* Private */
+
+
+  Group.findOrCreate = function (options) {
+    return groups[options.axis][options.name] || new Group(options);
+  };
+
+  Waypoint.Group = Group;
+})();
+
+(function () {
+  'use strict';
+
+  var $ = window.jQuery;
+  var Waypoint = window.Waypoint;
+
+  function JQueryAdapter(element) {
+    this.$element = $(element);
+  }
+
+  $.each(['innerHeight', 'innerWidth', 'off', 'offset', 'on', 'outerHeight', 'outerWidth', 'scrollLeft', 'scrollTop'], function (i, method) {
+    JQueryAdapter.prototype[method] = function () {
+      var args = Array.prototype.slice.call(arguments);
+      return this.$element[method].apply(this.$element, args);
+    };
+  });
+  $.each(['extend', 'inArray', 'isEmptyObject'], function (i, method) {
+    JQueryAdapter[method] = $[method];
+  });
+  Waypoint.adapters.push({
+    name: 'jquery',
+    Adapter: JQueryAdapter
+  });
+  Waypoint.Adapter = JQueryAdapter;
+})();
+
+(function () {
+  'use strict';
+
+  var Waypoint = window.Waypoint;
+
+  function createExtension(framework) {
+    return function () {
+      var waypoints = [];
+      var overrides = arguments[0];
+
+      if (framework.isFunction(arguments[0])) {
+        overrides = framework.extend({}, arguments[1]);
+        overrides.handler = arguments[0];
+      }
+
+      this.each(function () {
+        var options = framework.extend({}, overrides, {
+          element: this
+        });
+
+        if (typeof options.context === 'string') {
+          options.context = framework(this).closest(options.context)[0];
+        }
+
+        waypoints.push(new Waypoint(options));
+      });
+      return waypoints;
+    };
+  }
+
+  if (window.jQuery) {
+    window.jQuery.fn.waypoint = createExtension(window.jQuery);
+  }
+
+  if (window.Zepto) {
+    window.Zepto.fn.waypoint = createExtension(window.Zepto);
+  }
+})();
+
+/***/ }),
+
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _import_modules_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules.js */ "./src/js/import/modules.js");
+/* harmony import */ var _import_waypoints_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/waypoints.js */ "./src/js/import/waypoints.js");
+/* harmony import */ var _import_waypoints_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_waypoints_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _import_animate_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/_animate-css.js */ "./src/js/import/_animate-css.js");
+/* harmony import */ var _import_animate_css_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_import_animate_css_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+$(document).ready(function () {
+  // var rellax = new Rellax('.welcome__qual-bg');
+  // MOBILE MENU
+  var hamburger = document.querySelector('.hamburger'); // const headermobile = document.querySelector('.header-mobile');
+
+  var headermobile = document.querySelector('.header-mobile'); // const headermobile = document.querySelector('.header-mobile');
+
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('is-active');
+    headermobile.classList.toggle('opened'); // document.querySelector('html').classList.toggle('overflow');
+
+    if (hamburger.classList.contains('is-active')) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  });
+  $('.header-mobile__nav-link').on("click", function (e) {
+    // e.preventDefault();
+    console.log('close menu by link');
+    hamburger.classList.toggle('is-active'); // headermobile.classList.toggle('opened');
+
+    closeMenu();
+  });
+
+  function openMenu() {
+    console.log('open1');
+    $('html').addClass('overflow');
+    $('.header-mobile__circle').addClass('expand');
+    $('.header-mobile__nav-item').addClass('animate');
+    $('.header-mobile').css("visibility", "visible");
+    console.log('open2');
+  }
+
+  function closeMenu() {
+    console.log('close1');
+    $('html').removeClass('overflow');
+    $('.header-mobile__circle').removeClass('expand');
+    $('.header-mobile__nav-item').removeClass('animate');
+    $('.header-mobile').css("visibility", "hidden");
+    console.log('close2');
+  }
+
+  $('.header__nav-link, .footer__up-btn, .header-mobile__nav-link').on('click', function () {
+    var el = $(this);
+    var dest = el.attr('href'); // получаем направление
+
+    if (dest !== undefined && dest !== '') {
+      // проверяем существование
+      $('body,html').animate({
+        scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+
+      }, 500 // скорость прокрутки
+      );
+    }
+
+    return false;
+  });
+  $(".benefit__block-wrap").animated('fadeInUp');
+  $(".stage__block").animated('fadeInUp');
+  document.querySelectorAll(".welcome__form-button").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      party.confetti(this);
+      $('.welcome__form-done').addClass('welcome__form-done--active');
+      setTimeout(function () {
+        $('.welcome__form-done-btn').addClass('welcome__form-done-btn--active');
+      }, 1000);
+    });
+  }); // $('#request-form').submit(function (e) {
+  //     e.preventDefault();
+  //     var formData = new FormData(e.target);
+  //     console.log($(this));
+  //     $.ajax({
+  //         url: 'mail.php',
+  //         type: 'POST',
+  //         data: formData,
+  //         success: function success(data) {
+  //             if (data.trim() === 'OK') {
+  //                 console.log(data);
+  //                 $('.popup').fadeOut(400); // $('#popup').css("display","none");
+  //                 $('.popup').css("display", "none");
+  //                 $('#done-popup').fadeIn(400); // $('#done').css("display","block");
+  //                 $('#done-popup').css("display", "flex");
+  //             } else {
+  //                 console.error(data);
+  //                 $('.popup').fadeOut(400);
+  //                 $('.popup').css("display", "none");
+  //                 $('#error-popup').fadeIn(400);
+  //                 $('#error-popup').css("display", "flex");
+  //             }
+  //         },
+  //         cache: false,
+  //         contentType: false,
+  //         processData: false
+  //     });
+  //     return false;
+  // });
+});
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=main.js.map
