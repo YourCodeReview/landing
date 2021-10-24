@@ -14,7 +14,6 @@ $( document ).ready(function() {
         hamburger.classList.toggle('is-active');
         headermobile.classList.toggle('opened');
         // document.querySelector('html').classList.toggle('overflow');
-
         if (hamburger.classList.contains('is-active')) {
             openMenu();
         } else {
