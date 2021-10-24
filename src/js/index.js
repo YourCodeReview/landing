@@ -68,7 +68,6 @@ $( document ).ready(function() {
         e.preventDefault();
 
         let telegram = $(this).find(".welcome__form-input").val();
-
         let formData = new FormData();
         formData.append('telegram', telegram);
 
