@@ -34,6 +34,13 @@ function sendEmail(string $email, string $subject, string $message): bool {
 
 try {
 	$telegram = filter_input(INPUT_POST, 'telegram', FILTER_SANITIZE_STRING);
+    $telegram = filter_var(
+        $telegram, 
+        FILTER_VALIDATE_REGEXP,
+        [
+            'options' => ['regexp' => "^(https:\/\/t\.me\/)?[\w]{5,}$"]]
+        ]
+    );
 	if (empty($telegram)) {
 		throw new Exception('"telegram" is not valid!');
 	}
