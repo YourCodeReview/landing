@@ -65,7 +65,14 @@ try {
 
 	$message = sprintf('User "%s" has requested code review', $telegram);
 
-	$result = sendEmail($email, 'New review request', $message);
+    $recipients = [
+        $email,
+    ];
+    if (defined('OBSERVER_EMAIL')) {
+        $recipients[] = $email;
+    }
+
+	$result = sendEmail(implode(',', $recipients), 'New review request', $message);
 	if (!$result) {
 		throw new Exception('Failed to send email!');
 	}
