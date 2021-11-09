@@ -38,7 +38,7 @@ try {
         $telegram, 
         FILTER_VALIDATE_REGEXP,
         [
-            'options' => ['regexp' => "^(https:\/\/t\.me\/|@)?[\w]{5,}|\+\d{7,}$"],
+            'options' => ['regexp' => "#^(https:\/\/t\.me\/|@)?[\w]{5,}|\+\d{7,}$#"],
         ]
     );
 	if (empty($telegram)) {
@@ -48,7 +48,7 @@ try {
     $requestEmail = null;
     if ($telegram[0] === '+') {
         if (!defined('PHONE_REQUESTS_EMAIL')) {
-            throw new Exception('"REQUESTS_EMAIL" is not defined!');
+            throw new Exception('"PHONE_REQUESTS_EMAIL" is not defined!');
         }
         $requestEmail = PHONE_REQUESTS_EMAIL;
     } else {
