@@ -2,7 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\MailerException;
 
 header('Content-Type: application/json');
 
@@ -38,18 +38,27 @@ try {
         $telegram, 
         FILTER_VALIDATE_REGEXP,
         [
-            'options' => ['regexp' => "^(https:\/\/t\.me\/)?[\w]{5,}$"]]
+            'options' => ['regexp' => "^(https:\/\/t\.me\/|@)?[\w]{5,}|\+\d{7,}$"],
         ]
     );
 	if (empty($telegram)) {
 		throw new Exception('"telegram" is not valid!');
 	}
 
-	if (!defined('REQUESTS_EMAIL')) {
-		throw new Exception('"REQUESTS_EMAIL" is not defined!');
-	}
+    $requestEmail = null;
+    if ($telegram[0] === '+') {
+        if (!defined('PHONE_REQUESTS_EMAIL')) {
+            throw new Exception('"REQUESTS_EMAIL" is not defined!');
+        }
+        $requestEmail = PHONE_REQUESTS_EMAIL;
+    } else {
+        if (!defined('REQUESTS_EMAIL')) {
+            throw new Exception('"REQUESTS_EMAIL" is not defined!');
+        }
+        $requestEmail = REQUESTS_EMAIL;
+    }
 
-	$email = filter_var(REQUESTS_EMAIL, FILTER_SANITIZE_EMAIL);
+	$email = filter_var($requestEmail, FILTER_SANITIZE_EMAIL);
 	if (empty($email)) {
 		throw new Exception('"REQUESTS_EMAIL" is not valid email!');
 	}
