@@ -1,0 +1,35 @@
+.reviewer-welcome {
+  &__wrap {
+    align-items: flex-start;
+  }
+  &__img {
+    margin-top: -110px;
+  }
+  &__help-title {
+    margin-bottom: 4px;
+  }
+  &__help-text {
+    color: rgba(224, 224, 224, 0.8);
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  &__help-button {
+    display: inline-block;
+    width: 350px;
+  }
+
+  @include lg-down {
+    &__wrap {
+      align-items: center;
+    }
+    &__img {
+      margin-top: 0;
+    }
+  }
+  @include sm-down {
+    &__help-text {
+      font-size: 18px;
+    }
+  }
+}

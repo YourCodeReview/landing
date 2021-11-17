@@ -1,0 +1,13 @@
+.text-large {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  a {
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+    color: inherit;
+    &:hover {
+      color: #00bfa6;
+    }
+  }
+}

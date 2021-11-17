@@ -1,0 +1,150 @@
+.reviewer-last-section {
+  padding-top: 240px;
+  background: linear-gradient(109.3deg, #554FB6 -0.77%, #2F2B70 24.75%, #2F2B70 79.82%, #554FB6 102.39%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 180px 0;
+  @include md-down {
+    padding-top: 200px;
+    gap: 150px 0;
+  }
+  @include sm-down {
+    padding-top: 100px;
+  }
+}
+
+.reviewer-rating {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0 120px;
+  }
+  &__image {
+    flex: 1 0 500px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__langs-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+  }
+  @include lg-down {
+    &__container {
+      gap: 0 40px;
+    }
+    &__image {
+      flex: 1 1 50%;
+    }
+    &__content {
+      flex: 1 1 50%;
+    }
+  }
+  @include md-down {
+    &__container {
+      flex-direction: column;
+      gap: 50px 0;
+    }
+    &__image {
+      flex: initial;
+      width: 100%;
+      max-width: 700px;
+    }
+    &__content {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__content {
+      order: 2;
+    }
+  }
+  @include sm-down {
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.reviewer-github {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0 160px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5em;
+    margin-bottom: 40px;
+    img {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+  }
+  &__image {
+    flex: 0 0 400px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    flex: 1 1 auto;
+  }
+  @include lg-down {
+    &__container {
+      gap: 0 100px;
+    }
+  }
+  @include md-down {
+    &__container {
+      flex-direction: column;
+      gap: 50px 0;
+    }
+    &__image {
+      flex: initial;
+      max-width: 500px;
+    }
+    &__content {
+      flex: initial;
+      max-width: 500px;
+    }
+  }
+  @include sm-down {
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.reviewer-final {
+  &__box {
+    margin: 0 auto;
+    padding: 40px 40px 55px 40px;
+  }
+  &__button {
+    margin-top: 25px;
+    max-width: 380px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include xs-down {
+    &__box {
+      padding: 40px 15px;
+    }
+  }
+}
