@@ -45,20 +45,11 @@ try {
 		throw new Exception('"telegram" is not valid!');
 	}
 
-    $requestEmail = null;
-    if ($telegram[0] === '+') {
-        if (!defined('PHONE_REQUESTS_EMAIL')) {
-            throw new Exception('"PHONE_REQUESTS_EMAIL" is not defined!');
-        }
-        $requestEmail = PHONE_REQUESTS_EMAIL;
-    } else {
-        if (!defined('REQUESTS_EMAIL')) {
-            throw new Exception('"REQUESTS_EMAIL" is not defined!');
-        }
-        $requestEmail = REQUESTS_EMAIL;
+    if (!defined('REQUESTS_EMAIL')) {
+        throw new Exception('"REQUESTS_EMAIL" is not defined!');
     }
 
-	$email = filter_var($requestEmail, FILTER_SANITIZE_EMAIL);
+	$email = filter_var(REQUESTS_EMAIL, FILTER_SANITIZE_EMAIL);
 	if (empty($email)) {
 		throw new Exception('"REQUESTS_EMAIL" is not valid email!');
 	}
