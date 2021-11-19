@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
 
   <!-- Useful meta tags -->
-  <!--        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+  <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -50,10 +50,8 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="styles/main.css">
 
-
   <!-- Title -->
   <title>Your codereview - Первое русскоязычное код-ревью комьюнити</title>
-
 
   <!-- Facebook Pixel Code -->
   <meta name="facebook-domain-verification" content="wawmqzhen34cfyhgom66qxpbdonu7h" />
@@ -96,26 +94,15 @@
 </head>
 <body>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  <!--PRELOADER-->
-  <!--@@include("../blocks/preloader/preloader.html")-->
-
-    <!--ASIDE-->
-  <!--  @@include("../blocks/modules/aside/aside.html")-->
-
+  
+  
   <div class="wrapper">
-    @@include("../blocks/modules/welcome/welcome.html")
-    @@include("../blocks/modules/about/about.html")
-    @@include("../blocks/modules/session/session.html")
-    @@include("../blocks/modules/how/how.html")
-    @@include("../blocks/modules/improve/improve.html")
+    @@include("../../blocks/modules/reviewer-welcome/template.html")
+    @@include("../../blocks/modules/reviewer-about/template.html")
+    @@include("../../blocks/modules/reviewer-recommendations/template.html")
+    @@include("../../blocks/modules/reviewer-knowledge/template.html")
+    @@include("../../blocks/modules/reviewer-last/template.html")
   </div>
-
-  <!--  @@include("../blocks/modules/main/main.html")-->
-
-  <!--SVG SPRITE-->
-  <!--<div class="d-none">-->
-  <!--&lt;!&ndash;  @@include("../img/sprite/sprite.svg")&ndash;&gt;-->
-  <!--</div>-->
 
   <!--SCRIPTS-->
   <script src="js/libs/jquery-3.4.1.min.js"></script>
