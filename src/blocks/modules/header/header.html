@@ -1,5 +1,8 @@
 <header class="header" id="header">
     <div class="header__wrap">
+        <a class='header__logo' href="/">
+            <img src="/img/logos/logo.png" alt="image">
+        </a>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
@@ -13,7 +16,7 @@
                     <a href="/#apply" class="header__nav-link">Прислать код на ревью</a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="/reviewer.html" class="header__nav-link">Стать ревьюером</a>
+                    <a href="/reviewer.html" class="header__nav-link @@if (page === 'reviewer') { active }">Стать ревьюером</a>
                 </li>
                 <li class="header__nav-item">
                     <a href="https://t.me/YourCodeReview" class="header__nav-link">
@@ -59,7 +62,7 @@
                         <a class="header-mobile__nav-link" href="/#apply">Прислать код на ревью</a>
                     </li>
                     <li class="header-mobile__nav-item">
-                        <a class="header-mobile__nav-link" href="/reviewer.html">Стать ревьюером</a>
+                        <a class="header-mobile__nav-link @@if (page === 'reviewer') { active }" href="/reviewer.html">Стать ревьюером</a>
                     </li>
                     <li class="header-mobile__nav-item">
                         <a class="header-mobile__nav-link" href="https://t.me/YourCodeReview">

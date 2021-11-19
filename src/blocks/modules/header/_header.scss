@@ -1,8 +1,32 @@
 .header {
   padding: 50px 0;
 
+  &__logo {
+    display: block;
+    height: auto;
+    flex: 0 0 80px;
+    margin-right: 60px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+  @include lg-down {
+    padding: 20px 0;
+    &__logo {
+      display: none;
+    }
+  }
   @include md-down {
     padding: 20px 0;
+    &__logo {
+      flex: 0 0 60px;
+      display: block;
+      order: 2;
+      margin-right: 15px;
+    }
   }
 
   @include sm-down {
@@ -24,7 +48,7 @@
   }
 
   &__nav {
-    width: 100%;
+    flex: 1 1 auto;
 
     @include md-down {
       display: none;
@@ -36,12 +60,6 @@
       justify-content: space-between;
     }
 
-    &-item {
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-    }
-
     &-link {
       display: flex;
       align-items: center;
@@ -50,8 +68,9 @@
       line-height: 27px;
       color: #e5e5e5;
       transition: all 0.2s ease-in-out;
+      white-space: nowrap;
 
-      &:hover {
+      &:hover, &.active {
         color: #00bfa6;
       }
 
