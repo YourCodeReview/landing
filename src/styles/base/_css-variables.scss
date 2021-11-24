@@ -49,4 +49,13 @@
   @include media-breakpoint-down(sm) {
     --decoration-height: 30px;
   }
+
+  --section-py: 100px;
+  --section-margin: 160px;
+  --dark-section-py: calc(var(--decoration-height) + 150px);
+  @include media-breakpoint-down(sm) {
+    --section-margin: 100px;
+    --section-py: 60px;
+    --dark-section-py: calc(var(--decoration-height) + 70px);
+  }
 }
