@@ -63,6 +63,17 @@ h3, .h3 {
   }
 }
 
+h4, .h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 28px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+}
+
 h6, .h6 {
   font-size: 26px;
   margin-bottom: 1em;

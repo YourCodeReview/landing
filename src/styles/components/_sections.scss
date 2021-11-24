@@ -1,6 +1,9 @@
 .section {
   position: relative;
   color: var(--text-color);
+  &:not(.section_dark):not(.section_light):not(.section_last) {
+    margin-bottom: var(--section-margin);
+  }
   & > .container {
     position: relative;
     z-index: 2;
@@ -26,24 +29,21 @@
     }
   }
   &_dark {
-    padding: calc(var(--decoration-height) + 150px) 0;
+    padding: var(--dark-section-py) 0;
     --title-color: var(--color-light);
     --text-color: var(--color-light);
     background: var(--section-bg-gradient-dark);
   }
   &_light {
-    padding: 100px 0;
+    padding: var(--section-py) 0;
     background: var(--section-bg-gradient-light);
   }
   &_last {
-    padding-bottom: 0;
-  }
-  @include media-breakpoint-down(sm) {
-    &_light {
-      padding: 60px 0;
-    }
-    &_dark {
-      padding: calc(var(--decoration-height) + 70px) 0;
+    padding: calc(var(--dark-section-py) - var(--section-py)) 0 0 0;
+    & > .section {
+      &:first-child {
+        padding-top: var(--section-py);
+      }
     }
   }
 }
@@ -176,18 +176,9 @@
 }
 
 .reviews-section {
-  &__title {
-    text-align: center;
-  }
-  &__sub-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
-  }
   &__blocks {
     display: flex;
     flex-direction: column;
-    gap: 45px 0;
     margin-bottom: 80px;
   }
   &__schedule-title {
@@ -204,16 +195,6 @@
   &__schedule-description {
     margin-top: 75px;
     font-size: 20px;
-  }
-  @include media-breakpoint-up(xxl) {
-    &__title {
-      margin-bottom: 30px;
-    }
-  }
-  @include media-breakpoint-down(xxl) {
-    &__sub-title {
-      font-size: 30px;
-    }
   }
   @include media-breakpoint-down(xl) {
     &__schedule-title {
@@ -234,10 +215,6 @@
     }
   }
   @include media-breakpoint-down(md) {
-    &__sub-title {
-      font-size: 22px;
-      margin-bottom: 40px;
-    }
     &__schedule-title {
       font-size: 22px;
     }
@@ -245,8 +222,15 @@
       font-size: 16px;
     }
     &__blocks {
-      gap: 25px 0;
       margin-bottom: 60px;
+    }
+  }
+}
+
+.section-pricing {
+  @include media-breakpoint-up(xl) {
+    &__elements {
+      --bs-gutter-x: 50px;
     }
   }
 }

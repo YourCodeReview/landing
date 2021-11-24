@@ -1,16 +1,49 @@
 .footer {
   color: var(--color-muted);
-  padding: 40px 0;
-  border-top: 1px solid var(--color-muted);
   &__nav {
+    padding: 40px 0;
+    border-top: 1px solid var(--color-muted);
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px 20px;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  &__mail {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-muted);
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 30px;
+  }
+  &__social-group {
+    display: flex;
+    gap: 15px;
+  }
+  &__social-icon {
+    color: #fff;
+    height: 25px;
+    min-width: 25px;
+    svg {
+      display: block;
+      height: 100%;
+      width: auto;
+      color: inherit;
+    }
   }
   @include media-breakpoint-down(xl) {
     &__nav {
@@ -21,85 +54,9 @@
     }
   }
   @include media-breakpoint-down(md) {
-    &__list {
-      flex-direction: column;
-    }
-  }
-}
-
-.footer__link {
-  font-weight: 500;
-  font-size: 18px;
-
-  @include sm-down {
-    display: block;
-    text-align: center;
-  }
-}
-
-.footer__social {
-  display: flex;
-  align-items: center;
-
-  @include sm-down {
-    flex-direction: column;
-  }
-}
-
-.footer__mail {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-  margin-right: 30px;
-  transition: all 0.2s ease-in-out;
-
-  @include sm-down {
-    text-align: center;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  &:hover {
-    color: #00bfa6;
-  }
-}
-
-.footer__social-group {
-  display: flex;
-  align-items: center;
-}
-
-.footer__github {
-  margin-right: 12px;
-
-  svg {
-    path {
-      transition: all 0.2s ease-in-out;
-    }
-  }
-
-  &:hover {
-    svg {
-      path {
-        fill: #00bfa6;
-      }
-    }
-  }
-}
-
-.footer__telegram {
-  svg {
-    path {
-      transition: all 0.2s ease-in-out;
-    }
-  }
-
-  &:hover {
-    svg {
-      path {
-        fill: #00bfa6;
-      }
+    &__link {
+      display: block;
+      text-align: center;
     }
   }
 }

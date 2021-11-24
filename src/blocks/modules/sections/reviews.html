@@ -1,29 +1,30 @@
-<section class="section section_light reviews-section">
+<section @@if (page === 'main') {id="reviews"} class="section section_light reviews-section">
   <div class="container">
-    <h2 class="gradient-text gradient-text_style-2 reviews-section__title">
-      @@if (page === 'main') {
-        Ваши отзывы
-      }
-      @@if (page === 'reviewer') {
-        Делитесь своими заниями
-      }
-    </h2>
-    <p class="reviews-section__sub-title">
-      @@if (page === 'main') {
-        Что говорят разработчики, которым мы помогаем?
-      }
-      @@if (page === 'reviewer') {
-        Что говорят разработчики, которым вы помогаете?
-      }
-    </p>
+    <div class="mb-45 mb-md-60 mb-xl-70">
+      <h2 class="gradient-text gradient-text_style-2 text-center mb-30 mb-lg-20">
+        @@if (page === 'main') {
+          Ваши отзывы
+        }
+        @@if (page === 'reviewer') {
+          Делитесь своими заниями
+        }
+      </h2>
+      <p class="text-sub-title text-center">
+        @@if (page === 'main') {
+          Что говорят разработчики, которым мы помогаем?
+        }
+        @@if (page === 'reviewer') {
+          Что говорят разработчики, которым вы помогаете?
+        }
+      </p>
+    </div>
     
     
-    
-    <div class="reviews-section__blocks">
+    <div class="reviews-section__blocks row-gap-40 row-gap-md-50">
       <!-- review -->
       <div class="review-box">
         <div class="review-box__image">
-          <img src="/img/reviewer/photo_2021-11-12 10.23 1.jpg" alt="image">
+          <img src="/img/photo_2021-11-12 10.23 1.jpg" alt="image">
         </div>
         <div class="review-box__content">
           <div class="review-box__content-head">
@@ -38,7 +39,7 @@
       <!-- review -->
       <div class="review-box">
         <div class="review-box__image">
-          <img src="/img/reviewer/photo_2021-11-12 10.42 1.jpg" alt="image">
+          <img src="/img/photo_2021-11-12 10.42 1.jpg" alt="image">
         </div>
         <div class="review-box__content">
           <div class="review-box__content-head">
@@ -53,7 +54,7 @@
       <!-- review -->
       <div class="review-box">
         <div class="review-box__image">
-          <img src="/img/reviewer/photo_2021-11-12 16.25 1.jpg" alt="image">
+          <img src="/img/photo_2021-11-12 16.25 1.jpg" alt="image">
         </div>
         <div class="review-box__content">
           <div class="review-box__content-head">
@@ -87,7 +88,7 @@
     @@if (page === 'reviewer') {
       <div class="reviews-section__schedule">
         <p class="reviews-section__schedule-title">Наблюдайте за тем, как ваш фидбэк приносит <strong>реальную<br> пользу</strong> другим разработчикам. Наглядно и просто.</p>
-        <img class="reviews-section__schedule-image" src="/img/reviewer/schedule.svg" alt="schedule">
+        <img class="reviews-section__schedule-image" src="/img/schedule.svg" alt="schedule">
         <p class="reviews-section__schedule-description">Полезность комментариев из расчета лайк на комментарий*</p>
       </div>
     }
