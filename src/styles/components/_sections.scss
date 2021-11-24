@@ -1,0 +1,66 @@
+.welcome-section {
+  min-height: calc(min(var(--screen-max-height), 100vh));
+  padding-top: var(--header-height);
+  padding-bottom: var(--header-height);
+  display: flex;
+  align-items: center;
+  &__bottom-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  &__button {
+    margin-top: 5px;
+    --font-size: 22px;
+    --padding-x: 32px;
+    --height: 60px;
+  }
+  &__text-2 {
+    margin-bottom: 0;
+  }
+  &__text-3 {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: var(--color-muted);
+  }
+  &__image {
+    display: flex;
+    img {
+      margin: auto;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    padding-bottom: 100px;
+    &__text-3 {
+      font-size: 18px;
+    }
+    &__image {
+      img {
+        width: 80%;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 160px;
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: calc(var(--header-height) + 20px);
+    padding-bottom: 110px;
+    &__button {
+      --font-size: 18px;
+      --padding-x: 0px;
+    }
+    &__text-3 {
+      font-size: 16px;
+    }
+  }
+}

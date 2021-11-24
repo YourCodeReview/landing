@@ -1,3 +1,95 @@
+html, body {
+  font-size: 16px;
+}
+body {
+  line-height: 1.25;
+  font-family: 'Montserrat', sans-serif;
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --title-color: var(--color-primary);
+  --text-color: var(--color-default);
+  color: var(--text-color);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: var(--title-color);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1, .h1 {
+  font-size: 70px;
+  margin-bottom: 35px;
+  font-weight: 600;
+  @include media-breakpoint-down(xxl) {
+    font-size: 62px;
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+h2, .h2 {
+  font-size: 70px;
+  margin-bottom: 35px;
+  font-weight: 600;
+  @include media-breakpoint-down(xxl) {
+    font-size: 58px;
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
+}
+
+h6, .h6 {
+  font-size: 26px;
+  margin-bottom: 1em;
+  font-weight: 700;
+  @include media-breakpoint-down(xxl) {
+    font-size: 22px;
+  }
+  @include media-breakpoint-down(xl) {
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+}
+
+p, .text {
+  font-size: 26px;
+  margin: 0 0 1em 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-down(xxl) {
+    font-size: 22px;
+  }
+  @include media-breakpoint-down(xl) {
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+}
+
+a {
+  transition: color var(--trs-1);
+  &:hover {
+    color: var(--color-accent-1);
+  }
+}
+
 .text-large {
   &:not(:last-child) {
     margin-bottom: 25px;

@@ -1,9 +1,13 @@
 .wrapper {
   overflow: hidden;
+  position: relative;
 }
 
 .section {
   position: relative;
+  --title-color: var(--color-primary);
+  --text-color: var(--color-default);
+  color: var(--text-color);
   & > .container {
     position: relative;
     z-index: 2;
@@ -19,13 +23,31 @@
   &__figure {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: var(--decoration-height);
     left: 0;
     &_bottom {
       bottom: -1px;
     }
     &_top {
       top: -1px;
+    }
+  }
+  &_dark {
+    padding: calc(var(--decoration-height) + 150px) 0;
+    --title-color: var(--color-light);
+    --text-color: var(--color-light);
+    background: var(--section-bg-gradient-dark);
+  }
+  &_light {
+    padding: 100px 0;
+    background: var(--section-bg-gradient-light);
+  }
+  @include media-breakpoint-down(sm) {
+    &_light {
+      padding: 60px 0;
+    }
+    &_dark {
+      padding: calc(var(--decoration-height) + 70px) 0;
     }
   }
 }
