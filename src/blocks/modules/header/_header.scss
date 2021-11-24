@@ -66,16 +66,10 @@
       align-items: center;
       font-weight: 500;
       font-size: 22px;
-      color: #e5e5e5;
-      transition: var(--trs-1);
+      color: var(--color-light);
       white-space: nowrap;
-
-      &:hover, &.active {
-        color: var(--color-accent-1) !important;
-      }
-
-      svg {
-        margin-left: 8px;
+      &.active {
+        color: var(--color-accent-1);
       }
     }
   }
@@ -204,6 +198,9 @@
     line-height: 60px;
     font-weight: 500;
     color: #e5e5e5;
+    &.active {
+      color: var(--color-accent-1);
+    }
   }
 }
 
