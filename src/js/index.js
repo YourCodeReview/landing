@@ -67,9 +67,19 @@ $( document ).ready(function() {
     $(".welcome__form").submit(function (e) {
         e.preventDefault();
 
-        let telegram = $(this).find(".welcome__form-input").val();
-        let formData = new FormData();
+        const telegram = $(this).find(".welcome__form-input").val();
+        const formData = new FormData();
         formData.append('telegram', telegram);
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+
+        if (params.hasOwnProperty('utm_content')) {
+            formData.append('utm_content', params.utm_content);
+        }
+
+        if (params.hasOwnProperty('add_name_parameter')) {
+            formData.append('add_name_parameter', params.add_name_parameter);
+        }
 
         fetch($(this).attr('action'), {
             method: 'POST',

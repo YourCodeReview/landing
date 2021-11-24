@@ -54,7 +54,12 @@ try {
 		throw new Exception('"REQUESTS_EMAIL" is not valid email!');
 	}
 
-	$message = sprintf('User "%s" has requested code review', $telegram);
+    $utm_content = $_POST['utm_content'] ?? '-';
+    $add_name_parameter = $_POST['add_name_parameter'] ?? '-';
+
+	$message = "User '{$telegram}' has requested code review".PHP_EOL.
+        "utm_content: {$utm_content}".PHP_EOL.
+        "add_name_parameter: {$add_name_parameter}".PHP_EOL;
 
     $recipients = [
         $email,
