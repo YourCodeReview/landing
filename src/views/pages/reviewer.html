@@ -95,22 +95,21 @@
 <body>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
-  
   <div class="wrapper">
-    @@include("../../blocks/modules/reviewer-welcome/template.html")
-    @@include("../../blocks/modules/reviewer-about/template.html")
-    @@include("../../blocks/modules/reviewer-recommendations/template.html")
-    @@include("../../blocks/modules/reviewer-knowledge/template.html")
-    @@include("../../blocks/modules/reviewer-last/template.html")
+    @@include("../../blocks/modules/header/header.html", {"page": "reviewer"})
+    <main class="main">
+      @@include("../../blocks/modules/sections/welcome.html", {"page": "reviewer"})
+      @@include("../../blocks/modules/reviewer-about/template.html")
+      @@include("../../blocks/modules/reviewer-recommendations/template.html")
+      @@include("../../blocks/modules/reviewer-knowledge/template.html")
+      @@include("../../blocks/modules/reviewer-last/template.html")
+    </main>
   </div>
 
   <!--SCRIPTS-->
   <script src="js/libs/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-
-  <!--<script src="js/libs/lottie_html.js"></script>-->
-  <!--<script src="js/libs/rellax.min.js"></script>-->
-
+  <script src='/js/libs/scroll-lock.min.js'></script>
   <script src="js/main.js"></script>
 
 </body>

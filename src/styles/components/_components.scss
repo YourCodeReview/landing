@@ -1,0 +1,15 @@
+.gradient-text {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  &_style-1 {
+    background: -webkit-linear-gradient(180deg,#2f2b70 -9.12%,#00bfa6 116.47%);
+  } 
+}
+
+.content-image {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
