@@ -1,0 +1,25 @@
+<section id="about" class="section section_light about-section">
+  <div class="container">
+    <div class="about-section__container row align-items-center justify-content-between">
+
+      <div class="content-image col-lg-6 mb-35 mb-lg-0">
+        <img src="@@if (page === 'main') { /img/coding.svg } @@if (page === 'reviewer') { /img/team.svg }" alt="image">
+      </div>
+
+      <div class="welcome-section__text-content col-lg-6 col-xl-5">
+        <h2 class="welcome-section__title gradient-text gradient-text_style-1">
+          @@if (page === 'main') { Сервис код&#8209;ревью }
+          @@if (page === 'reviewer') { Код-ревью комьюнити }
+        </h2>
+        <p><strong>Your codereview</strong> объединяет на базе <a href="https://t.me/YourCodeReview"><strong>телеграм-канала</strong></a> разработчиков, которые хотят получить ревью на свой код, и тех, кто хочет поделиться своими знаниями с другими.</p>
+        @@if (page === 'main') {
+          <p>Любой желающий может прислать свой код и в течение 72 часов получить фидбэк от <strong>опытных программистов</strong>.</p>
+        }
+        @@if (page === 'reviewer') {
+          <p><strong>Наше комьюнити</strong> - это отличная возможность <strong>прокачать свой код</strong>, увидеть, как другие разработчики пишут на твоем стэке, а также подтянуть свои soft-skills и навыки ревью.</p>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>

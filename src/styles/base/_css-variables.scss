@@ -1,0 +1,61 @@
+:root {
+  //grid
+  --container-gutter-x: 24px;
+  --grid-gutter-x: 24px;
+  @include media-breakpoint-down(sm) {
+    --container-gutter-x: 20px;
+    --grid-gutter-x: 16px;
+  }
+
+  //animations
+  --animation-duration-1: 150ms;
+  --animation-duration-2: 300ms;
+  --animation-duration-3: 500ms;
+
+  --transition-timing-function-1: ease-out;
+  
+  --trs-1: var(--animation-duration-1) var(--transition-timing-function-1);
+  --trs-2: var(--animation-duration-2) var(--transition-timing-function-1);
+  --trs-3: var(--animation-duration-3) var(--transition-timing-function-1);
+
+  //screen
+  --screen-max-height: 60vw;
+  @include media-breakpoint-down(lg) {
+    --screen-max-height: 125vw;
+  }
+  @include media-breakpoint-down(sm) {
+    --screen-max-height: 200vw;
+  }
+
+  //header 
+  --header-height: 160px;
+  --header-fixed-height: 100px;
+  @include media-breakpoint-down(xxl) {
+    --header-height: 140px;
+  }
+  @include media-breakpoint-down(sm) {
+    --header-height: 100px;
+    --header-fixed-height: 80px;
+  }
+
+  //decoration
+  --decoration-height: 100px;
+  @include media-breakpoint-down(xxl) {
+    --decoration-height: 60px;
+  }
+  @include media-breakpoint-down(xl) {
+    --decoration-height: 50px;
+  }
+  @include media-breakpoint-down(sm) {
+    --decoration-height: 30px;
+  }
+
+  --section-py: 100px;
+  --section-margin: 160px;
+  --dark-section-py: calc(var(--decoration-height) + 150px);
+  @include media-breakpoint-down(sm) {
+    --section-margin: 100px;
+    --section-py: 60px;
+    --dark-section-py: calc(var(--decoration-height) + 70px);
+  }
+}
