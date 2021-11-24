@@ -5,20 +5,13 @@
 @import "components/nav/nav";
 @import "components/humburger/humburger";
 
-//main page
 @import "modules/header/header";
 @import "modules/footer/footer";
-@import "modules/welcome/welcome";
-@import "modules/about/about";
-@import "modules/session/session";
-@import "modules/how/how";
-@import "modules/improve/improve";
 
 //review page
 @import "modules/reviewer-welcome/styles";
 @import "modules/reviewer-about/styles";
 @import "modules/reviewer-recommendations/styles";
-@import "modules/reviewer-knowledge/styles";
 @import "modules/reviewer-last/styles";
 
 

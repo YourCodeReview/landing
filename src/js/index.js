@@ -6,11 +6,7 @@ import Header from '../blocks/modules/header/header';
 import ScrollTo from './import/scrollTo';
 
 document.addEventListener("DOMContentLoaded", function() {
-    //header
-    const $header = document.querySelector('#header');
-    const header = new Header($header);
-    header.init();
-    //scroll
+    Header.init();
     ScrollTo.init();
 })
 
