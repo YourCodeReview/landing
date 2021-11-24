@@ -35,6 +35,9 @@
     padding: 100px 0;
     background: var(--section-bg-gradient-light);
   }
+  &_last {
+    padding-bottom: 0;
+  }
   @include media-breakpoint-down(sm) {
     &_light {
       padding: 60px 0;
