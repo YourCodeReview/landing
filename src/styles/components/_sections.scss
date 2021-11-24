@@ -1,3 +1,50 @@
+.section {
+  position: relative;
+  color: var(--text-color);
+  & > .container {
+    position: relative;
+    z-index: 2;
+  }
+  &__gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(216, 216, 216, 0.2) 50%, #FFFFFF 100%);
+  }
+  &__figure {
+    position: absolute;
+    width: 100%;
+    height: var(--decoration-height);
+    left: 0;
+    &_bottom {
+      bottom: -1px;
+    }
+    &_top {
+      top: -1px;
+    }
+  }
+  &_dark {
+    padding: calc(var(--decoration-height) + 150px) 0;
+    --title-color: var(--color-light);
+    --text-color: var(--color-light);
+    background: var(--section-bg-gradient-dark);
+  }
+  &_light {
+    padding: 100px 0;
+    background: var(--section-bg-gradient-light);
+  }
+  @include media-breakpoint-down(sm) {
+    &_light {
+      padding: 60px 0;
+    }
+    &_dark {
+      padding: calc(var(--decoration-height) + 70px) 0;
+    }
+  }
+}
+
 .welcome-section {
   min-height: calc(min(var(--screen-max-height), 100vh));
   padding-top: var(--header-height);
@@ -12,9 +59,6 @@
   }
   &__button {
     margin-top: 5px;
-    --font-size: 22px;
-    --padding-x: 32px;
-    --height: 60px;
   }
   &__text-2 {
     margin-bottom: 0;
@@ -54,13 +98,152 @@
   }
   @include media-breakpoint-down(sm) {
     padding-top: calc(var(--header-height) + 20px);
-    padding-bottom: 110px;
+    padding-bottom: 90px;
     &__button {
-      --font-size: 18px;
       --padding-x: 0px;
     }
     &__text-3 {
       font-size: 16px;
+    }
+  }
+}
+
+.how-it-works-section {
+  &__content {
+    margin-bottom: 150px;
+  }
+  &__arrow {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 45px auto;
+  }
+  @include media-breakpoint-down(xxl) {
+    &__content {
+      margin-bottom: 140px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      margin-bottom: 130px;
+    }
+    &__arrow {
+      width: 40px;
+      height: 40px;
+      margin: 30px auto;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__content {
+      margin-bottom: 80px;
+    }
+    &__arrow {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+.code-quality-section {
+  &__image {
+    img {
+      --xl: 7%;
+      --xr: 7%;
+      --yt: 4%;
+      --yb: 8%;
+      margin-top: calc(var(--yt) * -1);
+      margin-left: calc(var(--xl) * -1);
+      margin-bottom: calc(var(--yb) * -1);
+      margin-right: calc(var(--xr) * -1);
+      width: calc(100% + var(--xl) + var(--xr));
+    }
+  }
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__block {
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+.reviews-section {
+  &__title {
+    text-align: center;
+  }
+  &__sub-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 45px 0;
+    margin-bottom: 80px;
+  }
+  &__schedule-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 90px;
+  }
+  &__schedule-image {
+    padding-right: 8%;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &__schedule-description {
+    margin-top: 75px;
+    font-size: 20px;
+  }
+  @include media-breakpoint-up(xxl) {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &__sub-title {
+      font-size: 30px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__schedule-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      br {
+        display: none;
+      }
+    }
+    &__schedule-description {
+      margin-top: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__sub-title {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+    &__schedule-title {
+      font-size: 22px;
+    }
+    &__schedule-description {
+      font-size: 16px;
+    }
+    &__blocks {
+      gap: 25px 0;
+      margin-bottom: 60px;
     }
   }
 }

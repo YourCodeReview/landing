@@ -9,7 +9,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --title-color: var(--color-primary);
+  --title-color: var(--color-default);
   --text-color: var(--color-default);
   color: var(--text-color);
 }
@@ -48,6 +48,18 @@ h2, .h2 {
   }
   @include media-breakpoint-down(md) {
     font-size: 32px;
+  }
+}
+
+h3, .h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  @include media-breakpoint-down(xxl) {
+    font-size: 38px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 26px;
   }
 }
 

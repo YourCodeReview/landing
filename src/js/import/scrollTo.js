@@ -7,12 +7,14 @@ const ScrollTo = {
 
       if (!$link) return;
 
-      event.preventDefault();
-
       let attr = $link.getAttribute('href').replace(/[/]/g, ''),
           $target = document.querySelector(`${attr}`);
 
-      if (!$target) return;
+      if (!$target) {
+        return;
+      } else {
+        event.preventDefault();
+      }
 
       scroll_event($target);
     }

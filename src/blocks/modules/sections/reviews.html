@@ -1,9 +1,25 @@
-<section class="section reviewer-knowledge">
-  <div class="section__gradient"></div>
+<section class="section section_light reviews-section">
   <div class="container">
-    <h2 class="reviewer-knowledge__title">Делитесь своими заниями</h2>
-    <h3 class="reviewer-knowledge__subtitle">Что говорят разработчики, которым вы помогаете?</h3>
-    <div class="reviewer-knowledge__reviews">
+    <h2 class="gradient-text gradient-text_style-2 reviews-section__title">
+      @@if (page === 'main') {
+        Ваши отзывы
+      }
+      @@if (page === 'reviewer') {
+        Делитесь своими заниями
+      }
+    </h2>
+    <p class="reviews-section__sub-title">
+      @@if (page === 'main') {
+        Что говорят разработчики, которым мы помогаем?
+      }
+      @@if (page === 'reviewer') {
+        Что говорят разработчики, которым вы помогаете?
+      }
+    </p>
+    
+    
+    
+    <div class="reviews-section__blocks">
       <!-- review -->
       <div class="review-box">
         <div class="review-box__image">
@@ -50,10 +66,31 @@
         </div>
       </div>
     </div>
-    <div class="reviewer-knowledge__schedule">
-      <p class="reviewer-knowledge__schedule-title">Наблюдайте за тем, как ваш фидбэк приносит <strong>реальную<br> пользу</strong> другим разработчикам. Наглядно и просто.</p>
-      <img class="reviewer-knowledge__schedule-image" src="/img/reviewer/schedule.svg" alt="schedule">
-      <p class="reviewer-knowledge__schedule-description">Полезность комментариев из расчета лайк на комментарий*</p>
-    </div>
+
+    @@if (page === 'main') {
+      <div class="row justify-content-center row-gap-40 row-gap-md-50">
+        <!-- item -->
+        <div class="short-info-item col-md-6 col-xl-4">
+          💯 <strong>Более 100</strong> довольных разработчиков 
+        </div>
+        <!-- item -->
+        <div class="short-info-item col-md-6 col-xl-4">
+          ⭐ <strong>8.7</strong> - cредняя оценка фидбэка 
+        </div>
+        <!-- item -->
+        <div class="short-info-item col-md-6 col-xl-4">
+          💬 <strong>70% </strong> людей возвращаются к нам снова
+        </div>
+      </div>
+    }
+
+    @@if (page === 'reviewer') {
+      <div class="reviews-section__schedule">
+        <p class="reviews-section__schedule-title">Наблюдайте за тем, как ваш фидбэк приносит <strong>реальную<br> пользу</strong> другим разработчикам. Наглядно и просто.</p>
+        <img class="reviews-section__schedule-image" src="/img/reviewer/schedule.svg" alt="schedule">
+        <p class="reviews-section__schedule-description">Полезность комментариев из расчета лайк на комментарий*</p>
+      </div>
+    }
+    
   </div>
 </section>

@@ -33,4 +33,16 @@
     background-color: var(--background-color-hover);
     color: var(--color-hover);
   }
+
+  &_large {
+    --font-size: 22px;
+    --padding-x: 32px;
+    --height: 60px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &_large {
+      --font-size: 18px;
+    }
+  }
 }

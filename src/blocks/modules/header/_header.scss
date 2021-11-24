@@ -41,8 +41,6 @@
 
   &__button {
     flex: 0 0 auto;
-    --font-size: 22px;
-    --padding-x: 32px;
     --font-weight: 700;
   }
 
@@ -157,8 +155,6 @@
   opacity: 0;
   visibility: hidden;
   &__button {
-    --font-size: 22px;
-    --padding-x: 30px;
     margin-top: 30px;
   }
 

@@ -24,14 +24,28 @@
 @import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/utilities";
+
 $utilities: map-merge(
   $utilities, (
     "width": map-merge(
       map-get($utilities, "width"),
       ( responsive: true ),
     ),
+    "column-gap": (
+      property: column-gap,
+      class: column-gap,
+      responsive: true,
+      values: $spacers
+    ),
+    "row-gap": (
+      property: row-gap,
+      class: row-gap,
+      responsive: true,
+      values: $spacers
+    ),
   )
 );
+
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
 @import "base/basic";
