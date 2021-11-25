@@ -3,7 +3,12 @@
     <div class="about-section__container row align-items-center justify-content-between">
 
       <div class="content-image col-lg-6 mb-35 mb-lg-0">
-        <img src="@@if (page === 'main') { /img/coding.svg } @@if (page === 'reviewer') { /img/team.svg }" alt="image">
+        @@if (page === 'main') {
+          <img src="/img/coding.svg" alt="image">
+        }
+        @@if (page === 'reviewer') {
+          <img src="/img/team.svg" alt="image">
+        }
       </div>
 
       <div class="welcome-section__text-content col-lg-6 col-xl-5">
