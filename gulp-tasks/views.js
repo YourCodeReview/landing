@@ -8,6 +8,9 @@ import replace from "gulp-replace";
 import browsersync from "browser-sync";
 import yargs from "yargs";
 
+import version from 'gulp-version-number';
+import config from '../version.config';
+
 const argv = yargs.argv,
     production = !!argv.production;
 
@@ -19,6 +22,7 @@ gulp.task("views", () => {
         }))
         // .pipe(gulpif(production, replace(".css", ".min.css")))
         // .pipe(gulpif(production, replace(".js", ".min.js")))
+        .pipe(gulpif(production, version(config)))
         .pipe(gulp.dest(paths.views.dist))
         .pipe(browsersync.stream());
 });
