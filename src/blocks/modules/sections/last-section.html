@@ -17,10 +17,12 @@
                 <p>Разбор кода <strong>Middle</strong> и <strong>Senior</strong> разработчиками</p>
                 <p>Детальный анализ ошибок</p>
                 <p>Возможность задать вопросы ревьюеру</p>
-                <p class="text-muted">Видео разбор вашего кода</p>
+                <p class="pricing-box__youtube text-muted">Видео разбор вашего кода</p>
               </div>
-              <span class="pricing-box__price">1 490 ₽</span>
+              <span class="pricing-box__price pricing-box__price_old">1 990 ₽</span>
+              <span class="pricing-box__price">990 ₽</span>
               <a class="button button_large pricing-box__button" href="https://t.me/commiters_codereview_bot">Купить</a>
+              <span class="pricing-box__discount">-50%</span>
             </div>
           </div>
           <!-- item -->
@@ -31,11 +33,14 @@
                 <p>Разбор кода <strong>Middle</strong> и <strong>Senior</strong> разработчиками</p>
                 <p>Детальный анализ ошибок</p>
                 <p>Возможность задать вопросы ревьюеру</p>
-                <p>Видео разбор вашего кода</p>
+                <p>
+                  <a target="_blank" class="pricing-box__youtube" href="https://www.youtube.com/channel/UC6wNgLxcNW72CRow-Hyu0LA">Видео разбор вашего кода</a>
+                </p>
               </div>
-              <span class="pricing-box__price">3 490 ₽  </span>
+              <span class="pricing-box__price pricing-box__price_old">3 490 ₽</span>
+              <span class="pricing-box__price">1990 ₽</span>
               <a class="button button_large pricing-box__button" href="https://t.me/commiters_codereview_bot">Купить</a>
-              <span class="pricing-box__discount">-22%</span>
+              <span class="pricing-box__discount">-67%</span>
             </div>
           </div>
           <!-- item -->
@@ -46,11 +51,14 @@
                 <p>Разбор кода <strong>Middle</strong> и <strong>Senior</strong> разработчиками</p>
                 <p>Детальный анализ ошибок</p>
                 <p>Возможность задать вопросы ревьюеру</p>
-                <p>Видео разбор вашего кода</p>
+                <p>
+                  <a target="_blank" class="pricing-box__youtube" href="https://www.youtube.com/channel/UC6wNgLxcNW72CRow-Hyu0LA">Видео разбор вашего кода</a>
+                </p>
               </div>
-              <span class="pricing-box__price">6 990 ₽</span>
+              <span class="pricing-box__price pricing-box__price_old">6 990 ₽</span>
+              <span class="pricing-box__price">4 500 ₽</span>
               <a class="button button_large pricing-box__button" href="https://t.me/commiters_codereview_bot">Купить</a>
-              <span class="pricing-box__discount">-53%</span>
+              <span class="pricing-box__discount">-77%</span>
             </div>
           </div>
 
@@ -102,7 +110,7 @@
     </section>
   }
   
-  <section class="section">
+  <section class="section" @@if (page === 'main') {id="registration-form"}>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -110,9 +118,11 @@
             <div class="final-content-box">
               <h4 class="final-content-box__title">Хотите прислать<br> свой код на ревью?</h4>
               <div class="final-content-box__text">
-                <p>Оставьте вашу заявку через нашего бота-помощника и прокачайте свой код уже сегодня.</p>
+                <p>Оставьте ваш ник в телеграм и прокачайте свой код уже сегодня.</p>
               </div>
-              <a href="https://t.me/commiters_codereview_bot" class="button button_large final-content-box__button w-100 w-sm-auto">Записаться на код-ревью</a>
+              <div class="final-content-box__form">
+                @@include("../form/form.html")
+              </div>
             </div>
           }
           @@if (page === 'reviewer') {

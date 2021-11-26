@@ -11,7 +11,7 @@ module.exports = {
         publicPath: "/"
     },
 
-    optimization: {
+    /* optimization: {
         splitChunks: {
             cacheGroups: {
                 vendor: {
@@ -22,7 +22,7 @@ module.exports = {
                 }
             }
         }
-    },
+    }, */
 
     module: {
         rules: [
@@ -30,10 +30,13 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: require.resolve("babel-loader"),
-                    query: {
-                        presets: [
-                            ["@babel/preset-env", { modules: false }]
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', {
+                            'plugins': [
+                              '@babel/plugin-proposal-class-properties',
+                              '@babel/plugin-transform-runtime'
+                            ]}
                         ]
                     }
                 }

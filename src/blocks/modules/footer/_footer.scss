@@ -1,5 +1,6 @@
 .footer {
   color: var(--color-muted);
+  margin-top: calc(var(--section-margin) / 2);
   &__nav {
     padding: 40px 0;
     border-top: 1px solid var(--color-muted);
