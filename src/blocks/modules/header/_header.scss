@@ -150,6 +150,7 @@
   visibility: hidden;
   &__button {
     margin-top: 30px;
+    --font-size: 22px !important;
   }
 
   &.opened {

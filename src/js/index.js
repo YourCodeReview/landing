@@ -1,59 +1,16 @@
-import './import/modules.js';
-import './import/waypoints.js';
-import './import/_animate-css.js';
+/* import './import/modules.js'; */
+/* import './import/waypoints.js'; */
+/* import './import/_animate-css.js'; */
 
 import Header from '../blocks/modules/header/header';
+import Form from '../blocks/modules/form/form';
 import ScrollTo from './import/scrollTo';
 
 document.addEventListener("DOMContentLoaded", function() {
-    Header.init();
-    ScrollTo.init();
+  Header.init();
+  ScrollTo.init();
+  //form
+  document.querySelectorAll('.welcome-form').forEach($parent => {
+    new Form($parent).init();
+  })
 })
-
-$( document ).ready(function() {
-
-    // var rellax = new Rellax('.welcome__qual-bg');
-
-    $(".benefit__block-wrap").animated('fadeInUp');
-    $(".stage__block").animated('fadeInUp');
-
-    $(".welcome__form").submit(function (e) {
-        e.preventDefault();
-
-        const telegram = $(this).find(".welcome__form-input").val();
-        const formData = new FormData();
-        formData.append('telegram', telegram);
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const params = Object.fromEntries(urlSearchParams.entries());
-
-        if (params.hasOwnProperty('utm_content')) {
-            formData.append('utm_content', params.utm_content);
-        }
-
-        if (params.hasOwnProperty('add_name_parameter')) {
-            formData.append('add_name_parameter', params.add_name_parameter);
-        }
-
-        fetch($(this).attr('action'), {
-            method: 'POST',
-            body: formData,
-        }).then(response => {
-            return response.json();
-        }).then(result => {
-            party.confetti(this);
-            if (result.result) {
-                $('.welcome__form-done').addClass('welcome__form-done--active');
-                $('.welcome__form-done').css('display', 'block');
-                $('.welcome__form-done-btn').addClass('welcome__form-done-btn--active');
-            } else {
-                console.error('Error');
-                // TODO: add display error message
-            }
-        }).catch(error => {
-            party.confetti(this);
-            console.error('Error:', error);
-        });
-    });
-
-    
-});

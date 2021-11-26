@@ -1,0 +1,57 @@
+.welcome-form {
+  position: relative;
+  &__element {
+
+  }
+  &__input {
+    margin-bottom: 15px;
+  }
+  &__submit {
+    width: 100%;
+    --padding-x: 0;
+    --font-size: 20px;
+  }
+
+  &__final {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility var(--trs-2), opacity var(--trs-2);
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+
+    &-text {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: 0 0.3em;
+      --padding-x: 0;
+      --font-size: 20px;
+      svg {
+        flex-shrink: 0;
+        width: 1.2em;
+        height: 1.2em;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__final {
+      &-text {
+        font-size: 18px;
+      }
+      &-button {
+        --font-size: 16px;
+      }
+    }
+  }
+}

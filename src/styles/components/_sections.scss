@@ -2,7 +2,7 @@
   position: relative;
   color: var(--text-color);
   &:not(.section_dark):not(.section_light):not(.section_last) {
-    margin-bottom: var(--section-margin);
+    padding: calc(var(--section-margin) / 2) 0;
   }
   & > .container {
     position: relative;

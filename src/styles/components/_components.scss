@@ -55,6 +55,10 @@
   &__button {
     flex: 0 0 auto;
   }
+  &__form {
+    flex: 0 0 auto;
+    width: 340px;
+  }
   @include media-breakpoint-down(xl) {
     &__title {
       margin-bottom: 40px;
@@ -71,6 +75,9 @@
     padding: 40px 20px;
     &__title {
       margin-bottom: 25px;
+    }
+    &__form {
+      width: 100%;
     }
   }
 }
@@ -171,10 +178,17 @@
   &__button {
     margin-top: 40px;
   }
+  &__form {
+    max-width: 380px;
+    margin: 40px auto 0 auto;
+  }
   @include media-breakpoint-down(md) {
     padding: 40px 20px;
     &__title {
       margin-bottom: 30px;
+    }
+    &__form {
+      margin: 30px auto 0 auto;
     }
     &__button {
       margin-top: 30px;
@@ -215,7 +229,7 @@
   align-items: center;
   position: relative;
   &__text {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     p {
       font-size: 22px;
     }
@@ -223,6 +237,16 @@
   &__price {
     font-size: 50px;
     font-weight: 600;
+    line-height: 1;
+    margin-bottom: 10px;
+    &_old {
+      margin-bottom: 5px;
+      color: var(--color-gray);
+      text-decoration: line-through;
+    }
+  }
+  &__youtube {
+    text-decoration: underline;
   }
   &__button {
     width: 220px;
