@@ -1,7 +1,10 @@
 <div class="welcome-form">
 
   <form action="/request.php" class="welcome-form__element">
-    <input id="telegram" class="input welcome-form__input welcome__form-input" type="text" placeholder="@ или +__________" required pattern="^(https:\/\/t\.me\/|@)?[\w]{5,}|\+\d{7,}$">
+    <div class="input welcome-form__input">
+      <label for="telegram">@</label>
+      <input id="telegram" class="welcome__form-input" type="text" placeholder="telegram" required pattern="^(https:\/\/t\.me\/|@)?[\w]{5,}|\+\d{7,}$">
+    </div>
     <button class="button button_large welcome-form__submit welcome__form-button">Записаться на код-ревью</button>
   </form>
 
