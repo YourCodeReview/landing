@@ -1,20 +1,41 @@
 .input {
   position: relative;
-  width: 100%;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: var(--color-primary);
-  line-height: 30px;
   font-size: 24px;
-  padding: 15px 20px;
-  &::placeholder {
-    color: var(--color-gray);
-    transition: opacity var(--trs-1);
-  }
-  &:focus {
+  line-height: 26px;
+  display: flex;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --py: 15px;
+  --px: 15px;
+  input {
+    flex: 1 1 auto;
+    color: var(--color-default);
+    padding: var(--py) var(--px);
     &::placeholder {
-      opacity: 0;
+      color: var(--color-gray);
+      transition: opacity var(--trs-1);
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+  label {
+    padding: var(--py) 10px var(--py) var(--px);
+    color: var(--color-default);
+    flex: 0 0 auto;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: calc(100% - 10px);
+      top: 5px;
+      right: -1px;
+      background-color: currentColor;
     }
   }
   @include media-breakpoint-down(sm) {

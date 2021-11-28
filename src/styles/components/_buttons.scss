@@ -47,6 +47,7 @@
   }
 
   @include media-breakpoint-down(sm) {
+    --padding-x: 15px;
     &_large {
       --font-size: 18px;
     }

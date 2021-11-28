@@ -1,0 +1,59 @@
+<!doctype>
+<html lang="en">
+
+<head>
+  <title>SVG Sprite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <style>
+    html {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetical Neue", sans-serif;
+      font-size: 1.125rem;
+      text-align: center
+    }
+
+    h1 {
+      font-weight: 100;
+      margin-bottom: 1em
+    }
+
+    small {
+      font-size: .34em
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin: .5em;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- SVG Sprite -->
+  <svg width="0" height="0" class="hidden">
+    <symbol fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 9" id="caret-bottom">
+      <path
+        d="M2.08814 0.0319018L7.05602 5.06381L12.0879 0.0959287L14.0815 1.10871L7.03681 8.06375L0.081775 1.01908L2.08814 0.0319018Z">
+      </path>
+    </symbol>
+  </svg>
+  <h1>
+    SVG Sprite Demo
+    <br />
+    <small>
+      created with <a href="https://svgsprit.es/">svgsprit.es</a>
+    </small>
+  </h1>
+  <svg class="icon">
+    <use xlink:href="#caret-bottom"></use>
+  </svg>
+</body>

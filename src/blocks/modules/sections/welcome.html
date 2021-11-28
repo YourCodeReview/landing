@@ -1,4 +1,4 @@
-<section class="section section_dark welcome-section">
+<section id="welcome" class="section section_dark welcome-section">
   <div class="container">
     <div class="welcome-section__container row align-items-center justify-content-between">
 
@@ -8,13 +8,15 @@
 
       <div class="welcome-section__text-content col-lg-6 col-xxl-5">
         <h1 class="welcome-section__title">Your codereview</h1>
+
         @@if (page === 'main') {
           <p class="welcome-section__text-1">Первый русскоязычный сервис код-ревью.</p>
           <div class="welcome-section__bottom-text">
             <p class="welcome-section__text-2">Хотите улучшить свой код?</p>
-            <a class="button button_large welcome-section__button w-100 w-sm-auto" href="#registration-form" data-action="scroll">Записаться на код-ревью</a>
+            <a class="button button_large welcome-section__button w-100 w-sm-auto" href="/#registration-form" data-action="scroll">Записаться на код-ревью</a>
           </div>
         }
+
         @@if (page === 'reviewer') {
           <p class="welcome-section__text-1">Первое русскоязычное код-ревью комьюнити.</p>
           <div class="welcome-section__bottom-text">
@@ -23,8 +25,16 @@
             <a class="button button_large welcome-section__button w-100 w-sm-auto" href="https://t.me/YourCodeReview">Стать ревьюером</a>
           </div>
         }
-      </div>
 
+        @@if (page === 'sobesedovaniya') {
+          <p class="welcome-section__text-1">Сервис, который помогает подготовиться к работе в IT</p>
+          <div class="welcome-section__bottom-text">
+            <p class="welcome-section__text-2">Хочешь подготовиться к собесу?</p>
+            <a class="button button_large welcome-section__button w-100 w-sm-auto" href="/sobesedovaniya.html#registration-form" data-action="scroll">Записаться на пробную неделю</a>
+          </div>
+        }
+
+      </div>
     </div>
   </div>
   <img src="/img/figures/crescent-bottom.svg" class="section__figure section__figure_bottom"></img>

@@ -1,117 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
+<html lang="ru">
 
-  <!-- Useful meta tags -->
-  <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  @@include("../../blocks/modules/layout/head.html")
 
-  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <body>
+    
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    
+    <div class="wrapper">
+      @@include("../../blocks/modules/header/header.html", {"page": "reviewer"})
+      <main class="main">
+        @@include("../../blocks/modules/sections/welcome.html", {"page": "reviewer"})
+        @@include("../../blocks/modules/sections/about.html", {"page": "reviewer"})
+        @@include("../../blocks/modules/sections/recommendations.html")
+        @@include("../../blocks/modules/sections/reviews.html", {"page": "reviewer"})
+        @@include("../../blocks/modules/sections/last-section.html", {"page": "reviewer"})
+      </main>
+    </div>
+    
+    @@include("../../blocks/modules/layout/scripts.html")
 
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="robots" content="">
-  <meta name="googlebot" content="">
-  <meta name="google" content="notranslate">
-  <meta name="format-detection" content="telephone=no">
+  </body>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content=""/>
-  <meta property="og:description" content=""/>
-  <meta property="og:url" content=""/>
-  <meta property="og:image" content=""/>
-  <meta property="og:locale" content="ru_RU"/>
-  <meta property="og:locale:alternate" content="fr_FR"/>
-  <meta property="og:locale:alternate" content="es_ES"/>
-  <meta property="og:locale:alternate" content="en_GB"/>
-  <meta property="og:site_name" content=""/>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-  <link sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link sizes="32x32" href="img/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="img/favicons/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="1512x512" href="img/favicons/android-chrome-512x512.png">
-
-  <meta name="application-name" content="&nbsp;"/>
-  <meta name="msapplication-TileColor" content="#FFFFFF"/>
-  <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
-  <meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
-  <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
-  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png"/>
-  <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
-
-  <meta name="theme-color" content="#554FB6">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="styles/main.css">
-
-  <!-- Title -->
-  <title>Your codereview - Первое русскоязычное код-ревью комьюнити</title>
-
-  <!-- Facebook Pixel Code -->
-  <meta name="facebook-domain-verification" content="wawmqzhen34cfyhgom66qxpbdonu7h" />
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '700701727521226');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=700701727521226&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
-
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-     ym(86020084, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true,
-          webvisor:true
-     });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/86020084" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TML7HDJ');</script>
-
-  <script>(function(a,m,o,c,r,m){a[m]={id:"80443",hash:"fccde5af4f449f82a319fc133445078d697772f75809be591605ff1f3bd160c7",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1636362996';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
-</head>
-<body>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  
-  <div class="wrapper">
-    @@include("../../blocks/modules/header/header.html", {"page": "reviewer"})
-    <main class="main">
-      @@include("../../blocks/modules/sections/welcome.html", {"page": "reviewer"})
-      @@include("../../blocks/modules/sections/about.html", {"page": "reviewer"})
-      @@include("../../blocks/modules/sections/recommendations.html")
-      @@include("../../blocks/modules/sections/reviews.html", {"page": "reviewer"})
-      @@include("../../blocks/modules/sections/last-section.html", {"page": "reviewer"})
-    </main>
-  </div>
-
-  <!--SCRIPTS-->
-  <script src="js/libs/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-  <script src='/js/libs/scroll-lock.min.js'></script>
-  <script src="js/main.js"></script>
-
-</body>
 </html>
+
+
 

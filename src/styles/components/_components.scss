@@ -57,7 +57,7 @@
   }
   &__form {
     flex: 0 0 auto;
-    width: 340px;
+    width: 400px;
   }
   @include media-breakpoint-down(xl) {
     &__title {
@@ -72,7 +72,7 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    padding: 40px 20px;
+    padding: 30px 20px;
     &__title {
       margin-bottom: 25px;
     }
@@ -173,26 +173,26 @@
   text-align: center;
   &__title {
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   &__button {
     margin-top: 40px;
   }
   &__form {
-    max-width: 380px;
+    max-width: 400px;
     margin: 40px auto 0 auto;
   }
   @include media-breakpoint-down(md) {
     padding: 40px 20px;
-    &__title {
-      margin-bottom: 30px;
-    }
     &__form {
       margin: 30px auto 0 auto;
     }
     &__button {
       margin-top: 30px;
     }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 20px;
   }
 }
 
@@ -295,6 +295,76 @@
     &__price {
       font-size: 38px;
       font-weight: 600;
+    }
+  }
+}
+
+.large-pricing-box {
+  padding: 40px 70px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: var(--color-default);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+    font-size: 24px;
+  }
+  &__image {
+    display: block;
+    width: 175px;
+    margin-bottom: 30px;
+  }
+  &__price {
+    color: #48429A;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 40px 50px;
+    column-gap: 50px;
+    &__price {
+      font-size: 36px;
+    }
+    &__list {
+      font-size: 22px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 40px;
+    &__list {
+      order: 2;
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__list {
+      font-size: 18px;
+    }
+    &__image {
+      width: 120px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 20px;
+    &__button {
+      width: 100%;
     }
   }
 }

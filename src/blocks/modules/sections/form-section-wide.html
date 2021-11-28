@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container">
+    <div class="call-for-appointment-box">
+      <h3 class="call-for-appointment-box__title">Запишитесь на свое первое код&#8209;ревью</h3>
+      <div class="call-for-appointment-box__content">
+        <p class="call-for-appointment-box__text">Оставьте вашу заявку, и совсем скоро с вами свяжется наш менеджер и поможет с первым код-ревью.</p>
+        <img src="/img/icon/red-right-arrow.svg" alt="icon" class="call-for-appointment-box__icon">
+    
+        <div class="call-for-appointment-box__form">
+          @@if (page === 'main') {
+            @@include("../form/form.html", {"button": "Записаться на пробное код-ревью", "id": "1"})
+          }
+          @@if (page === 'sobesedovaniya') {
+            @@include("../form/form.html", {"button": "Записаться на пробную неделю", "id": "1"})
+          }
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</section>

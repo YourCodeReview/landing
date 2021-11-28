@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  @@include("../../blocks/modules/layout/head.html")
+
+  <body>
+
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    
+    <div class="wrapper">
+      @@include("../../blocks/modules/header/header.html", {"page": "sobesedovaniya"})
+      <main class="main">
+        @@include("../../blocks/modules/sections/welcome.html", {"page": "sobesedovaniya"})
+
+
+        <section class="section section_last section_dark">
+          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../../blocks/modules/sections/pricing.html", {"page": "sobesedovaniya"})          
+          @@include("../../blocks/modules/sections/form-section.html", {"page": "sobesedovaniya"})
+          @@include("../../blocks/modules/footer/footer.html")
+        </section>
+
+      </main>
+    </div>
+    
+    @@include("../../blocks/modules/layout/scripts.html")
+
+  </body>
+
+</html>
+
+
+
+

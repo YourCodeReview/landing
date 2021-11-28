@@ -1,5 +1,6 @@
 <section class="section section_last section_dark code-quality-section">
   @@if (page === 'main') {
+    
     <section id="pricing" class="section section-pricing">
       <div class="container">
 
@@ -75,7 +76,7 @@
   }
 
   @@if (page === 'reviewer') {
-    <section class="section">
+    <section class="section" id='rating'>
       <div class="container">
         <div class="row align-items-center">
           <div class="content-image col-lg-5 offset-lg-1 mb-35 mb-lg-0 order-lg-2">
@@ -118,7 +119,7 @@
             <div class="final-content-box">
               <h4 class="final-content-box__title">Хотите прислать<br> свой код на ревью?</h4>
               <div class="final-content-box__text">
-                <p>Оставьте ваш ник в телеграм и прокачайте свой код уже сегодня.</p>
+                <p>Оставьте ваш ник в телеграм и получите <strong>бесплатное</strong> пробное код-ревью уже сегодня</p>
               </div>
               <div class="final-content-box__form">
                 @@include("../form/form.html")
