@@ -1,33 +1,71 @@
-<section class="section how-it-works-section">
+<section id="how-it-works" class="section how-it-works-section">
   <div class="container">
     <h2 class="gradient-text gradient-text_style-2 mb-40 mb-lg-50">Как это работает?</h2>
 
     <div class="row align-items-center how-it-works-section__content">
       <div class="content-image col-md-6 mb-45 mb-md-0 order-md-2">
-        <img src="/img/how-it-works.svg" alt="image">
+        @@if (page === 'main') {
+          <img src="/img/how-it-works.svg" alt="image">
+        }
+        @@if (page === 'sobesedovaniya') {
+          <img src="/img/session-flow.svg" alt="image">
+        }
       </div>
 
       <div class="col-md-6 pe-lg-50 pe-xl-60">
-        <div class="how-it-works-block">
-          <h6>Оставляете заявку</h6>
-          <p>Вы оставляете свою заявку на код-ревью и присылаете ваш код.</p>
-        </div>
-        <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
-        <div class="how-it-works-block">
-          <h6>Подготавливаете вопросы</h6>
-          <p>Вы можете подготовить вопросы по вашему коду, которые бы вы хотели задать ревьюерам.</p>
-        </div>
-        <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
-        <div class="how-it-works-block">
-          <h6>Получаете ревью</h6>
-          <p>В течение 72 часов вы начинаете получать фидбэк от наших ревьюеров.</p>
-        </div>
-        <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
-        <div class="how-it-works-block">
-          <h6>Оставляете свой отзыв</h6>
-          <p>После того, как вы получили свое ревью, вы можете выбрать ревьюера, чей фидбэк был наиболее полезным.</p>
-        </div>
+
+        @@if (page === 'main') {
+          <div class="how-it-works-block">
+            <h6>Оставляете заявку</h6>
+            <p>Вы оставляете свою заявку на код-ревью и присылаете ваш код.</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Подготавливаете вопросы</h6>
+            <p>Вы можете подготовить вопросы по вашему коду, которые бы вы хотели задать ревьюерам.</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Получаете ревью</h6>
+            <p>В течение 72 часов вы начинаете получать фидбэк от наших ревьюеров.</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Оставляете свой отзыв</h6>
+            <p>После того, как вы получили свое ревью, вы можете выбрать ревьюера, чей фидбэк был наиболее полезным.</p>
+          </div>
+        }
+
+        @@if (page === 'sobesedovaniya') {
+          <div class="how-it-works-block">
+            <h6>Оставляете заявку</h6>
+            <p>Вы оставляете свою заявку, и мы подбираем задания с собеседований, которые подойдут вашему стэку.</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Первое задание</h6>
+            <p>Вы получаете свое первое задание от реальной компании и приступаете к его решению</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Получаете ревью</h6>
+            <p>Вы отсылаете нам на проверку ваше задание и получаете фидбэк от нескольких наших ревьюеров.</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Работа над ошибками</h6>
+            <p>Делаете работу над ошибками и снова присылаете нам на ревью.</p>
+          </div>
+          <img src="/img/icon/bottom-arrow.svg" alt="arrow" class="how-it-works-section__arrow">
+          <div class="how-it-works-block">
+            <h6>Результат тестового задания</h6>
+            <p>Наши ревьюеры присылают вам второе ревью кода и оценивают, прошли ли бы вы на выбранную позицию.</p>
+          </div>
+        }
+
+        
       </div>
+
     </div>
     
   </div>

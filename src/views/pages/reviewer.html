@@ -11,10 +11,38 @@
       @@include("../../blocks/modules/header/header.html", {"page": "reviewer"})
       <main class="main">
         @@include("../../blocks/modules/sections/welcome.html", {"page": "reviewer"})
-        @@include("../../blocks/modules/sections/about.html", {"page": "reviewer"})
-        @@include("../../blocks/modules/sections/recommendations.html")
-        @@include("../../blocks/modules/sections/reviews.html", {"page": "reviewer"})
-        @@include("../../blocks/modules/sections/last-section.html", {"page": "reviewer"})
+
+        <section class="section section_light">
+          @@include("../../blocks/modules/sections/about.html", {"page": "reviewer"})
+        </section>
+
+        <section class="section section_dark section-recommendations">
+          <img src="/img/figures/crescent-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../../blocks/modules/sections/recommendations.html")
+          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
+        </section>
+
+        <section class="section section_light">
+          @@include("../../blocks/modules/sections/reviews.html", {
+            "page": "reviewer",
+            "title": "Делитесь своими заниями",
+            "text": "Что говорят разработчики, которым вы помогаете?"
+          })
+        </section>
+
+        <section class="section section_last section_dark">
+          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../../blocks/modules/sections/rating.html")
+          @@include("../../blocks/modules/sections/github.html")
+          @@include("../../blocks/modules/sections/form-section.html", {
+            "page": "reviewer",
+            "title": "Хотите присоединиться к команде ревьюеров?",
+            "text": "Пройдите регистрацию через нашего бота-помощника и начните помогать разработчикам уже сегодня.",
+            "button": "Стать ревьюером"
+          })
+          @@include("../../blocks/modules/footer/footer.html")
+        </section>
+        
       </main>
     </div>
     

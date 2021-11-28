@@ -3,40 +3,21 @@
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
 
-        @@if (page === 'main') {
-          <div class="final-content-box">
-            <h4 class="final-content-box__title">Хотите прислать<br> свой код на ревью?</h4>
-            <div class="final-content-box__text">
-              <p>Оставьте ваш ник в телеграм и получите <strong>бесплатное</strong> пробное код-ревью уже сегодня</p>
-            </div>
+        <div class="final-content-box">
+          <h4 class="final-content-box__title">@@title</h4>
+          <div class="final-content-box__text">
+            <p>@@text</p>
+          </div>
+          @@if (page === 'main' || page === 'sobesedovaniya') {
             <div class="final-content-box__form">
-              @@include("../form/form.html", {"button": "Записаться на пробное код-ревью", "id": "2"})
+              @@include("../form/form.html", {"button": "@@button", "id": "2"})
             </div>
-          </div>
-        }
-
-        @@if (page === 'sobesedovaniya') {
-          <div class="final-content-box">
-            <h4 class="final-content-box__title">Хотите стать крутым<br> разработчиком?</h4>
-            <div class="final-content-box__text">
-              <p>Оставьте ваш ник в телеграм и получите <strong>бесплатную</strong> пробную неделю уже сегодня</p>
-            </div>
-            <div class="final-content-box__form">
-              @@include("../form/form.html", {"button": "Записаться на пробную неделю", "id": "2"})
-            </div>
-          </div>
-        }
-
-        @@if (page === 'reviewer') {
-          <div class="final-content-box">
-            <h4 class="final-content-box__title">Хотите присоединиться к команде ревьюеров?</h4>
-            <div class="final-content-box__text">
-              <p>Пройдите регистрацию через нашего бота-помощника и начните помогать разработчикам уже сегодня.</p>
-            </div>
-            <a href="https://t.me/YourCodeReview" class="button button_large final-content-box__button w-100 w-sm-auto">Стать ревьюером</a>
-          </div>
-        }
-
+          }
+          @@if (page === 'reviewer') {
+            <a href="https://t.me/YourCodeReview" class="button button_large final-content-box__button w-100 w-sm-auto">@@button</a>
+          }
+        </div>
+        
       </div>
     </div>
   </div>

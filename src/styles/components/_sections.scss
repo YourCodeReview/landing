@@ -1,9 +1,7 @@
 .section {
   position: relative;
-  color: var(--text-color);
-  &:not(.section_dark):not(.section_light):not(.section_last) {
-    padding: calc(var(--section-margin) / 2) 0;
-  }
+  padding: calc(var(--section-margin) / 2) 0;
+
   & > .container {
     position: relative;
     z-index: 2;
@@ -29,17 +27,17 @@
     }
   }
   &_dark {
-    padding: var(--dark-section-py) 0;
     --title-color: var(--color-light);
-    --text-color: var(--color-light);
+    color: var(--color-light);
     background: var(--section-bg-gradient-dark);
+    padding: calc(var(--decoration-height) * 1.5) 0;
   }
   &_light {
-    padding: var(--section-py) 0;
     background: var(--section-bg-gradient-light);
+    padding: 0;
   }
   &_last {
-    padding: calc(var(--dark-section-py) - var(--section-py)) 0 0 0;
+    padding-bottom: 0;
     & > .section {
       &:first-child {
         padding-top: var(--section-py);
@@ -104,6 +102,7 @@
     padding-bottom: 90px;
     &__button {
       --padding-x: 0px;
+      --font-size: 16px;
     }
     &__text-3 {
       font-size: 16px;
