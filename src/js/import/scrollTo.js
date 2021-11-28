@@ -4,19 +4,20 @@ const ScrollTo = {
 
     let click_event = (event) => {
       let $link = event.target.closest(`${_scroll_}`);
-
       if (!$link) return;
 
-      let attr = $link.getAttribute('href').replace(/[/]/g, ''),
-          $target = document.querySelector(`${attr}`);
+      let location = $link.getAttribute('href').split('#')[0];
 
-      if (!$target) {
-        return;
-      } else {
+      if (location == window.location.pathname) {
         event.preventDefault();
+      } else {
+        return;
       }
 
-      scroll_event($target);
+      let attr = $link.getAttribute('href').split('#')[1],
+          $target = document.querySelector(`#${attr}`);
+      
+      if ($target) scroll_event($target);
     }
 
     let scroll_event = ($target) => {

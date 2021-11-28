@@ -8,7 +8,7 @@ class Form {
 
   init() {
     this.$form = this.$parent.querySelector('.welcome-form__element');
-    this.$telegram = this.$parent.querySelector('#telegram');
+    this.$telegram = this.$parent.querySelector('[name="telegram"]');
     this.formFinal = this.$parent.querySelector('.welcome-form__final');
 
     this.submit = async () => {

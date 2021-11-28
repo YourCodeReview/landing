@@ -1,119 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Your codereview - Первое русскоязычное код-ревью комьюнити</title>
-  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<html lang="ru">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content=""/>
-  <meta property="og:description" content=""/>
-  <meta property="og:url" content=""/>
-  <meta property="og:image" content=""/>
-  <meta property="og:locale" content="ru_RU"/>
-  <meta property="og:locale:alternate" content="fr_FR"/>
-  <meta property="og:locale:alternate" content="es_ES"/>
-  <meta property="og:locale:alternate" content="en_GB"/>
-  <meta property="og:site_name" content=""/>
+  @@include("../blocks/modules/layout/head.html")
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-  <link sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link sizes="32x32" href="img/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="img/favicons/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="1512x512" href="img/favicons/android-chrome-512x512.png">
+  <body>
+    
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    
+    <div class="wrapper">
+      @@include("../blocks/modules/header/header.html", {"page": "main"})
+      <main class="main">
+        @@include("../blocks/modules/sections/welcome.html", {"page": "main"})
 
-  <meta name="application-name" content="&nbsp;"/>
-  <meta name="msapplication-TileColor" content="#FFFFFF"/>
-  <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
-  <meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
-  <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
-  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png"/>
-  <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
+        <section class="section section_light">
+          @@include("../blocks/modules/sections/about.html", {"page": "main"})
+        </section>
 
-  <meta name="theme-color" content="#554FB6">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <section class="section section_dark">
+          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../blocks/modules/sections/who-needs.html")
+          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
+        </section>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <section class="section section_light">
+          @@include("../blocks/modules/sections/how-it-works.html", {"page": "main"})
+          @@include("../blocks/modules/sections/form-section-wide.html", {
+            "page": "main",
+            "title": "Запишитесь на пробное код-ревью",
+            "text": "Оставьте вашу заявку, чтобы получить <strong>бесплатное</strong> код-ревью и прокачать свой код уже сегодня",
+            "button": "Записаться на пробное код-ревью"
+          })
+        </section>
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="styles/main.css">
+        <section class="section section_dark">
+          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../blocks/modules/sections/code-quality.html")
+          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
+        </section>
 
-  <!-- Facebook Pixel Code -->
-  <meta name="facebook-domain-verification" content="wawmqzhen34cfyhgom66qxpbdonu7h" />
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '700701727521226');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=700701727521226&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Facebook Pixel Code -->
+        <section class="section section_light">
+          @@include("../blocks/modules/sections/reviews.html", {
+            "page": "main",
+            "title": "Ваши отзывы",
+            "text": "Что говорят разработчики, которым мы помогаем?"
+          })
+        </section>
 
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        <section class="section section_dark section_last">
+          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../blocks/modules/sections/pricing.html", {"page": "main"})
+          @@include("../blocks/modules/sections/form-section.html", {
+            "page": "main",
+            "title": "Хотите прислать свой код на ревью?",
+            "text": "Оставьте ваш ник в телеграм и получите <strong>бесплатное</strong> пробное код-ревью уже сегодня",
+            "button": "Записаться на пробное код-ревью"
+          })
+          @@include("../blocks/modules/footer/footer.html")
+        </section>
 
-     ym(86020084, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true,
-          webvisor:true
-     });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/86020084" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TML7HDJ');</script>
-  <script>(function(a,m,o,c,r,m){a[m]={id:"80443",hash:"fccde5af4f449f82a319fc133445078d697772f75809be591605ff1f3bd160c7",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1636362996';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213688445-1">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      </main>
+    </div>
+    
+    @@include("../blocks/modules/layout/scripts.html")
 
-    gtag('config', 'UA-213688445-1');
-  </script>
-</head>
-<body>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML7HDJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </body>
 
-  <div class="wrapper">
-    @@include("../blocks/modules/header/header.html", {"page": "main"})
-    <main class="main">
-      @@include("../blocks/modules/sections/welcome.html", {"page": "main"})
-      @@include("../blocks/modules/sections/about.html", {"page": "main"})
-      @@include("../blocks/modules/sections/who-needs.html")
-      @@include("../blocks/modules/sections/how-it-works.html")
-      @@include("../blocks/modules/sections/code-quality.html")
-      @@include("../blocks/modules/sections/reviews.html", {"page": "main"})
-      @@include("../blocks/modules/sections/last-section.html", {"page": "main"})
-    </main>
-  </div>
-
-  <!--SCRIPTS-->
-  <script src="js/libs/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-  <script src='/js/libs/scroll-lock.min.js'></script>
-  <script src="js/main.js"></script>
-
-</body>
 </html>
 
 

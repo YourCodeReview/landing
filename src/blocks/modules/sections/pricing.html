@@ -1,0 +1,97 @@
+<section id="pricing" class="section section-pricing">
+  <div class="container">
+
+    <div class="mb-45 mb-md-60 mb-xl-70">
+      <h2 class="text-center mb-30 mb-lg-20">Стоимость</h2>
+      <p class="text-sub-title text-center">Платите за то, чем вы действительно пользуетесь</p>
+    </div>
+
+    @@if (page === 'main') {
+      <div class="section-pricing__elements row row-gap-40 row-gap-md-50 justify-content-center">
+        <!-- item -->
+        <div class="col-md-6 col-xl-4">
+          <div class="pricing-box">
+            <h3 class="pricing-box__title gradient-text gradient-text_style-3">1 код-ревью</h3>
+            <div class="pricing-box__text">
+              <p>Разбор кода <strong>Middle</strong> и <strong>Senior</strong> разработчиками</p>
+              <p>Детальный анализ ошибок</p>
+              <p>Возможность задать вопросы ревьюеру</p>
+              <p class="pricing-box__youtube text-muted">Видео разбор вашего кода</p>
+            </div>
+            <span class="pricing-box__price pricing-box__price_old">1 990 ₽</span>
+            <span class="pricing-box__price">990 ₽</span>
+            <a class="button button_large pricing-box__button" href="/#registration-form" data-action="scroll">Попробовать бесплатно</a>
+            <span class="pricing-box__discount">-50%</span>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="col-md-6 col-xl-4">
+          <div class="pricing-box">
+            <h3 class="pricing-box__title gradient-text gradient-text_style-4">3 код-ревью</h3>
+            <div class="pricing-box__text">
+              <p>Разбор кода <strong>Middle</strong> и <strong>Senior</strong> разработчиками</p>
+              <p>Детальный анализ ошибок</p>
+              <p>Возможность задать вопросы ревьюеру</p>
+              <p>
+                <a target="_blank" class="pricing-box__youtube" href="https://www.youtube.com/channel/UC6wNgLxcNW72CRow-Hyu0LA">Видео разбор вашего кода</a>
+              </p>
+            </div>
+            <span class="pricing-box__price pricing-box__price_old">3 490 ₽</span>
+            <span class="pricing-box__price">1990 ₽</span>
+            <a class="button button_large pricing-box__button" href="/#registration-form" data-action="scroll">Попробовать бесплатно</a>
+            <span class="pricing-box__discount">-67%</span>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="col-md-6 col-xl-4">
+          <div class="pricing-box">
+            <h3 class="pricing-box__title gradient-text gradient-text_style-5">10 код-ревью</h3>
+            <div class="pricing-box__text">
+              <p>Разбор кода <strong>Middle</strong> и <strong>Senior</strong> разработчиками</p>
+              <p>Детальный анализ ошибок</p>
+              <p>Возможность задать вопросы ревьюеру</p>
+              <p>
+                <a target="_blank" class="pricing-box__youtube" href="https://www.youtube.com/channel/UC6wNgLxcNW72CRow-Hyu0LA">Видео разбор вашего кода</a>
+              </p>
+            </div>
+            <span class="pricing-box__price pricing-box__price_old">6 990 ₽</span>
+            <span class="pricing-box__price">4 500 ₽</span>
+            <a class="button button_large pricing-box__button" href="/#registration-form" data-action="scroll">Попробовать бесплатно</a>
+            <span class="pricing-box__discount">-77%</span>
+          </div>
+        </div>
+  
+      </div>
+      <div class="section-pricing__text row mt-50 mt-lg-60">
+        <div class="col-lg-8">
+          <p>Все ревью вы сможете использовать в течение 1 года после покупки, без каких-либо подписок или обязательств.</p>
+          <p>Если вы останетесь недовольны полученным фидбэком, то мы <strong>вернем вам деньги</strong>.</p>
+        </div>
+      </div>
+    }
+
+    @@if (page === 'sobesedovaniya') {
+      <div class="section-pricing__sobesedovanie-box">
+
+        <div class="large-pricing-box">
+          <ul class="large-pricing-box__list list">
+            <li>Реальные задачи с собеседований под ваш стэк технологий</li>
+            <li>Код-ревью ваших решений от <strong>Senior</strong> разработчиков</li>
+            <li>Детальный анализ ошибок в коде</li>
+            <li>Разбор заданий на одном из стримов с возможностью задать вопросы</li>
+            <li>Просмотр кода других разработчиков</li>
+          </ul>
+          <div class="large-pricing-box__content">
+            <h3 class="gradient-text gradient-text_style-1 large-pricing-box__title">Подготовьтесь<br> к собеседованию</h3>
+            <img class="large-pricing-box__image" src="/img/icons/bottom-arrows.svg" alt="arrows">
+            <div class="large-pricing-box__price">2 990 ₽ / мес.</div>
+            <a class="button button_large large-pricing-box__button" href="/sobesedovaniya.html#registration-form" data-action="scroll">Попробовать бесплатно</a>
+          </div>
+        </div>
+
+      </div>
+    }
+
+
+  </div>
+</section>

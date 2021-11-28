@@ -1,24 +1,9 @@
-<section @@if (page === 'main') {id="reviews"} class="section section_light reviews-section">
+<section id="reviews" class="section reviews-section">
   <div class="container">
     <div class="mb-45 mb-md-60 mb-xl-70">
-      <h2 class="gradient-text gradient-text_style-2 text-center mb-30 mb-lg-20">
-        @@if (page === 'main') {
-          Ваши отзывы
-        }
-        @@if (page === 'reviewer') {
-          Делитесь своими заниями
-        }
-      </h2>
-      <p class="text-sub-title text-center">
-        @@if (page === 'main') {
-          Что говорят разработчики, которым мы помогаем?
-        }
-        @@if (page === 'reviewer') {
-          Что говорят разработчики, которым вы помогаете?
-        }
-      </p>
+      <h2 class="gradient-text gradient-text_style-2 text-center mb-30 mb-lg-20">@@title</h2>
+      <p class="text-sub-title text-center">@@text</p>
     </div>
-    
     
     <div class="reviews-section__blocks row-gap-40 row-gap-md-50">
       <!-- review -->
@@ -68,7 +53,7 @@
       </div>
     </div>
 
-    @@if (page === 'main') {
+    @@if (page === 'main' || page === 'sobesedovaniya') {
       <div class="row justify-content-center row-gap-40 row-gap-md-50">
         <!-- item -->
         <div class="short-info-item col-md-6 col-xl-4">
