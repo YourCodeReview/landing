@@ -340,7 +340,7 @@
     text-decoration: underline;
   }
   &__button {
-    width: 220px;
+    width: 100%;
     margin-top: 5px;
   }
   &__discount {
@@ -362,6 +362,9 @@
         font-size: 20px;
       }
     }
+    &__button {
+      --font-size: 18px;
+    }
   }
   @include media-breakpoint-down(md) {
     &__discount {
@@ -370,6 +373,7 @@
     &__title {
       font-size: 32px;
     }
+    
   }
   @include media-breakpoint-down(sm) {
     padding: 30px 20px 25px 20px;
