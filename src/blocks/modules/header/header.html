@@ -23,7 +23,7 @@
           </li>
 
           <li class="header__nav-item">
-            <a class="header__nav-link @@if (page === 'sobesedovaniya') { active }" href="/sobesedovaniya.html">
+            <a class="header__nav-link @@if (page === 'interview') { active }" href="/interview.html">
               Собеседования
               <svg class="sprite-icon">
                 <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
@@ -31,12 +31,12 @@
             </a>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
-                <li class="header__dropdown-item"><a href="/sobesedovaniya.html#welcome" data-action="scroll" class="header__dropdown-link">Главная</a></li>
-                <li class="header__dropdown-item"><a href="/sobesedovaniya.html#about" data-action="scroll" class="header__dropdown-link">О нас</a></li>
-                <li class="header__dropdown-item"><a href="/sobesedovaniya.html#how-it-works" data-action="scroll" class="header__dropdown-link">Как работает</a></li>
-                <li class="header__dropdown-item"><a href="/sobesedovaniya.html#reviewers" data-action="scroll" class="header__dropdown-link">Ревьюеры</a></li>
-                <li class="header__dropdown-item"><a href="/sobesedovaniya.html#reviews" data-action="scroll" class="header__dropdown-link">Отзывы</a></li>
-                <li class="header__dropdown-item"><a href="/sobesedovaniya.html#pricing" data-action="scroll" class="header__dropdown-link">Стоимость</a></li>
+                <li class="header__dropdown-item"><a href="/interview.html#welcome" data-action="scroll" class="header__dropdown-link">Главная</a></li>
+                <li class="header__dropdown-item"><a href="/interview.html#about" data-action="scroll" class="header__dropdown-link">О нас</a></li>
+                <li class="header__dropdown-item"><a href="/interview.html#how-it-works" data-action="scroll" class="header__dropdown-link">Как работает</a></li>
+                <li class="header__dropdown-item"><a href="/interview.html#reviewers" data-action="scroll" class="header__dropdown-link">Ревьюеры</a></li>
+                <li class="header__dropdown-item"><a href="/interview.html#reviews" data-action="scroll" class="header__dropdown-link">Отзывы</a></li>
+                <li class="header__dropdown-item"><a href="/interview.html#pricing" data-action="scroll" class="header__dropdown-link">Стоимость</a></li>
               </ul>
             </div>
           </li>
@@ -64,8 +64,8 @@
       @@if (page === 'main') { 
         <a href="/#registration-form" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
       }
-      @@if (page === 'sobesedovaniya') { 
-        <a href="/sobesedovaniya.html#registration-form" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
+      @@if (page === 'interview') { 
+        <a href="/interview.html#registration-form" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
       }
       @@if (page === 'reviewer') { 
         <a href="https://t.me/codereivew_reviewers_bot" class="button button_large header__button">Стать ревьюером</a>
@@ -102,19 +102,19 @@
               </li>
     
               <li class="header-mobile__nav-item" data-toggle="parent">
-                <a class="header-mobile__nav-link @@if (page === 'sobesedovaniya') { active }" href="javascript:void(0);" data-toggle="trigger">
+                <a class="header-mobile__nav-link @@if (page === 'interview') { active }" href="javascript:void(0);" data-toggle="trigger">
                   Собеседования
                   <svg class="sprite-icon">
                     <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
                   </svg>
                 </a>
                 <ul class="header-mobile__dropdown-list" data-toggle="content">
-                  <li class="header-mobile__dropdown-item"><a href="/sobesedovaniya.html#welcome" data-action="scroll" class="header-mobile__dropdown-link">Главная</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/sobesedovaniya.html#about" data-action="scroll" class="header-mobile__dropdown-link">О нас</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/sobesedovaniya.html#how-it-works" data-action="scroll" class="header-mobile__dropdown-link">Как работает</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/sobesedovaniya.html#reviewers" data-action="scroll" class="header-mobile__dropdown-link">Ревьюеры</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/sobesedovaniya.html#reviews" data-action="scroll" class="header-mobile__dropdown-link">Отзывы</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/sobesedovaniya.html#pricing" data-action="scroll" class="header-mobile__dropdown-link">Стоимость</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/interview.html#welcome" data-action="scroll" class="header-mobile__dropdown-link">Главная</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/interview.html#about" data-action="scroll" class="header-mobile__dropdown-link">О нас</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/interview.html#how-it-works" data-action="scroll" class="header-mobile__dropdown-link">Как работает</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/interview.html#reviewers" data-action="scroll" class="header-mobile__dropdown-link">Ревьюеры</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/interview.html#reviews" data-action="scroll" class="header-mobile__dropdown-link">Отзывы</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/interview.html#pricing" data-action="scroll" class="header-mobile__dropdown-link">Стоимость</a></li>
                 </ul>
               </li>
     
@@ -137,8 +137,8 @@
                 @@if (page === 'main') { 
                   <a href="/#registration-form" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
                 }
-                @@if (page === 'sobesedovaniya') { 
-                  <a href="/sobesedovaniya.html#registration-form" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
+                @@if (page === 'interview') { 
+                  <a href="/interview.html#registration-form" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
                 }
                 @@if (page === 'reviewer') { 
                   <a href="https://t.me/YourCodeReview" class="button button_large header-mobile__button">Стать ревьюером</a>
