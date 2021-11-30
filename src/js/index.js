@@ -2,7 +2,7 @@ import Header from '../blocks/modules/header/header';
 import Form from '../blocks/modules/form/form';
 import ScrollTo from './import/scrollTo';
 import checkAnchor from './import/checkAnchor';
-import ToggleElement from './import/toggleElement';
+import ToggleElement from './import/ToggleElement';
 
 document.addEventListener("DOMContentLoaded", function() {
   checkAnchor();
