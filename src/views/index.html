@@ -18,42 +18,22 @@
 
         <section class="section section_dark">
           <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/who-needs.html")
+         @@include("../blocks/modules/sections/sessions.html")
           <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
         </section>
 
         <section class="section section_light">
           @@include("../blocks/modules/sections/how-it-works.html", {"page": "main"})
-          @@include("../blocks/modules/sections/form-section-wide.html", {
-            "page": "main",
-            "title": "Запишитесь на пробное код-ревью",
-            "text": "Оставьте вашу заявку, чтобы получить <strong>бесплатное</strong> код-ревью и прокачать свой код уже сегодня",
-            "button": "Записаться на пробное код-ревью"
-          })
-        </section>
-
-        <section class="section section_dark">
-          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/code-quality.html")
-          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
-        </section>
-
-        <section class="section section_light">
-          @@include("../blocks/modules/sections/reviews.html", {
-            "page": "main",
-            "title": "Ваши отзывы",
-            "text": "Что говорят разработчики, которым мы помогаем?"
-          })
         </section>
 
         <section class="section section_dark section_last">
           <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/pricing.html", {"page": "main"})
+          @@include("../blocks/modules/sections/code-quality.html")
           @@include("../blocks/modules/sections/form-section.html", {
             "page": "main",
             "title": "Хотите прислать свой код на ревью?",
-            "text": "Оставьте ваш ник в телеграм и получите <strong>бесплатное</strong> пробное код-ревью уже сегодня",
-            "button": "Записаться на пробное код-ревью"
+            "text": "Оставьте свой ник в telegram, и мы поможем вам разместить ваш код на ревью. <br> <strong>Это бесплатно.</strong>",
+            "button": "Записаться на код-ревью"
           })
           @@include("../blocks/modules/footer/footer.html")
         </section>

@@ -11,6 +11,28 @@ class Form {
     this.$telegram = this.$parent.querySelector('[name="telegram"]');
     this.formFinal = this.$parent.querySelector('.welcome-form__final');
 
+    this.$form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (Dev) {
+        this.done();
+        return;
+      }
+
+      this.submit()
+        .then(data => {
+          if (data.result) {
+            this.done();
+          } else {
+            console.error('Error:', data);
+          }
+        })
+
+      
+
+    })
+
+    //отправка формы
     this.submit = async () => {
       const formData = new FormData();
       const requestURL = this.$form.getAttribute('action');
@@ -36,30 +58,14 @@ class Form {
       return data;
     }
 
+    //если форма успешно отправлена
     this.done = () => {
       party.confetti(this.$parent);
       this.$form.remove();
       this.formFinal.classList.add('active');
+
+      
     }
-
-    this.$form.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      if (Dev) {
-        this.done();
-        return;
-      }
-
-      this.submit()
-        .then(data => {
-          if (data.result) {
-            this.done();
-          } else {
-            console.error('Error:', data);
-          }
-        })
-
-    })
   }
 }
 
