@@ -64,7 +64,8 @@ class Form {
       this.$form.remove();
       this.formFinal.classList.add('active');
 
-      
+      //конверсия гугл 
+      dataLayer.push({'event': 'formSubmit'});
     }
   }
 }
