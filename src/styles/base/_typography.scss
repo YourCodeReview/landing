@@ -36,6 +36,9 @@ h1, .h1 {
     font-size: 36px;
     margin-bottom: 20px;
   }
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+  }
 }
 
 h2, .h2 {

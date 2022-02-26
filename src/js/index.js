@@ -3,6 +3,7 @@ import Form from "../blocks/modules/form/form";
 import ScrollTo from "./import/scrollTo";
 import checkAnchor from "./import/checkAnchor";
 import ToggleElement from "./import/ToggleElement";
+import WelcomeTypedText from "./import/WelcomeTypedText";
 
 document.addEventListener("DOMContentLoaded", function () {
   checkAnchor();
@@ -16,4 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-toggle=\"parent\"]").forEach($this => {
     new ToggleElement($this).init();
   });
+
+  const WelcomeTypedTextElement = document.querySelector('.welcome-typed-text');
+  if (WelcomeTypedTextElement) new WelcomeTypedText(WelcomeTypedTextElement).init();
 });

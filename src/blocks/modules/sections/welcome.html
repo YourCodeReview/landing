@@ -1,51 +1,32 @@
 <section id="welcome" class="section section_dark welcome-section">
   <div class="container">
-    <div class="welcome-section__container row align-items-center justify-content-between">
-
-      <div class="welcome-section__image col-lg-6 order-lg-2 mb-35 mb-lg-0">
-        @@if (page === 'main') {
-          <img src="/img/community.svg" alt="image">
-        }
-        @@if (page === 'interview' || page === 'reviewer') {
+    @@if (page === 'reviewer') {
+      <div class="welcome-section__container row align-items-center justify-content-between">
+        <div class="welcome-section__image col-lg-6 order-lg-2 mb-35 mb-lg-0">
           <img src="/img/pair.svg" alt="image">
-        }
-      </div>
-
-      <div class="welcome-section__text-content col-lg-6 col-xxl-5">
-        <h1 class="welcome-section__title">Your codereview</h1>
-        @@if (page === 'main') {
-          <!-- <p class="welcome-section__text-1">Первый русскоязычный сервис код-ревью.</p>
-          <div class="welcome-section__bottom-text">
-            <p class="welcome-section__text-2">Хотите улучшить свой код?</p>
-            <p class="welcome-section__text-3">Оставьте вашу заявку</p>
-            <a class="button button_large welcome-section__button w-100 w-sm-auto" href="/#registration-form-section" data-action="scroll">Записаться на пробное код-ревью</a>
-          </div> -->
-          <p class="welcome-section__text-1">Первое русскоязычное код-ревью комьюнити</p>
-          <div class="welcome-section__bottom-text">
-            <p class="welcome-section__text-2">Хотите улучшить свой код?</p>
-            <a class="button button_large welcome-section__button w-100 w-sm-auto" href="/#registration-form-section" data-action="scroll">Записаться на код-ревью</a>
-          </div>
-        }
-
-        @@if (page === 'reviewer') {
+        </div>
+        <div class="welcome-section__text-content col-lg-6 col-xxl-5">
+          <h1 class="welcome-section__title">Your codereview</h1>
           <p class="welcome-section__text-1">Первое русскоязычное код-ревью комьюнити.</p>
           <div class="welcome-section__bottom-text">
             <p class="welcome-section__text-2">Хочешь стать ревьюером?</p>
             <p class="welcome-section__text-3">Присоединяйся к команде</p>
             <a class="button button_large welcome-section__button w-100 w-sm-auto" href="https://t.me/codereivew_reviewers_bot">Стать ревьюером</a>
           </div>
-        }
-
-        @@if (page === 'interview') {
-          <p class="welcome-section__text-1">Сервис, который помогает подготовиться к работе в IT</p>
-          <div class="welcome-section__bottom-text">
-            <p class="welcome-section__text-2">Хочешь подготовиться к собесу?</p>
-            <a class="button button_large welcome-section__button w-100 w-sm-auto" href="/interview.html#registration-form-section" data-action="scroll">Записаться на пробную неделю</a>
-          </div>
-        }
-
+        </div>
       </div>
-    </div>
+    }
+    @@if (page === 'interview') {
+      <div class="text-center">
+        <h1 class="mb-30">Подготовим разработчиков к&nbsp;собеседованию в <span class="welcome-typed-text"></span></h1>
+        <div class="row justify-content-center mb-30">
+          <div class="col-lg-8 col-xxl-10">
+            <p>Ускорим процесс получения оффера в <strong>X2 раза</strong> за счет обратной связи от Senior разработчика и HR из топовых IT компаний.</p>
+          </div>
+        </div>
+        <a class="button button_large welcome-section__wide-button w-100 w-sm-auto" href="/#registration-form-section" data-action="scroll">Получить бесплатную консультацию</a>
+      </div>
+    }
   </div>
   <img src="/img/figures/crescent-bottom.svg" class="section__figure section__figure_bottom"></img>
 </section>

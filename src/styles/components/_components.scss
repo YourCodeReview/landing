@@ -521,3 +521,27 @@
     }
   }
 }
+
+.welcome-typed-text {
+  &_yandex {
+    color: #F2000C;
+  }
+  &_ozon {
+    color: #0254F2;
+  }
+  &_tinkoff {
+    color: #F1D22B;
+  }
+  &_sber {
+    color: #1F9835;
+  }
+  &_vk {
+    color: #2480E9;
+  }
+  &_epam {
+    color: #45B8C7;
+  }
+  &_mail {
+    color: #F29600;
+  }
+}
