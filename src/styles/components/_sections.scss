@@ -117,6 +117,9 @@
     display: block;
     margin: 45px auto;
   }
+  ul {
+    font-size: 22px;
+  }
   @include media-breakpoint-down(xl) {
     &__arrow {
       width: 40px;

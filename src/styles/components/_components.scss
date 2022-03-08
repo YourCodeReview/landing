@@ -263,9 +263,17 @@
   padding: 50px 20px;
   text-align: center;
   &__title {
+    display: block;
+    max-width: 337px;
     font-weight: 500;
-    margin-bottom: 30px;
+   margin: 0 auto;
+   margin-bottom: 30px;
+
   }
+  &__text {
+    max-width: 467px;
+    margin: 0 auto;
+   }
   &__button {
     margin-top: 40px;
   }
@@ -418,13 +426,18 @@
   &__image {
     display: block;
     width: 175px;
-    margin-bottom: 30px;
+    transform: rotate(180deg);
+    margin-top: 20px;
   }
   &__price {
     color: #48429A;
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 15px;
+  }
+  .old__price {
+    color: #BBBBBB;
+    text-decoration: line-through;
   }
   @include media-breakpoint-down(xl) {
     padding: 40px 50px;
