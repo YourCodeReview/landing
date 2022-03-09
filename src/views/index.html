@@ -14,39 +14,42 @@
 
         <section class="section section_light">
           @@include("../blocks/modules/sections/what-we-do.html")
-          @@include("../blocks/modules/sections/you-can.html")
+          @@include("../blocks/modules/sections/what-target.html")
+          <!-- @@include("../blocks/modules/sections/you-can.html") -->
         </section>
 
         <section class="section section_dark">
           <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/who-needs.html")
+          <!-- @@include("../blocks/modules/sections/who-needs.html") -->
           <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
         </section>
 
-        <section class="section section_light">
-          @@include("../blocks/modules/sections/how-it-works.html", {"page": "interview"})
-          @@include("../blocks/modules/sections/form-section-wide.html", {
-            "page": "interview",
-            "title": "Сделай шаг на пути к работе мечты",
-            "text": "Оставьте вашу заявку, чтобы получить <strong>бесплатную</strong> пробную неделю и начать подготовку к собеседованию",
-            "button": "Записаться на консультацию"
-          })
-        </section>
-
         <section class="section section_dark">
           <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/code-quality.html")
+          <!-- @@include("../blocks/modules/sections/code-quality.html") -->
           @@include("../blocks/modules/sections/reviewers.html")
-          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
+       
         </section>
 
         <section class="section section_light">
           @@include("../blocks/modules/sections/reviews.html", {
             "page": "interview",
-            "title": "Ваши отзывы",
-            "text": "Что говорят разработчики, которым мы помогаем?"
+            "title": "О нашем курсе",
+            "text": "Что о нас говорят ребята, которым мы помогаем"
           })
+          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
         </section>
+
+        <section class="section section_light">
+      
+        @@include("../blocks/modules/sections/how-it-works.html", {"page": "interview"})
+        @@include("../blocks/modules/sections/form-section-wide.html", {
+          "page": "interview",
+          "title": "Сделай шаг на пути к работе мечты",
+          "text": "Оставьте вашу заявку, чтобы получить <strong>бесплатную</strong> пробную неделю и начать подготовку к собеседованию",
+          "button": "Записаться на консультацию"
+        })
+      </section>
 
         <section class="section section_dark section_last">
           <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>

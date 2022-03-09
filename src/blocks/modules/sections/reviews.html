@@ -1,82 +1,85 @@
 <section id="reviews" class="section reviews-section">
   <div class="container">
     <div class="mb-45 mb-md-60 mb-xl-70">
-      <h2 class="gradient-text gradient-text_style-2 text-center mb-30 mb-lg-20">@@title</h2>
+      <h2
+        class="gradient-text gradient-text_style-2 text-center mb-30 mb-lg-20"
+      >
+        @@title
+      </h2>
       <p class="text-sub-title text-center">@@text</p>
     </div>
+
+    <div class="reviews-section__blocks  row row-gap-40 row-gap-md-50 "> 
+      <!-- review -->
+      <div class="review-box">
+     
+        <div class="review-box__image">
+          <img src="/img/photo_2021-11-12 10.23 1.jpg" alt="image" />
+        </div>
+        <div class="review-box__title">Алексей Кожевников</div>
     
-    <div class="reviews-section__blocks row-gap-40 row-gap-md-50">
-      <!-- review -->
-      <div class="review-box">
-        <div class="review-box__image">
-          <img src="/img/photo_2021-11-12 10.23 1.jpg" alt="image">
-        </div>
-        <div class="review-box__content">
-          <div class="review-box__content-head">
-            <div class="review-box__title">Карим - Java разработчик</div>
-            <div class="review-box__rating"><img src="/img/icon/stars.svg" alt="stars"></div>
-          </div>
-          <div class="review-box__text">
-            <p>Комментарии от ревьюеров <strong>просто пушка!</strong> Недавно присылал свой проект на Java, получил тонну полезного фидбэка. Спасибо огромное вашей команде!</p>
-          </div>
-        </div>
       </div>
       <!-- review -->
       <div class="review-box">
+     
         <div class="review-box__image">
-          <img src="/img/photo_2021-11-12 10.42 1.jpg" alt="image">
+          <img src="/img/photo_2021-11-12 10.23 1.jpg" alt="image" />
         </div>
-        <div class="review-box__content">
-          <div class="review-box__content-head">
-            <div class="review-box__title">Макс - JavaScript разработчик </div>
-            <div class="review-box__rating"><img src="/img/icon/stars.svg" alt="stars"></div>
-          </div>
-          <div class="review-box__text">
-            <p>Реально много интересных моментов, которых я бы сам  не заметил. Огромное спасибо ревьюерам. <strong>Ай лайк ит!</strong></p>
-          </div>
-        </div>
+        <div class="review-box__title">Алексей Кожевников</div>
+    
       </div>
       <!-- review -->
       <div class="review-box">
+     
         <div class="review-box__image">
-          <img src="/img/photo_2021-11-12 16.25 1.jpg" alt="image">
+          <img src="/img/photo_2021-11-12 10.23 1.jpg" alt="image" />
         </div>
-        <div class="review-box__content">
-          <div class="review-box__content-head">
-            <div class="review-box__title">Андрей - PHP разработчик</div>
-            <div class="review-box__rating"><img src="/img/icon/stars.svg" alt="stars"></div>
-          </div>
-          <div class="review-box__text">
-            <p>Я остался <strong>очень доволен</strong> прошедшей сессией, буду подаваться снова. Отдельное спасибо ревьюерам!</p>
-          </div>
-        </div>
+        <div class="review-box__title">Алексей Кожевников</div>
+    
       </div>
+    </div>
+    <div class="slider-dots">
+      <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+      <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+      <span class="slider-dots_item" onclick="currentSlide(3)"></span>
     </div>
 
     @@if (page === 'main' || page === 'interview') {
-      <div class="row justify-content-center row-gap-40 row-gap-md-50">
-        <!-- item -->
-        <div class="short-info-item col-md-6 col-xl-4">
-          💯 <strong>Более 100</strong> довольных разработчиков 
-        </div>
-        <!-- item -->
-        <div class="short-info-item col-md-6 col-xl-4">
-          ⭐ <strong>8.7</strong> - cредняя оценка фидбэка 
-        </div>
-        <!-- item -->
-        <div class="short-info-item col-md-6 col-xl-4">
-          💬 <strong>70% </strong> людей возвращаются к нам снова
-        </div>
+    <!-- <div class="row justify-content-center row-gap-40 row-gap-md-50">
+      item
+      <div class="short-info-item col-md-6 col-xl-4">
+        💯 <strong>Более 100</strong> довольных разработчиков
       </div>
+      item
+      <div class="short-info-item col-md-6 col-xl-4">
+        ⭐ <strong>8.7</strong> - cредняя оценка фидбэка
+      </div>
+      item
+      <div class="short-info-item col-md-6 col-xl-4">
+        💬 <strong>70% </strong> людей возвращаются к нам снова
+      </div>
+    </div> -->
+    } @@if (page === 'reviewer') {
+    <div class="reviews-section__schedule">
+      <p class="reviews-section__schedule-title">
+        Наблюдайте за тем, как ваш фидбэк приносит
+        <strong
+          >реальную<br />
+          пользу</strong
+        >
+        другим разработчикам. Наглядно и просто.
+      </p>
+      <img
+        class="reviews-section__schedule-image"
+        src="/img/schedule.svg"
+        alt="schedule"
+      />
+      <p class="reviews-section__schedule-description">
+        Полезность комментариев из расчета лайк на комментарий*
+      </p>
+    </div>
     }
 
-    @@if (page === 'reviewer') {
-      <div class="reviews-section__schedule">
-        <p class="reviews-section__schedule-title">Наблюдайте за тем, как ваш фидбэк приносит <strong>реальную<br> пользу</strong> другим разработчикам. Наглядно и просто.</p>
-        <img class="reviews-section__schedule-image" src="/img/schedule.svg" alt="schedule">
-        <p class="reviews-section__schedule-description">Полезность комментариев из расчета лайк на комментарий*</p>
-      </div>
-    }
-    
-  </div>
 </section>
+
+<script defer src="../../../js/import/Slider.js"></script>

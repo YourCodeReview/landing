@@ -164,9 +164,13 @@
 }
 
 .reviews-section {
+  justify-content: space-around;
+  background: var(--section-bg-gradient-dark);
+  color: #fff;
+padding-bottom: 120px;
   &__blocks {
     display: flex;
-    flex-direction: column;
+   justify-content: space-around;
     margin-bottom: 80px;
   }
   &__schedule-title {
