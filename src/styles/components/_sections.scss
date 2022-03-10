@@ -113,11 +113,19 @@
 }
 
 .target-text {
-  max-width: 500px;
+  h6 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 24px;
+  }
+ 
+  max-width: 480px;
   margin-bottom: 50px;
 }
 
 .our-target {
+  padding-bottom: 200px;
   .mb-130 {
     margin-top: 140px;
     margin-bottom: 130px;
@@ -126,6 +134,7 @@
 
 .how-it-works-section {
   padding: 50px 0;
+ 
  
  
   &__arrow {
