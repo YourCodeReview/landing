@@ -1,35 +1,39 @@
-//Создаём переменную, в которой будут находиться наши превью
-let videos;
+let modal = document.querySelector("#myModal");
 
-//Запускаем функцию, которая найдёт все видео на странице и добавит обработчики событий
-Init();
+// let btn = document.querySelector("#myBtn");
 
-function Init()
-{
-	//Получаем видео
-	videos = document.getElementsByClassName("item__thumb");
+let span = document.getElementsByClassName("close")[0];
+let youtubeLink = document.getElementById("Youtube");
 
-	for(var i = 0; i < videos.length; i++)
-	{
-		//Добавляем обработчик события наведения мыши
-		videos[i].addEventListener("click", function(e) { MouseEnter(e.target); });
+const arrayLink = {
+  0: "https://www.youtube.com/embed/QI5a5YbUW6w",
+  1: "https://www.youtube.com/embed/dBDX7ERYvCc",
+  2: "https://www.youtube.com/embed/dBDX7ERYvCc",
+  3: "https://www.youtube.com/embed/dBDX7ERYvCc",
+};
 
-		//Добавляем обработчик события выходу курсора за границы элемента
-		videos[i].addEventListener("mouseleave", function(e) { MouseLeave(e.target); });
-	}
+span.onclick = function () {
+  modal.style.display = "none";
 
+  location.reload();
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    location.reload();
+  }
+};
+
+const buttons = document.querySelectorAll(".feedback-video");
+// console.log(buttons);
+for (let i = 0; i < buttons.length; i++) {
+  const btns = buttons[i];
+  btns.addEventListener("click", () => {
+    modal.style.display = "block";
+
+    youtubeLink.innerHTML = `<iframe  width="100%" height=700" src="${arrayLink[i]}" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  });
 }
 
-//Если мышь наведена, просто запускаем ролик
-function MouseEnter(e)
-{
-	e.play();
-}
-
-//Если курсор выходит за пределы элемента, то мы сначала ставим видео на паузу
-//А потом перезагружаем его, чтобы отобразился постер
-function MouseLeave(e)
-{
-	e.pause();
-	e.load();
-}
