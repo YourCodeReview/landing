@@ -32,7 +32,11 @@
   }
 }
 
+.section-step {
+  padding-bottom: 50px;
+}
 .call-for-appointment-box {
+  
   --title-color: var(--color-light);
   color: var(--color-light);
   border-radius: 20px;
@@ -191,7 +195,7 @@
   width: 300px;
   // padding: 40px 45px;
   padding: 0;
-  border-radius: 15px;
+  border-radius: 20px;
   background: linear-gradient(
     96.17deg,
     #ffffff 1.53%,
@@ -204,8 +208,7 @@
   &__image {
     display: block;
     position: relative;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+   
     overflow: hidden;
     width: 100%;
     height: 260px;
@@ -351,7 +354,7 @@
     margin-top: 40px;
   }
   &__form {
-    max-width: 400px;
+    max-width: 520px;
     margin: 40px auto 0 auto;
   }
   @include media-breakpoint-down(md) {
