@@ -91,10 +91,36 @@
     }
   }
 }
-
-.short-info-item {
+.our-raiting-info {
   font-size: 34px;
   text-align: center;
+  p {
+    font-size: 22px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+  }
+}
+.section-raiting {
+  height: 164px;
+  display: flex;
+  align-items: center;
+  background: rgb(0,191,166);
+background: linear-gradient(99deg, rgba(0,191,166,1) 0%, rgba(43,40,101,1) 94%, rgba(43,40,101,1) 100%);
+color: #fff
+
+}
+
+.short-info-item {
+  font-size: 32px;
+  text-align: center;
+p {
+  font-size: 22px;
+}
+
   @include media-breakpoint-down(lg) {
     font-size: 30px;
   }
@@ -329,6 +355,7 @@
 }
 
 .final-content-box {
+  max-width: 820px;
   border-radius: 10px;
   background: linear-gradient(
     100deg,
