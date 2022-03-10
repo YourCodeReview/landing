@@ -179,9 +179,13 @@
     }
   }
 }
+.reviewers-section {
+  background: var(--color-default);
+}
 
 .reviewers-section__blocks {
   justify-content: space-around;
+  margin-bottom: 60px;
 }
 .reviewer-box {
   width: 300px;

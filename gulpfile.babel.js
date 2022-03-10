@@ -53,6 +53,7 @@ const requireDir = require("require-dir"),
             dist: "./dist/img/",
             watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
         },
+      
         webp: {
             src: [
                 "./src/img/**/*.{jpg,jpeg,png,tiff}",

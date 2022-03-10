@@ -165,9 +165,12 @@
 
 .reviews-section {
   justify-content: space-around;
-  background: var(--section-bg-gradient-dark);
+  background: var(--color-default); 
   color: #fff;
 padding-bottom: 120px;
+ h2 {
+   color:#fff
+ }
   &__blocks {
     display: flex;
    justify-content: space-around;
