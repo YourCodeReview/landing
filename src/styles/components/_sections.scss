@@ -121,7 +121,7 @@
   }
  
   max-width: 480px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
 }
 
 .our-target {
@@ -250,6 +250,18 @@ padding-bottom: 120px;
 
 .section-pricing {
   margin-bottom: 42px;
+
+
+&__sobesedovanie-box {
+  position: relative;
+  .image-sales {
+    position: absolute;
+    right: -30px;
+    top: -50px;
+  }
+
+}
+ 
   @include media-breakpoint-up(xl) {
     &__elements {
       --bs-gutter-x: 50px;

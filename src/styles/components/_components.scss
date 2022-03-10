@@ -31,6 +31,13 @@
     height: auto;
   }
 }
+.text-start {
+  display: block;
+  max-width: 630px;
+  margin: 0 auto;
+  text-align: center !important;
+
+}
 
 .section-step {
   padding-bottom: 50px;
@@ -105,7 +112,8 @@
   }
 }
 .section-raiting {
-  height: 164px;
+  min-height: 164px;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   background: rgb(0,191,166);
