@@ -23,7 +23,9 @@
     background: -webkit-linear-gradient(-90deg, #ff2d20 0%, #554fb6 100%);
   }
 }
-
+label {
+  pointer-events:none;
+}
 .content-image {
   img {
     display: block;
