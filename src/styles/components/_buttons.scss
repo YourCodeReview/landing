@@ -2,6 +2,7 @@
   --height: 50px;
   --font-size: 18px;
   --padding-x: 20px;
+  --padding-y: 12px;
   --font-weight: 500;
   --radius: 10px;
 
@@ -16,11 +17,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  line-height: var(--height);
-  padding: 0 var(--padding-x);
+  min-height: var(--height);
+  padding: var(--padding-y) var(--padding-x);
   font-size: var(--font-size);
   border-radius: var(--radius);
   font-weight: var(--font-weight);

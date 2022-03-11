@@ -71,6 +71,7 @@
         "normalize.css": "^8.0.1",
         "party-js": "^2.1.2",
         "scroll-lock": "^2.1.5",
-        "smart-grid": "^2.1.2"
+        "smart-grid": "^2.1.2",
+        "typed.js": "^2.0.12"
     }
 }

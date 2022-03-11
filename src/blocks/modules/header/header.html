@@ -6,8 +6,8 @@
         <ul class="header__nav-list">
 
           <li class="header__nav-item">
-            <a class="header__nav-link @@if (page === 'main') { active }" href="/">
-              Код-ревью
+            <a class="header__nav-link @@if (page === 'interview') { active }" href="/">
+              Главная
               <svg class="sprite-icon">
                 <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
               </svg>
@@ -16,34 +16,18 @@
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item"><a href="/#welcome" data-action="scroll" class="header__dropdown-link">Главная</a></li>
                 <li class="header__dropdown-item"><a href="/#about" data-action="scroll" class="header__dropdown-link">О нас</a></li>
-                <li class="header__dropdown-item"><a href="/#sessions" data-action="scroll" class="header__dropdown-link">Ревью сессии</a></li>
-                <li class="header__dropdown-item"><a href="/#how-it-works" data-action="scroll" class="header__dropdown-link">Как работает</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="header__nav-item">
-            <a class="header__nav-link @@if (page === 'interview') { active }" href="/interview.html">
-              Собеседования
-              <svg class="sprite-icon">
-                <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
-              </svg>
-            </a>
-            <div class="header__dropdown">
-              <ul class="header__dropdown-list">
-                <li class="header__dropdown-item"><a href="/interview.html#welcome" data-action="scroll" class="header__dropdown-link">Главная</a></li>
-                <li class="header__dropdown-item"><a href="/interview.html#about" data-action="scroll" class="header__dropdown-link">О нас</a></li>
-                <li class="header__dropdown-item"><a href="/interview.html#how-it-works" data-action="scroll" class="header__dropdown-link">Как работает</a></li>
-                <li class="header__dropdown-item"><a href="/interview.html#reviewers" data-action="scroll" class="header__dropdown-link">Ревьюеры</a></li>
-                <li class="header__dropdown-item"><a href="/interview.html#reviews" data-action="scroll" class="header__dropdown-link">Отзывы</a></li>
-                <li class="header__dropdown-item"><a href="/interview.html#pricing" data-action="scroll" class="header__dropdown-link">Стоимость</a></li>
+                <li class="header__dropdown-item"><a href="/#our-target" data-action="scroll" class="header__dropdown-link">Наша цель</a></li>          
+                <li class="header__dropdown-item"><a href="/#reviewers" data-action="scroll" class="header__dropdown-link">Менторы</a></li>
+                <li class="header__dropdown-item"><a href="/#reviews" data-action="scroll" class="header__dropdown-link">Отзывы</a></li>
+                <li class="header__dropdown-item"><a href="/#how-it-works" data-action="scroll" class="header__dropdown-link">Программа</a></li>
+                <li class="header__dropdown-item"><a href="/#pricing" data-action="scroll" class="header__dropdown-link">Стоимость</a></li>
               </ul>
             </div>
           </li>
 
           <li class="header__nav-item">
             <a class="header__nav-link @@if (page === 'reviewer') { active }" href="/reviewer.html">
-              Стать ревьюером
+              Стать ментором
               <svg class="sprite-icon">
                 <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
               </svg>
@@ -57,21 +41,22 @@
               </ul>
             </div>
           </li>
+
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="https://www.youtube.com/channel/UC6wNgLxcNW72CRow-Hyu0LA" target="_blank">
+              Мы на YouTube
+            </a>
+          </li>
           
         </ul> 
       </nav>
 
-      @@if (page === 'main') { 
-        <a href="/#registration-form-section" data-action="scroll" class="button button_large header__button">Записаться на код-ревью</a>
-      }
       @@if (page === 'interview') { 
-        <a href="/interview.html#registration-form-section" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
+        <a href="/#registration-form-section" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
       }
       @@if (page === 'reviewer') { 
         <a href="https://t.me/codereivew_reviewers_bot" class="button button_large header__button">Стать ревьюером</a>
       }
-
-      
 
       <div class="header__hamburger-wrap">
         <button class="hamburger hamburger--3dxy js-hamburger burger--btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
@@ -85,10 +70,10 @@
         <div class="container header-mobile__container">
           <nav class="header-mobile__nav">
             <ul class="header-mobile__nav-list">
-              
+    
               <li class="header-mobile__nav-item" data-toggle="parent">
-                <a class="header-mobile__nav-link @@if (page === 'main') { active }" href="javascript:void(0);" data-toggle="trigger">
-                  Код-ревью
+                <a class="header-mobile__nav-link @@if (page === 'interview') { active }" href="javascript:void(0);" data-toggle="trigger">
+                  Главная
                   <svg class="sprite-icon">
                     <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
                   </svg>
@@ -96,25 +81,10 @@
                 <ul class="header-mobile__dropdown-list" data-toggle="content">
                   <li class="header-mobile__dropdown-item"><a href="/#welcome" data-action="scroll" class="header-mobile__dropdown-link">Главная</a></li>
                   <li class="header-mobile__dropdown-item"><a href="/#about" data-action="scroll" class="header-mobile__dropdown-link">О нас</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/#sessions" data-action="scroll" class="header-mobile__dropdown-link">Ревью сессии</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/#how-it-works" data-action="scroll" class="header-mobile__dropdown-link">Как работает</a></li>
-                </ul>
-              </li>
-    
-              <li class="header-mobile__nav-item" data-toggle="parent">
-                <a class="header-mobile__nav-link @@if (page === 'interview') { active }" href="javascript:void(0);" data-toggle="trigger">
-                  Собеседования
-                  <svg class="sprite-icon">
-                    <use xlink:href="/img/icons/sprite.svg#caret-bottom"></use>
-                  </svg>
-                </a>
-                <ul class="header-mobile__dropdown-list" data-toggle="content">
-                  <li class="header-mobile__dropdown-item"><a href="/interview.html#welcome" data-action="scroll" class="header-mobile__dropdown-link">Главная</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/interview.html#about" data-action="scroll" class="header-mobile__dropdown-link">О нас</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/interview.html#how-it-works" data-action="scroll" class="header-mobile__dropdown-link">Как работает</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/interview.html#reviewers" data-action="scroll" class="header-mobile__dropdown-link">Ревьюеры</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/interview.html#reviews" data-action="scroll" class="header-mobile__dropdown-link">Отзывы</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/interview.html#pricing" data-action="scroll" class="header-mobile__dropdown-link">Стоимость</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/#our-target" data-action="scroll" class="header-mobile__dropdown-link">Как работает</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/#reviewers" data-action="scroll" class="header-mobile__dropdown-link">Ревьюеры</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/#reviews" data-action="scroll" class="header-mobile__dropdown-link">Отзывы</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/#pricing" data-action="scroll" class="header-mobile__dropdown-link">Стоимость</a></li>
                 </ul>
               </li>
     
@@ -134,11 +104,8 @@
               </li>
               
               <li class="header-mobile__nav-item">
-                @@if (page === 'main') { 
-                  <a href="/#registration-form-section" data-action="scroll" class="button button_large header-mobile__button">Записаться на код-ревью</a>
-                }
                 @@if (page === 'interview') { 
-                  <a href="/interview.html#registration-form-section" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
+                  <a href="/#registration-form-section" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
                 }
                 @@if (page === 'reviewer') { 
                   <a href="https://t.me/YourCodeReview" class="button button_large header-mobile__button">Стать ревьюером</a>
