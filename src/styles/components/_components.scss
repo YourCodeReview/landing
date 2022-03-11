@@ -36,14 +36,12 @@
   max-width: 630px;
   margin: 0 auto;
   text-align: center !important;
-
 }
 
 .section-step {
   padding-bottom: 50px;
 }
 .call-for-appointment-box {
-  
   --title-color: var(--color-light);
   color: var(--color-light);
   border-radius: 20px;
@@ -116,18 +114,22 @@
   padding: 20px 0;
   display: flex;
   align-items: center;
-  background: rgb(0,191,166);
-background: linear-gradient(99deg, rgba(0,191,166,1) 0%, rgba(43,40,101,1) 94%, rgba(43,40,101,1) 100%);
-color: #fff
-
+  background: rgb(0, 191, 166);
+  background: linear-gradient(
+    99deg,
+    rgba(0, 191, 166, 1) 0%,
+    rgba(43, 40, 101, 1) 94%,
+    rgba(43, 40, 101, 1) 100%
+  );
+  color: #fff;
 }
 
 .short-info-item {
   font-size: 32px;
   text-align: center;
-p {
-  font-size: 22px;
-}
+  p {
+    font-size: 22px;
+  }
 
   @include media-breakpoint-down(lg) {
     font-size: 30px;
@@ -138,13 +140,24 @@ p {
 }
 
 .video-box {
-  width: 420px; 
+  min-width: 286px;
+  max-width: 420px;
   padding: 0;
   height: 622px;
   border-radius: 20px;
   background: #000;
   color: #fff;
   position: relative;
+  margin: 0 auto;
+  &__playBtn {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 100;
+  }
+  &_playBtn:hover {
+    display: none;
+  }
   &__image {
     display: block;
     position: relative;
@@ -178,8 +191,8 @@ p {
     bottom: 18px;
     width: 196px;
     padding: 10px 3px;
-    background: #E0E0E0;
-    color: #554FB6;
+    background: #e0e0e0;
+    color: #554fb6;
     font-size: 14px;
     text-align: center;
     border-radius: 20px;
@@ -192,12 +205,12 @@ p {
     gap: 0 35px;
   }
   @include media-breakpoint-down(md) {
+    height: 420px;
     flex-direction: column;
     align-items: center;
-    
+
     &__image {
       margin-bottom: 20px;
-     
     }
     &__content {
       padding: 0;
@@ -210,7 +223,6 @@ p {
       img {
         display: block;
         width: 100%;
-       
       }
     }
   }
@@ -219,13 +231,25 @@ p {
 .review-box {
   width: 286px;
   // padding: 40px 45px;
- 
+
   padding: 0;
   height: 418px;
   border-radius: 20px;
   background: #000;
   color: #fff;
   position: relative;
+  &_playBtn {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 70px;
+    height: 70px;
+    z-index: 100;
+  }
+  &_playBtn:hover {
+    display: none;
+  }
+
   &__image {
     display: block;
     position: relative;
@@ -259,8 +283,8 @@ p {
     bottom: 18px;
     width: 196px;
     padding: 10px 3px;
-    background: #E0E0E0;
-    color: #554FB6;
+    background: #e0e0e0;
+    color: #554fb6;
     font-size: 14px;
     text-align: center;
     border-radius: 20px;
@@ -275,10 +299,9 @@ p {
   @include media-breakpoint-down(md) {
     flex-direction: column;
     align-items: center;
-    
+
     &__image {
       margin-bottom: 20px;
-     
     }
     &__content {
       padding: 0;
@@ -291,7 +314,6 @@ p {
       img {
         display: block;
         width: 100%;
-       
       }
     }
   }
@@ -321,7 +343,7 @@ p {
   &__image {
     display: block;
     position: relative;
-   
+
     overflow: hidden;
     width: 100%;
     height: 260px;
@@ -439,6 +461,145 @@ p {
   .item:hover {
     text-decoration: none;
   }
+}
+
+// Стили ждя слайдер
+
+/*Обнуление*/
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+/*Стили для демонстрации*/
+
+.wrapper-slider {
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  // .wrapper{padding: 50px 10px;}
+}
+
+/* Основные стили */
+
+/* Слайдер */
+.slick-slider {
+  min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+
+/* Точки */
+.slick-dots {
+}
+.slick-dots li {
+}
+.slick-dots button {
+}
+
+/* Конкретный слайдер */
+.slider {
+  position: relative;
+  padding: 0px 60px;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    padding: 0px 40px;
+  }
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+}
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.slider .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.slider__item {
+  padding: 0px 15px;
+}
+.slider__item img {
+  max-width: 100%;
+}
+.slider__item.slick-center {
 }
 
 .final-content-box {

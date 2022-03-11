@@ -6,6 +6,7 @@ import ToggleElement from "./import/ToggleElement";
 import WelcomeTypedText from "./import/WelcomeTypedText";
 import Slider from "./import/Slider";
 
+
 document.addEventListener("DOMContentLoaded", function () {
   checkAnchor();
   Header.init();

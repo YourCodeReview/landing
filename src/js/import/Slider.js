@@ -7,10 +7,13 @@ let youtubeLink = document.getElementById("Youtube");
 
 const arrayLink = {
   0: "https://www.youtube.com/embed/QI5a5YbUW6w",
-  1: "https://www.youtube.com/embed/dBDX7ERYvCc",
+
+  1: "https://www.youtube.com/embed/5pPlMQYNUEE",
   2: "https://www.youtube.com/embed/dBDX7ERYvCc",
-  3: "https://www.youtube.com/embed/dBDX7ERYvCc",
+  3: "https://www.youtube.com/embed/6CHP8mNN95A",
+  4: "https://www.youtube.com/embed/zWhwV6zdRJI",
 };
+
 
 span.onclick = function () {
   modal.style.display = "none";
@@ -37,3 +40,31 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
+
+// Слайдер
+
+
+
+
+$('.slider').slick({
+    arrows:true,
+    dots:true,
+    slidesToShow:3,
+    autoplay:true,
+    speed:1000,
+    autoplaySpeed:800,
+    responsive:[
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow:2
+            }
+        },
+        {
+            breakpoint: 550,
+            settings: {
+                slidesToShow:1
+            }
+        }
+    ]
+});
