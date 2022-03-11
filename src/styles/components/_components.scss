@@ -156,7 +156,7 @@
     z-index: 100;
   }
   &_playBtn:hover {
-    display: none;
+    z-index: 0;
   }
   &__image {
     display: block;
@@ -227,7 +227,17 @@
     }
   }
 }
+#myBtn {
+  width: 286px;
+  // padding: 40px 45px;
 
+  padding: 0;
+  height: 418px;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+  position: relative;
+}
 .review-box {
   width: 286px;
   // padding: 40px 45px;
@@ -238,17 +248,16 @@
   background: #000;
   color: #fff;
   position: relative;
+
   &_playBtn {
     position: absolute;
     top: 40%;
     left: 40%;
     width: 70px;
     height: 70px;
-    z-index: 100;
+   z-index: 1;
   }
-  &_playBtn:hover {
-    display: none;
-  }
+ 
 
   &__image {
     display: block;
