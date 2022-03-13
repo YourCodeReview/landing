@@ -13,6 +13,7 @@
         "build views": "gulp views --production",
         "build styles": "gulp styles --production",
         "build scripts": "gulp scripts --production",
+        "build imports": "gulp imports --production",
         "build images": "gulp images --production",
         "build webp": "gulp webp --production",
         "build sprites": "gulp sprites --production",

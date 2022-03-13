@@ -8,7 +8,8 @@ class Form {
 
   init() {
     this.$form = this.$parent.querySelector('.welcome-form__element');
-    this.$telegram = this.$parent.querySelector('[name="telegram"]');
+    this.$userName = this.$parent.querySelector('[name="user_name"]');
+    this.$userPhone = this.$parent.querySelector('[name="user_phone"]');
     this.formFinal = this.$parent.querySelector('.welcome-form__final');
 
     this.$form.addEventListener('submit', (event) => {
@@ -36,13 +37,15 @@ class Form {
     this.submit = async () => {
       const formData = new FormData();
       const requestURL = this.$form.getAttribute('action');
+
       const requestOptions = {
         method: 'POST',
         body: formData,
       }
       
-      formData.append('telegram', this.$telegram.value);
-      
+      formData.append('name', this.$userName.value);
+      formData.append('telegram', this.$userPhone.value);
+
       const urlSearchParams = new URLSearchParams(window.location.search);
       const params = Object.fromEntries(urlSearchParams.entries());
       if (params.hasOwnProperty('utm_content')) {

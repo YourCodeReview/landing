@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   checkAnchor();
   Header.init();
   ScrollTo.init();
+  Slider.init();
   //form
   document.querySelectorAll(".welcome-form").forEach($this => {
     new Form($this).init();
