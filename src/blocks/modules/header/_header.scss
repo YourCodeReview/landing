@@ -1,10 +1,10 @@
 .header {
-  height: var(--header-height);
   display: flex;
   align-items: center;
   position: fixed;
+  height: var(--header-height);
+  width: var(--page-width);
   z-index: 100;
-  width: 100%;
   top: 0;
   left: 0;
   transition: height var(--trs-1), background-color var(--trs-1);

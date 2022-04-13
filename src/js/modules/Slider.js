@@ -40,8 +40,6 @@ for (let i = 0; i < buttons.length; i++) {
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   });
 }
-
-
 // Слайдер
 
 

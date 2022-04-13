@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  // padding: calc(var(--section-margin) / 2) 0;
+  padding: calc(var(--section-margin) / 2) 0;
 
   & > .container {
     position: relative;
@@ -366,6 +366,29 @@
   @include media-breakpoint-up(xl) {
     &__elements {
       --bs-gutter-x: 50px;
+    }
+  }
+}
+
+.section-rating {
+  &__container {
+    background: rgb(0, 191, 166);
+    background: linear-gradient(99deg,
+      rgba(0, 191, 166, 1) 0%,
+      rgba(43, 40, 101, 1) 94%,
+      rgba(43, 40, 101, 1) 100%
+    );
+  }
+}
+
+.what-will-you-get-section {
+  &__video {
+    max-width: 380px;
+    margin: auto 0 auto auto;
+  }
+  @include media-breakpoint-down(md) {
+    &__video {
+      max-width: initial;
     }
   }
 }
