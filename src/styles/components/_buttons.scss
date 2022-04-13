@@ -44,6 +44,12 @@
     --height: 60px;
   }
 
+  &_xl {
+    --font-size: 22px;
+    --padding-x: 52px;
+    --height: 76px;
+  }
+
   @include media-breakpoint-down(sm) {
     --padding-x: 15px;
     &_large {

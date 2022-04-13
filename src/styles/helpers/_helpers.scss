@@ -23,6 +23,10 @@
   color: var(--color-light);
 }
 
+.bordered-link {
+  border-bottom: 1px solid currentColor;
+}
+
 .overflow {
   overflow: hidden;
 }
