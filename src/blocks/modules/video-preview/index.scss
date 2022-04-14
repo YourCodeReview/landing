@@ -4,6 +4,7 @@
   overflow: hidden;
   background-color: rgba(127, 127, 127, 0.5);
   display: block;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   &::before {
     content: '';
     display: block;
@@ -13,10 +14,27 @@
     .video-preview__play-icon {
       display: block;
     }
+    .video-preview__poster {
+      display: block;
+    }
     &:hover {
       .video-preview__play-icon {
         color: var(--color-accent-1);
       }
+    }
+  }
+  &__poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &__video {
