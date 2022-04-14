@@ -1,19 +1,43 @@
 <div class="welcome-form">
 
-  <form id="registration-form" action="/request.php" class="welcome-form__element">
+  <form action="/request.php" class="welcome-form__element">
     <!-- <div class="input welcome-form__input">
       <label for="@@id">@</label>
       <input id="@@id" type="text" name="telegram" placeholder="telegram" required pattern="^(https:\/\/t\.me\/|@)?[\w]{5,}|\+\d{7,}$">
     </div> -->
+
     <div class="input welcome-form__input">
-      <label for="user_name">Имя</label>
-      <input id="user_name" type="text" name="user_name" placeholder="Иван" required >
+      <input id="@@name" type="text" name="user_name" placeholder="Иван" required >
+      <label for="@@name">Имя</label>
+      <span></span>
     </div>
+
     <div class="input welcome-form__input">
-      <label for="user_phone">Телефон</label>
-      <input id="user_phone" type="text" name="user_phone" placeholder="+7 906 777 777 7" required >
+      <input id="@@email" type="email" name="user_email" placeholder="example@gmail.com" required >
+      <label for="@@email">Почта</label>
+      <span></span>
     </div>
-    <button class="button button_large welcome-form__submit">@@button</button>
+
+    <div class="input welcome-form__input">
+      <input id="@@tel" type="text" name="user_tel" placeholder="+7 906 777 777 7" required >
+      <label for="@@tel">Телефон</label>
+      <span></span>
+    </div>
+
+    @@if (id === "1") {
+      <button class="button button_large w-100 mt-5">@@button</button>
+    }
+
+    @@if (id === "2") {
+      <div class="d-flex align-items-center flex-column mt-30 mt-lg-50">
+        <button class="button button_large w-100 w-sm-auto">@@button</button>
+        <svg class="welcome-form__button-figure" viewBox="0 0 172 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M87.2096 1.28003C86.6262 0.691907 85.6765 0.6881 85.0883 1.27153L75.5042 10.7791C74.9161 11.3626 74.9123 12.3123 75.4957 12.9004C76.0791 13.4886 77.0289 13.4924 77.617 12.9089L86.1362 4.45774L94.5874 12.977C95.1709 13.5651 96.1206 13.5689 96.7087 12.9855C97.2969 12.402 97.3007 11.4523 96.7172 10.8642L87.2096 1.28003ZM87.3962 64.3419L87.6447 2.34245L84.6447 2.33042L84.3963 64.3299L87.3962 64.3419Z" fill="#E76F00"/>
+          <path d="M27.1076 1.75078C26.7738 1.02061 25.8742 0.716248 25.0982 1.07097L12.4524 6.85159C11.6764 7.20632 11.3179 8.08581 11.6516 8.81598C11.9854 9.54615 12.8851 9.85051 13.6611 9.49579L24.9018 4.35746L29.7366 14.9343C30.0704 15.6644 30.9701 15.9688 31.7461 15.6141C32.5221 15.2593 32.8806 14.3798 32.5468 13.6497L27.1076 1.75078ZM3.43481 60.9875L27.1234 2.87377L24.2816 1.91238L0.593025 60.0261L3.43481 60.9875Z" fill="#E76F00"/>
+          <path d="M147.193 1.62776C146.419 1.26925 145.518 1.56911 145.181 2.29751L139.686 14.1674C139.349 14.8958 139.703 15.7769 140.478 16.1354C141.252 16.4939 142.153 16.194 142.491 15.4656L147.375 4.91464L158.593 10.1077C159.368 10.4662 160.269 10.1663 160.606 9.4379C160.943 8.70951 160.589 7.8284 159.814 7.4699L147.193 1.62776ZM171.436 60.7061L148.006 2.47305L145.16 3.42022L168.589 61.6533L171.436 60.7061Z" fill="#E76F00"/>
+        </svg>          
+      </div>
+    }
   </form>
 
   <div class="welcome-form__final">

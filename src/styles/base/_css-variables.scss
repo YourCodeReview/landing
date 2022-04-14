@@ -7,6 +7,12 @@
     --grid-gutter-x: 16px;
   }
 
+  --scrollbar-width: var(--scrollbar-width-property, 0px);
+  --window-safe-height: var(--window-safe-height-property, 100vh);
+  --window-min-width: 320px;
+  --window-width: max(100vw, var(--window-min-width));
+  --page-width: calc(var(--window-width) - var(--scrollbar-width));
+
   //animations
   --animation-duration-1: 150ms;
   --animation-duration-2: 300ms;

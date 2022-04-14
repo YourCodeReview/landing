@@ -14,59 +14,23 @@
 
         <section class="section section_light">
           @@include("../blocks/modules/sections/what-we-do.html")
-          @@include("../blocks/modules/sections/our-target.html")
-          <!-- @@include("../blocks/modules/sections/you-can.html") -->
+          @@include("../blocks/modules/sections/our-rating.html")
+          @@include("../blocks/modules/sections/content-blue-box.html")
+          @@include("../blocks/modules/sections/what-will-you-get.html")
         </section>
-        <section class="section section_green">
-         
-          @@include("../blocks/modules/sections/our-raiting.html")
-        </section>
-        
 
-        <!-- <section class="section section_dark">
-          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/who-needs.html") 
-           <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
-        </section> -->
-
-        <section class="section section_dark">
-          <!-- <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img> -->
-          <!-- @@include("../blocks/modules/sections/code-quality.html") -->
+        <section class="section section_dark section_pb-half">
+          <img src="/img/figures/crescent-top.svg" class="section__figure section__figure_top"></img>
+          @@include("../blocks/modules/sections/training-program.html")
+          @@include("../blocks/modules/sections/interview-videos.html")
+          @@include("../blocks/modules/sections/new-form-wide.html")
           @@include("../blocks/modules/sections/reviewers.html")
-       
+          @@include("../blocks/modules/sections/real-reviews.html")
         </section>
 
-        <section class="section section_light">
-          @@include("../blocks/modules/sections/reviews.html", {
-            "page": "interview",
-            "title": "О нашем курсе",
-            "text": "Что о нас говорят ребята, которым мы помогаем"
-          })
-          <img src="/img/figures/waves-bottom.svg" class="section__figure section__figure_bottom"></img>
-        </section>
-
-        <section class="section section_light">
-      
-        @@include("../blocks/modules/sections/how-it-works.html", {"page": "interview"})
-        @@include("../blocks/modules/sections/form-section-wide.html", {
-          "page": "interview",
-          "title": "Сделай шаг на пути к работе мечты",
-          "text": "Оставь заявку, чтобы получить <strong>бесплатную</strong> консультацию и начать подготовку к собеседованиям",
-          "button": "Записаться на консультацию"
-        })
-      </section>
-
-        <section class="section section_dark section_last ">
-          <img src="/img/figures/waves-top.svg" class="section__figure section__figure_top"></img>
-          @@include("../blocks/modules/sections/pricing.html", {"page": "interview"})          
-          @@include("../blocks/modules/sections/form-section.html", {
-            "page": "interview",
-            "title": "Хочешь стать крутым разработчиком?",
-            "text": "Оставь заявку и получи <strong>бесплатную</strong> консультацию уже сегодня",
-            "button": "Записаться на бесплатную консультацию"
-          })
+        <section class="section section_blue section_last section_pt-half">
+          @@include("../blocks/modules/sections/new-form-last.html")
           @@include("../blocks/modules/footer/footer.html")
-       
         </section>
 
       </main>

@@ -1,17 +1,18 @@
 .input {
   position: relative;
-  background-color: #fff;
+  background-color: #F7F7F5;
   border-radius: 10px;
   font-size: 24px;
   line-height: 26px;
   display: flex;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  --py: 15px;
+  --py: 22px;
   --px: 15px;
   input {
     flex: 1 1 auto;
     color: var(--color-default);
     padding: var(--py) var(--px);
+    order: 2;
     &::placeholder {
       color: var(--color-gray);
       transition: opacity var(--trs-1);
@@ -20,13 +21,35 @@
       &::placeholder {
         opacity: 0;
       }
+      & ~ span {
+        border-color: #4C6FBF;
+      }
+      & ~ label {
+        color: #4C6FBF;
+      }
     }
   }
+  span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border-radius: inherit;
+    border: 1px solid #2F2B70;
+    pointer-events: none;
+    transition: border-color var(--trs-1);
+  }
+
   label {
-    padding: var(--py) 10px var(--py) var(--px);
+    padding: var(--py) 12px var(--py) var(--px);
     color: var(--color-default);
     flex: 0 0 auto;
     position: relative;
+    pointer-events: all;
+    transition: color var(--trs-1);
     &::after {
       content: '';
       display: block;
@@ -38,8 +61,10 @@
       background-color: currentColor;
     }
   }
+
   @include media-breakpoint-down(sm) {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
+    --py: 20px;
   }
 }
