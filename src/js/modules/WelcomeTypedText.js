@@ -14,9 +14,9 @@ export default class {
         '<span class="welcome-typed-text welcome-typed-text_avito">Avito</span>',
         '<span class="welcome-typed-text welcome-typed-text_mail">@mail.ru</span>'
       ],
-      typeSpeed: 100,
+      typeSpeed: 75,
       backSpeed: 50,
-      backDelay: 1500,
+      backDelay: 750,
       loop: true
     };
   }

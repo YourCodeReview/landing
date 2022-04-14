@@ -10,6 +10,7 @@ class Form {
     this.$form = this.$parent.querySelector('.welcome-form__element');
     this.$userName = this.$parent.querySelector('[name="user_name"]');
     this.$userPhone = this.$parent.querySelector('[name="user_phone"]');
+    this.$email = this.$parent.querySelector('[name="user_email"]');
     this.formFinal = this.$parent.querySelector('.welcome-form__final');
 
     this.$form.addEventListener('submit', (event) => {
@@ -28,9 +29,6 @@ class Form {
             console.error('Error:', data);
           }
         })
-
-      
-
     })
 
     //отправка формы
@@ -39,7 +37,6 @@ class Form {
       const requestURL = this.$form.getAttribute('action');
 
       const timezone = Intl?.DateTimeFormat()?.resolvedOptions()?.timeZone;
-      // console.log(timezone);
       if (timezone) {
         formData.append('timezone', timezone);
       }
@@ -51,9 +48,11 @@ class Form {
 
       formData.append('name', this.$userName.value);
       formData.append('telegram', this.$userPhone.value);
+      formData.append('email', this.$email.value);
 
       const urlSearchParams = new URLSearchParams(window.location.search);
       const params = Object.fromEntries(urlSearchParams.entries());
+      
       if (params.hasOwnProperty('utm_content')) {
         formData.append('utm_content', params.utm_content);
       }

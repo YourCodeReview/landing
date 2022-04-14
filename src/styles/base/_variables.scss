@@ -16,7 +16,9 @@ $container-max-widths: (
 
 $spacers: (
   grid: var(--grid-gutter-x),
+  section-y: calc(var(--section-margin) / 2),
   0: 0px,
+  5: 10px,
   10: 10px,
   15: 15px,
   20: 20px,
@@ -29,7 +31,8 @@ $spacers: (
   60: 60px,
   70: 70px,
   80: 80px,
-  90: 90px
+  90: 90px,
+  100: 100px
 );
 
 $grid-gutter-width: var(--grid-gutter-x);

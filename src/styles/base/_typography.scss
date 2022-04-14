@@ -72,8 +72,14 @@ h4, .h4 {
   @include media-breakpoint-down(xxl) {
     font-size: 28px;
   }
+  @include media-breakpoint-down(lg) {
+    font-size: 26px;
+  }
   @include media-breakpoint-down(md) {
     font-size: 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
   }
 }
 
@@ -99,7 +105,7 @@ p, .text {
     margin-bottom: 0;
   }
   @include media-breakpoint-down(xxl) {
-    font-size: 22px;
+    font-size: 24px;
   }
   @include media-breakpoint-down(xl) {
     font-size: 20px;
@@ -143,5 +149,22 @@ ul:not([class]), .list {
     &:hover {
       color: #00bfa6;
     }
+  }
+}
+
+.text-small {
+  font-size: 22px;
+}
+
+.text-sub-title {
+  font-size: 30px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 28px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 26px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
   }
 }

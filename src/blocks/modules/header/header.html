@@ -16,10 +16,9 @@
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item"><a href="/#welcome" data-action="scroll" class="header__dropdown-link">Главная</a></li>
                 <li class="header__dropdown-item"><a href="/#about" data-action="scroll" class="header__dropdown-link">О нас</a></li>
-                <li class="header__dropdown-item"><a href="/#our-target" data-action="scroll" class="header__dropdown-link">Наша цель</a></li>          
+                <li class="header__dropdown-item"><a href="/#training-program" data-action="scroll" class="header__dropdown-link">Программа</a></li> 
                 <li class="header__dropdown-item"><a href="/#reviewers" data-action="scroll" class="header__dropdown-link">Менторы</a></li>
                 <li class="header__dropdown-item"><a href="/#reviews" data-action="scroll" class="header__dropdown-link">Отзывы</a></li>
-                <li class="header__dropdown-item"><a href="/#how-it-works" data-action="scroll" class="header__dropdown-link">Программа</a></li>
                 <li class="header__dropdown-item"><a href="/#pricing" data-action="scroll" class="header__dropdown-link">Стоимость</a></li>
               </ul>
             </div>
@@ -52,8 +51,9 @@
       </nav>
 
       @@if (page === 'interview') { 
-        <a href="/#registration-form-section" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
+        <a href="/#registration-form" data-action="scroll" class="button button_large header__button">Попробовать бесплатно</a>
       }
+
       @@if (page === 'reviewer') { 
         <a href="https://t.me/codereivew_reviewers_bot" class="button button_large header__button">Стать ревьюером</a>
       }
@@ -81,8 +81,8 @@
                 <ul class="header-mobile__dropdown-list" data-toggle="content">
                   <li class="header-mobile__dropdown-item"><a href="/#welcome" data-action="scroll" class="header-mobile__dropdown-link">Главная</a></li>
                   <li class="header-mobile__dropdown-item"><a href="/#about" data-action="scroll" class="header-mobile__dropdown-link">О нас</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/#our-target" data-action="scroll" class="header-mobile__dropdown-link">Как работает</a></li>
-                  <li class="header-mobile__dropdown-item"><a href="/#reviewers" data-action="scroll" class="header-mobile__dropdown-link">Ревьюеры</a></li>
+                  <li class="header-mobile__dropdown-item"><a href="/#training-program" data-action="scroll" class="header-mobile__dropdown-link">Программа</a></li> 
+                  <li class="header-mobile__dropdown-item"><a href="/#reviewers" data-action="scroll" class="header-mobile__dropdown-link">Менторы</a></li>
                   <li class="header-mobile__dropdown-item"><a href="/#reviews" data-action="scroll" class="header-mobile__dropdown-link">Отзывы</a></li>
                   <li class="header-mobile__dropdown-item"><a href="/#pricing" data-action="scroll" class="header-mobile__dropdown-link">Стоимость</a></li>
                 </ul>
@@ -105,7 +105,7 @@
               
               <li class="header-mobile__nav-item">
                 @@if (page === 'interview') { 
-                  <a href="/#registration-form-section" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
+                  <a href="/#registration-form" data-action="scroll" class="button button_large header-mobile__button">Попробовать бесплатно</a>
                 }
                 @@if (page === 'reviewer') { 
                   <a href="https://t.me/YourCodeReview" class="button button_large header-mobile__button">Стать ревьюером</a>

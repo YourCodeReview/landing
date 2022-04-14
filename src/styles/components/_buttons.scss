@@ -9,8 +9,8 @@
   //style
   --color: #fff;
   --color-hover: var(--color);
-  --background-color: var(--color-accent-1);
-  --background-color-hover: var(--color-accent-1_2);
+  --background-color: var(--color-accent-2);
+  --background-color-hover: var(--color-accent-2_2);
 
   position: relative;
   display: inline-flex;
@@ -41,13 +41,24 @@
   &_large {
     --font-size: 22px;
     --padding-x: 32px;
-    --height: 60px;
+    --height: 64px;
+  }
+
+  &_xl {
+    --font-size: 22px;
+    --padding-x: 52px;
+    --height: 76px;
   }
 
   @include media-breakpoint-down(sm) {
     --padding-x: 15px;
     &_large {
       --font-size: 18px;
+    }
+    &_xl {
+      --font-size: 20px;
+      --padding-x: 40px;
+      --height: 70px;
     }
   }
 }
