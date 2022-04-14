@@ -2,6 +2,8 @@ import device from "current-device";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox.css";
 
+const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
 export default class {
   constructor(element) {
     this.El = element;
@@ -27,7 +29,7 @@ export default class {
       );
     })
 
-    if (device.desktop()) {
+    if (device.desktop() && !isSafari) {
       this.El.addEventListener('mouseenter', () => {
         videoEl.play();
       })
@@ -38,7 +40,7 @@ export default class {
     }
 
     else {
-      this.El.classList.add('video-preview_mobile');
+      this.El.classList.add('video-preview_no-video');
     }
   }
 }
