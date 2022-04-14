@@ -10,19 +10,6 @@
     display: block;
     padding-top: 148%;
   }
-  &_mobile {
-    .video-preview__play-icon {
-      display: block;
-    }
-    .video-preview__poster {
-      display: block;
-    }
-    &:hover {
-      .video-preview__play-icon {
-        color: var(--color-accent-1);
-      }
-    }
-  }
   &__poster {
     position: absolute;
     width: 100%;
@@ -79,6 +66,21 @@
       height: 100%;
     }
   }
+
+  &_no-video {
+    .video-preview__play-icon {
+      display: block;
+    }
+    .video-preview__poster {
+      display: block;
+    }
+    &:hover {
+      .video-preview__play-icon {
+        color: var(--color-accent-1);
+      }
+    }
+  }
+
 }
 
 .vertical-video-modal {
