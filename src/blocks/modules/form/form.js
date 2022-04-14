@@ -38,11 +38,17 @@ class Form {
       const formData = new FormData();
       const requestURL = this.$form.getAttribute('action');
 
+      const timezone = Intl?.DateTimeFormat()?.resolvedOptions()?.timeZone;
+      // console.log(timezone);
+      if (timezone) {
+        formData.append('timezone', timezone);
+      }
+
       const requestOptions = {
         method: 'POST',
         body: formData,
       }
-      
+
       formData.append('name', this.$userName.value);
       formData.append('telegram', this.$userPhone.value);
 
