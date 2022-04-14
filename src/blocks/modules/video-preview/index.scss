@@ -28,14 +28,16 @@
     object-fit: cover;
   }
   &__label {
+    --gutter: 20px;
     position: absolute;
-    bottom: 25px;
-    left: 25px;
+    bottom: var(--gutter);
+    left: var(--gutter);
     border-radius: 16px;
     background-color: #E0E0E0;
     padding: 10px 30px;
     color: #554FB6;
     text-align: center;
+    max-width: calc(100% - var(--gutter) * 2);
     span {
       display: block;
       &:nth-child(2) {

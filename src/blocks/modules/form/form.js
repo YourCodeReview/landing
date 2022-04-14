@@ -27,9 +27,6 @@ class Form {
             console.error('Error:', data);
           }
         })
-
-      
-
     })
 
     //отправка формы
@@ -45,6 +42,7 @@ class Form {
       
       const urlSearchParams = new URLSearchParams(window.location.search);
       const params = Object.fromEntries(urlSearchParams.entries());
+      
       if (params.hasOwnProperty('utm_content')) {
         formData.append('utm_content', params.utm_content);
       }

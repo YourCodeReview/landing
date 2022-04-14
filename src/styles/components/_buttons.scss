@@ -41,7 +41,7 @@
   &_large {
     --font-size: 22px;
     --padding-x: 32px;
-    --height: 60px;
+    --height: 64px;
   }
 
   &_xl {
@@ -54,6 +54,11 @@
     --padding-x: 15px;
     &_large {
       --font-size: 18px;
+    }
+    &_xl {
+      --font-size: 20px;
+      --padding-x: 40px;
+      --height: 70px;
     }
   }
 }
